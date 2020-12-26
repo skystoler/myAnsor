@@ -1,3 +1,11 @@
+-----------------------------------
+
+**Note: This repo is not maintained. We moved our development to Apache TVM repo. Ansor is integrated as "AutoScheduler" in Apache TVM.
+Please checkout our tutorials [here](https://tvm.apache.org/docs/tutorials/index.html#autoscheduler-template-free-auto-scheduling)**
+
+-----------------------------------
+
+
 # Ansor : Generating High-Performance Tensor Programs for Deep Learning
 -----------------------------------
 
