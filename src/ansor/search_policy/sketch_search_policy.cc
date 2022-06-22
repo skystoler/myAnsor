@@ -1509,6 +1509,8 @@ void SketchSearchPolicyNode::EvolutionarySearch(
           case 3:
             tmp_s = RandomMutateParallel((*pnow)[id], &rand_gen_, cur_task);
             break;
+	  case 4:
+	    break;
           default:
             LOG(FATAL) << "Invalid rule id: " << rule_id;
         }
