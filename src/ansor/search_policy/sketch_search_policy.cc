@@ -29,6 +29,7 @@
 #include <iomanip>
 #include <vector>
 #include <string>
+#include <fstream>
 #include <algorithm>
 #include <limits>
 #include <set>
@@ -86,7 +87,7 @@ State SketchSearchPolicyNode::Search(SearchTask task, int n_trials,
       }
 
       // Search one round to get promising states
-      PrintTitle("Search", verbose);
+      PrintTitle("Searchtest", verbose);
       SearchOneRound(&best_states, num_random, &random_states);
 
       // Infer bound. This is necessary for computing the correct ToStr() for redundancy check
@@ -1387,23 +1388,56 @@ void SketchSearchPolicyNode::EvolutionarySearch(
   std::vector<float> rule_weights;
   std::vector<double> rule_selection_probs;
   if (IsGPUTask(cur_task)) {
-    rule_weights = {0.90, 0.10, 0.00, 0.00};
+	//rule_weights={1.00,0.00,0.00,0.00};
+	//rule_weights={0.00,1.00,0.00,0.00};
+ 	rule_weights = {0.90, 0.10, 0.00, 0.00};
   } else {
-    rule_weights = {0.90, 0.03, 0.05, 0.02};
+  	rule_weights = {0.90, 0.03, 0.05, 0.02};
+	//rule_weights = {1.00, 0.00, 0.00, 0.00};
+	// rule_weights={0.00,1.00,0.00,0.00};
+        // rule_weights={0.00,0.00,1.00,0.00};
+	//rule_weights={0.00,0.00,0.00,1.00};
   }
+
+  for(auto rule_weight:rule_weights){
+    StdCout(verbose)<<rule_weight<<" ";
+  }
+
+  StdCout(verbose)<<std::endl;
+
   if (GetIntParam(params, "disable_change_compute_location")) {
     rule_weights[2] = 0.0;
   }
   ComputePrefixSumProb(rule_weights, &rule_selection_probs);
   
+  int max_i=0;
+  double max_score_i=0.00;
+
+  // std::time_t t = std::time(0); 
+  // StdCout(verbose)<<"time:"<<t<<std::endl;
+
+  std::fstream fout;
+  fout.open("./data.txt",std::ios::app);
+  
+
+  int k = 0;
   // Genetic Algorithm
-  for (int k = 0; k < num_iters + 1; ++k) {
+  for (; k < num_iters + 1; ++k) {
+    auto tic_begin = std::chrono::high_resolution_clock::now();
+
     // Maintain the heap
     cur_task->compute_dag.InferBound(pnow);
     PruneInvalidState(cur_task, pnow);
     program_cost_model->Predict(cur_task, *pnow, &pop_scores);
 
+    fout<<"iter:"<<k+1<<std::endl;
     for (size_t i = 0; i < pnow->size(); ++i) {
+
+      //record experiment
+      if(i%10==0) fout<<std::endl;
+      fout<<i<<":"<<pop_scores[i]<<"  ";
+      //fout<<std::endl;
+      
       const State& state = (*pnow)[i];
       std::string state_str = state.ToStr();
 
@@ -1423,9 +1457,18 @@ void SketchSearchPolicyNode::EvolutionarySearch(
         }
         if (pop_scores[i] > max_score) {
           max_score = pop_scores[i];
+	        max_i=i;
         }
       }
     }
+    
+
+    //elites strategy 1, heap.size=128,elite.size=64
+    
+    // std::sort(heap.begin(),heap.end(),cmp);
+    // for(size_t i=0;i<64;++i){
+    // 	pnext->push_back(heap[i].first);
+    // }
 
     if (k % 5 == 0 || k == num_iters) {
       StdCout(verbose) << "GA Iter: " << k << std::fixed << std::setprecision(4)
@@ -1449,19 +1492,134 @@ void SketchSearchPolicyNode::EvolutionarySearch(
 
     // Compute selection probability
     ComputePrefixSumProb(pop_scores, &pop_selection_probs);
+    
+    //over proportion selection
+   
+    // std::sort(pop_scores.begin(),pop_scores.end());
+    // double good_number=pop_scores.size()*0.32;
+    // std::vector<float> ops_good_pop_scores;
+    // std::vector<float> ops_poor_pop_scores;
+    // ops_good_pop_scores.reserve(good_number);
+    // ops_poor_pop_scores.reserve(pop_scores.size()-good_number);
+    // for(size_t i=0;i<good_number;++i){
+    // 	ops_good_pop_scores.push_back(pop_scores[i]);
+    // }
+    // for(size_t i=good_number;i<pop_scores.size();++i){
+    //     ops_poor_pop_scores.push_back(pop_scores[i]);
+    // }
 
+    // std::uniform_real_distribution<> dis(0.0, 1.0);
+    // double x = dis(rand_gen_);
+    // if(x<=0.8)  ComputePrefixSumProb(ops_good_pop_scores, &pop_selection_probs); 
+    // else  ComputePrefixSumProb(ops_poor_pop_scores, &pop_selection_probs);
+    
+
+
+    //sigma zoom
+   
+    // float sum=0.00;
+    // for(auto score:pop_scores){
+    // 	sum+=score;
+    // }
+    // float mean=sum/population;
+    // sum=0.00;
+    // for(auto score:pop_scores){
+    // 	sum+=std::pow(score-mean,2);
+    // }
+    // float standard_deviation=std::pow(sum/population,0.5);
+    // std::vector<float> sz_pop_scores;
+    // sz_pop_scores.reserve(population);
+    // for(size_t i=0;i<pop_scores.size();++i){
+    // 	float new_score=standard_deviation==0?1:std::max(1+(pop_scores[i]-mean)/standard_deviation/2,0.00f);
+    //   if(new_score>max_score_i) {
+    //     max_score_i=new_score;
+    //     max_i=i;
+    //   }
+    // 	sz_pop_scores.push_back(new_score);
+    // }
+
+    // ComputePrefixSumProb(sz_pop_scores, &pop_selection_probs);
+    
+
+
+    //champinion selectionn
+    
+    //  std::vector<float> cs_pop_scores;
+     
+    //  cs_pop_scores.reserve(population);
+    //  size_t tao=100;
+    //  std::uniform_real_distribution<> dis(0.0, 1.0);
+
+    //  for(size_t i=0;i<pop_scores.size();++i){
+	  //   std::vector<float> cs_scores;
+    //  	for(size_t j=0;j<tao;++j){
+    // 	  double x = dis(rand_gen_);
+    //     cs_scores.push_back(pop_scores[int(pop_scores.size()*x)]);
+	  // }
+	  //   float new_score=*max_element(cs_scores.begin(),cs_scores.end());
+    //   if(new_score>max_score_i) {
+    //     max_score_i=new_score;
+    //     max_i=i;
+    //   }
+    //  	cs_pop_scores.push_back(new_score);
+    // }
+    
+    // ComputePrefixSumProb(cs_pop_scores, &pop_selection_probs);
+     
     // Do cross over
     int ct = 0;
+    
+    //StdCout(verbose)<<"num_cross_over: "<<num_cross_over<<std::endl; 2048*0.05=102
+
+    //StdCout(verbose)<<"num_cross_over_bound: "<<num_cross_over_trial_upper_bound<<std::endl;
+
+    //StdCout(verbose)<<"pnext.size: "<<static_cast<int>(pnext->size())<<std::endl;
     while (cross_over_enabled_ &&
            static_cast<int>(pnext->size()) < num_cross_over &&
-           ct < num_cross_over_trial_upper_bound) {
+      	   ct < num_cross_over_trial_upper_bound) {
+
       int p1 = RandomChoose(pop_selection_probs, &rand_gen_);
       int p2 = RandomChoose(pop_selection_probs, &rand_gen_);
 
+      //stallion evolution
+      // int p1 = RandomChoose(pop_selection_probs, &rand_gen_);
+      // int p2 = max_i;
+
+      
+      StdCout(verbose)<<"p1:"<<p1<<" p2:"<<p2<<" ";
+
+      //p1,p2从对应的pop_score数组里取出score，算出比例，作为参数传到crossoverstate里
+      
+      float proportion=0.0;
+
+      float a=pop_scores[p1];
+      float b=pop_scores[p2];
+      
+      // float a=sz_pop_scores[p1];
+      // float b=sz_pop_scores[p2];
+
+      // float a=cs_pop_scores[p1];
+      // float b=cs_pop_scores[p2];
+
+      
+      if(a<0){
+        proportion=100.0;
+      }else if(b<0){
+        proportion=0.0;
+      }
+      proportion=(a/(a+b))*100;
+
       if (p1 == p2 || (*pnow)[p1].ToStr() == (*pnow)[p2].ToStr()) {
+	  StdCout(verbose)<<ct<<":equall ";
         pnext->push_back((*pnow)[p1]);
       } else {
+	      //State tmp_s = CrossOverState(cur_task, &rand_gen_, (*pnow)[p1], (*pnow)[p  2], &crossover_fail_counters,proportion);
         State tmp_s = CrossOverState(cur_task, &rand_gen_, (*pnow)[p1], (*pnow)[p2], &crossover_fail_counters);
+    for(auto fail:crossover_fail_counters){
+			StdCout(verbose)<<fail<<" ";
+		}	
+	      //StdCout(verbose)<<crossover_fail_counters<<std::endl;
+      	      //StdCout(verbose)<<tmp_s.ToStr()<<std::endl;
         if (tmp_s.defined()) {
           //std::cerr << (*pnow)[p1] << std::endl;
           //std::cerr << "========================================" << std::endl;
@@ -1473,8 +1631,10 @@ void SketchSearchPolicyNode::EvolutionarySearch(
           ////std::cerr << cur_task->compute_dag.PrintStepsAsPython(tmp_s->transform_steps);
           //exit(0);
           pnext->push_back(std::move(tmp_s));
+	StdCout(verbose)<<ct<<":success "<<std::endl;
           crossover_success_ct++;
-        } else {
+        } else{
+	StdCout(verbose)<<ct<<":fail "<<std::endl;
           crossover_fail_ct++;
         }
       }
@@ -1483,11 +1643,12 @@ void SketchSearchPolicyNode::EvolutionarySearch(
 
     // Turn off crossover forever if we cannot perform it successfully
     if (crossover_success_ct == 0) {
-      cross_over_enabled_ = false;
+	StdCout(verbose)<<"crossover fail"<<std::endl;
+      	    cross_over_enabled_ = false;
       crossover_success_ct = crossover_fail_ct = -1;
     }
 
-    // Do mutation
+    // Do mutation,num_best_states=128
     while (pnext->size() < population) {
       int id = RandomChoose(pop_selection_probs, &rand_gen_);
 
@@ -1497,8 +1658,7 @@ void SketchSearchPolicyNode::EvolutionarySearch(
         State tmp_s;
         switch (rule_id) {
           case 0:
-            tmp_s = RandomMutateTileSize((*pnow)[id], &split_memo_, &rand_gen_,
-                                         max_innermost_split_factor);
+            tmp_s = RandomMutateTileSize((*pnow)[id], &split_memo_, &rand_gen_,max_innermost_split_factor);
             break;
           case 1:
             tmp_s = RandomMutateMaxUnrollStep((*pnow)[id], &rand_gen_, auto_unroll_configs_);
@@ -1523,8 +1683,11 @@ void SketchSearchPolicyNode::EvolutionarySearch(
         pnext->push_back((*pnow)[id]);
       }
     }
-
+	//StdCout(verbose)<<"mutation test"<<std::endl;
     std::swap(pnext, pnow); pnext->clear();
+    double duration = std::chrono::duration_cast<std::chrono::duration<double> >(
+      std::chrono::high_resolution_clock::now() - tic_begin).count();
+    fout<<std::fixed << std::setprecision(2)<<duration<<std::endl;
   }
 
   // Copy best states in the heap to out_states
@@ -1539,6 +1702,10 @@ void SketchSearchPolicyNode::EvolutionarySearch(
   StdCout(verbose) << "EvolutionarySearch\t\t#s: " << best_states->size()
                    << "\tTime elapsed: "
                    << std::fixed << std::setprecision(2) << duration << std::endl;
+
+  fout<<"Time elapsed:"<<std::fixed << std::setprecision(2) << duration<<std::endl;
+  fout<<std::endl;
+  fout.close();
 }
 
 /*!
