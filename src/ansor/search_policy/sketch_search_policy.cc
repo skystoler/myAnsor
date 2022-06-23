@@ -1613,13 +1613,12 @@ void SketchSearchPolicyNode::EvolutionarySearch(
 	  StdCout(verbose)<<ct<<":equall ";
         pnext->push_back((*pnow)[p1]);
       } else {
-	      //State tmp_s = CrossOverState(cur_task, &rand_gen_, (*pnow)[p1], (*pnow)[p2], &crossover_fail_counters,proportion);
-        State tmp_s = CrossOverState(cur_task, &rand_gen_, (*pnow)[p1], (*pnow)[p2], &crossover_fail_counters);
+	      State tmp_s = CrossOverState(cur_task, &rand_gen_, (*pnow)[p1], (*pnow)[p2], &crossover_fail_counters,proportion);
     for(auto fail:crossover_fail_counters){
 			StdCout(verbose)<<fail<<" ";
 		}	
 	      //StdCout(verbose)<<crossover_fail_counters<<std::endl;
-      	      //StdCout(verbose)<<tmp_s.ToStr()<<std::endl;
+      	//StdCout(verbose)<<tmp_s.ToStr()<<std::endl;
         if (tmp_s.defined()) {
           //std::cerr << (*pnow)[p1] << std::endl;
           //std::cerr << "========================================" << std::endl;
@@ -1631,10 +1630,10 @@ void SketchSearchPolicyNode::EvolutionarySearch(
           ////std::cerr << cur_task->compute_dag.PrintStepsAsPython(tmp_s->transform_steps);
           //exit(0);
           pnext->push_back(std::move(tmp_s));
-	StdCout(verbose)<<ct<<":success "<<std::endl;
+	      StdCout(verbose)<<ct<<":success "<<std::endl;
           crossover_success_ct++;
         } else{
-	StdCout(verbose)<<ct<<":fail "<<std::endl;
+	        StdCout(verbose)<<ct<<":fail "<<std::endl;
           crossover_fail_ct++;
         }
       }
@@ -1643,8 +1642,8 @@ void SketchSearchPolicyNode::EvolutionarySearch(
 
     // Turn off crossover forever if we cannot perform it successfully
     if (crossover_success_ct == 0) {
-	StdCout(verbose)<<"crossover fail"<<std::endl;
-      	    cross_over_enabled_ = false;
+	  StdCout(verbose)<<"crossover fail"<<std::endl;
+      cross_over_enabled_ = false;
       crossover_success_ct = crossover_fail_ct = -1;
     }
 
