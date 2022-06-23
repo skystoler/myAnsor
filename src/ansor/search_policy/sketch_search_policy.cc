@@ -1613,7 +1613,7 @@ void SketchSearchPolicyNode::EvolutionarySearch(
 	  StdCout(verbose)<<ct<<":equall ";
         pnext->push_back((*pnow)[p1]);
       } else {
-	      //State tmp_s = CrossOverState(cur_task, &rand_gen_, (*pnow)[p1], (*pnow)[p  2], &crossover_fail_counters,proportion);
+	      //State tmp_s = CrossOverState(cur_task, &rand_gen_, (*pnow)[p1], (*pnow)[p2], &crossover_fail_counters,proportion);
         State tmp_s = CrossOverState(cur_task, &rand_gen_, (*pnow)[p1], (*pnow)[p2], &crossover_fail_counters);
     for(auto fail:crossover_fail_counters){
 			StdCout(verbose)<<fail<<" ";
