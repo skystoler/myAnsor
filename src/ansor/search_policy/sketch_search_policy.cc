@@ -1497,8 +1497,7 @@ void SketchSearchPolicyNode::EvolutionarySearch(
         State tmp_s;
         switch (rule_id) {
           case 0:
-            tmp_s = RandomMutateTileSize((*pnow)[id], &split_memo_, &rand_gen_,
-                                         max_innermost_split_factor);
+            tmp_s = RandomMutateTileSize((*pnow)[id], &split_memo_, &rand_gen_,max_innermost_split_factor);
             break;
           case 1:
             tmp_s = RandomMutateMaxUnrollStep((*pnow)[id], &rand_gen_, auto_unroll_configs_);
@@ -1509,8 +1508,9 @@ void SketchSearchPolicyNode::EvolutionarySearch(
           case 3:
             tmp_s = RandomMutateParallel((*pnow)[id], &rand_gen_, cur_task);
             break;
-	  case 4:
-	    break;
+	        case 4:
+            tmp_s = RandomReorder((*pnow)[id], &rand_gen_, cur_task);
+	          break;
           default:
             LOG(FATAL) << "Invalid rule id: " << rule_id;
         }
