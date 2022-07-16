@@ -747,7 +747,7 @@ State RandomMutateComputeLocation(const State& old_state, std::mt19937* random_g
 
 // GA: Crossover two states
 State CrossOverState(const SearchTask& task, std::mt19937* random_gen, const State& p1
-                    const State& p2, std::vector<int>* fail_counters);
+                    const State& p2, std::vector<int>* fail_counters,float proportion);
                       
 // Prune invalid states and return the results in-place.
 void PruneInvalidState(const SearchTask& task, std::vector<State>* states);

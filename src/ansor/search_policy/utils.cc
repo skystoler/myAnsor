@@ -897,7 +897,7 @@ State ApplyStepToNewState(const SearchTask& task, const State& state, const Stat
 }
 
 State CrossOverState(const SearchTask& task, std::mt19937* random_gen, const State& p1,
-  const State& p2, std::vector<int>* fail_counters){
+  const State& p2, std::vector<int>* fail_counters,float proportion){
   // An internal class that replays a parent state to make the stage ID consist.
   class SyncingState {
    public:
@@ -977,7 +977,7 @@ State CrossOverState(const SearchTask& task, std::mt19937* random_gen, const Sta
       // Since CacheRead steps target to placeholder stage, we assign all placeholders to p1.
       stage_out_to_states[p1->stages[t]->op->name] = sync_p1.id;
       continue;
-    } else if ((*random_gen)() % 100 >= 50) {
+    } else if ((*random_gen)() % 100 >= proportion) {
       // TODO(lmzheng, comaniac): Should be based on the score breakdown instead of random selection.
       stage_out_to_states[p1->stages[t]->op->name] = sync_p2.id;
       if (p2->stages[t]->compute_at != kInlined) {
