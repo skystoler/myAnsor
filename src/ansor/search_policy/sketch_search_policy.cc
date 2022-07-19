@@ -1539,7 +1539,7 @@ void SketchSearchPolicyNode::EvolutionarySearch(
 
     //elite strategy, heap.size=128,elite.size=128?
     //vector<index> return the index of the max pop_scores
-    std::vector<size> index(pop_scores.size(),0);
+    std::vector<size_t> index(pop_scores.size(),0);
     for (size_t i = 0; i < index.size(); ++i) {
       index[i]=i;
     }
