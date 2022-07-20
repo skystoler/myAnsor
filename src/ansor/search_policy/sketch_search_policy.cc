@@ -1470,7 +1470,7 @@ void SketchSearchPolicyNode::EvolutionarySearch(
     // 	pnext->push_back(heap[i].first);
     // }
 
-    if (k % 5 == 0 || k == num_iters) 
+    if (k % 5 == 0 || k == num_iters){
       StdCout(verbose) << "GA Iter: " << k << std::fixed << std::setprecision(4)
                        << "\tMax score: " << max_score
                        << "\tMin score: " << heap.front().second
