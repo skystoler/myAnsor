@@ -1416,6 +1416,9 @@ void SketchSearchPolicyNode::EvolutionarySearch(
   std::fstream fout;
   fout.open("./data.txt",std::ios::app);
   
+    
+  int max_i=0;
+  double max_score_i=0.00;
 
   int k = 0;
   // Genetic Algorithm
@@ -1454,6 +1457,7 @@ void SketchSearchPolicyNode::EvolutionarySearch(
         }
         if (pop_scores[i] > max_score) {
           max_score = pop_scores[i];
+          max_i=i;
         }
       }
     }
@@ -1481,10 +1485,7 @@ void SketchSearchPolicyNode::EvolutionarySearch(
 
     //sigma zoom
    
-    float sum=0.00;
-    for(auto score:pop_scores){
-    	sum+=score;
-    }
+    float sum=std::accumulate(pop_scores.begin(),pop_scores.end(),0.00);
     float mean=sum/population;
     sum=0.00;
     for(auto score:pop_scores){
