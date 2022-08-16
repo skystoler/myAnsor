@@ -1417,8 +1417,8 @@ void SketchSearchPolicyNode::EvolutionarySearch(
   fout.open("./data.txt",std::ios::app);
   
     
-  //int max_i=0;
-  //double max_score_i=0.00;
+  // int max_i=0;
+  // double max_score_i=0.00;
 
   int k = 0;
   // Genetic Algorithm
@@ -1495,7 +1495,7 @@ void SketchSearchPolicyNode::EvolutionarySearch(
     std::vector<float> sz_pop_scores;
     sz_pop_scores.reserve(population);
     for(size_t i=0;i<pop_scores.size();++i){
-    	float new_score=standard_deviation==0?1:std::max(1+(pop_scores[i]-mean)/standard_deviation/2.00,f);
+    	float new_score=standard_deviation==0?1:std::max(1+(pop_scores[i]-mean)/standard_deviation/2.00f,0.00f);
       // if(new_score>max_score_i) {
       //   max_score_i=new_score;
       //   max_i=i;
