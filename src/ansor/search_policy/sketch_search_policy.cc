@@ -1480,12 +1480,12 @@ void SketchSearchPolicyNode::EvolutionarySearch(
       break;
     }
 
-    //champinion selectionn
+    //champion selectionn
     
      std::vector<float> cs_pop_scores;
      
      cs_pop_scores.reserve(population);
-     size_t tao=100;
+     size_t tao=1230;//2048*0.6
      std::uniform_real_distribution<> dis(0.0, 1.0);
 
      for(size_t i=0;i<pop_scores.size();++i){
