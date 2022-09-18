@@ -1493,7 +1493,7 @@ void SketchSearchPolicyNode::EvolutionarySearch(
      	for(size_t j=0;j<tao;++j){
     	  double x = dis(rand_gen_);
         cs_scores.push_back(pop_scores[int(pop_scores.size()*x)]);
-	  }
+	    }
 	    float new_score=*max_element(cs_scores.begin(),cs_scores.end());
       if(new_score>max_score_i) {
         max_score_i=new_score;
@@ -1520,11 +1520,23 @@ void SketchSearchPolicyNode::EvolutionarySearch(
 
       StdCout(verbose)<<"p1:"<<p1<<" p2:"<<p2<<" ";
 
+      float proportion=0.0;
+
+      float a=pop_scores[p1];
+      float b=pop_scores[p2];
+         
+      if(a<0){
+        proportion=100.0;
+      }else if(b<0){
+        proportion=0.0;
+      }
+      proportion=(a/(a+b))*100;
+
       if (p1 == p2 || (*pnow)[p1].ToStr() == (*pnow)[p2].ToStr()) {
 	  StdCout(verbose)<<ct<<":equall ";
         pnext->push_back((*pnow)[p1]);
       } else {
-        State tmp_s = CrossOverState(cur_task, &rand_gen_, (*pnow)[p1], (*pnow)[p2], &crossover_fail_counters);
+        State tmp_s = CrossOverState(cur_task, &rand_gen_, (*pnow)[p1], (*pnow)[p2], &crossover_fail_counters,proportion);
     for(auto fail:crossover_fail_counters){
 			StdCout(verbose)<<fail<<" ";
 		}	
@@ -1593,7 +1605,7 @@ void SketchSearchPolicyNode::EvolutionarySearch(
         pnext->push_back((*pnow)[id]);
       }
     }
-	//StdCout(verbose)<<"mutation test"<<std::endl;
+	  //StdCout(verbose)<<"mutation test"<<std::endl;
     std::swap(pnext, pnow); pnext->clear();
     double duration = std::chrono::duration_cast<std::chrono::duration<double> >(
       std::chrono::high_resolution_clock::now() - tic_begin).count();

@@ -897,7 +897,7 @@ State ApplyStepToNewState(const SearchTask& task, const State& state, const Stat
 }
 
 State CrossOverState(const SearchTask& task, std::mt19937* random_gen, const State& p1,
-  const State& p2, std::vector<int>* fail_counters){
+  const State& p2, std::vector<int>* fail_counters,float proportion){
   // An internal class that replays a parent state to make the stage ID consist.
   class SyncingState {
    public:
@@ -961,7 +961,12 @@ State CrossOverState(const SearchTask& task, std::mt19937* random_gen, const Sta
   std::unordered_map<std::string, int> stage_out_to_states;
   int p1_selected = 0, p2_selected = 0;
 
-  for (int t = static_cast<int>(p1->stages.size()) - 1; t >= 0; --t) {
+  //single crossover
+  int length=static_cast<int>(p1->stages.size());
+  int single_point=(int)(rand()*(length-1));
+  bool flag=false;
+  for (int t=length-1; t >= 0; --t) {
+
     // Don't do crossover only when the stage names are different
     if (p1->stages[t]->op->name != p2->stages[t]->op->name) {
       (*fail_counters)[1]++;
@@ -977,13 +982,18 @@ State CrossOverState(const SearchTask& task, std::mt19937* random_gen, const Sta
       // Since CacheRead steps target to placeholder stage, we assign all placeholders to p1.
       stage_out_to_states[p1->stages[t]->op->name] = sync_p1.id;
       continue;
-    } else if ((*random_gen)() % 100 >= 50) {
-      // TODO(lmzheng, comaniac): Should be based on the score breakdown instead of random selection.
-      stage_out_to_states[p1->stages[t]->op->name] = sync_p2.id;
+    } 
+
+    if(t==single_point) flag=true;
+
+    if(!flag){
+      stage_out_to_states[p2->stages[t]->op->name] = sync_p2.id;
       if (p2->stages[t]->compute_at != kInlined) {
         p2_selected++;
       }
-    } else {
+    }
+
+    if(flag){
       stage_out_to_states[p1->stages[t]->op->name] = sync_p1.id;
       if (p1->stages[t]->compute_at != kInlined) {
         p1_selected++;
