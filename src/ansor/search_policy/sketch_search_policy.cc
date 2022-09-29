@@ -1481,7 +1481,7 @@ void SketchSearchPolicyNode::EvolutionarySearch(
     }
 
     //champion selectionn
-    
+    /*
      std::vector<float> cs_pop_scores;
      
      cs_pop_scores.reserve(population);
@@ -1500,8 +1500,8 @@ void SketchSearchPolicyNode::EvolutionarySearch(
       }
      	cs_pop_scores.push_back(new_score);
     }
-    
-    ComputePrefixSumProb(cs_pop_scores, &pop_selection_probs);
+    */
+    ComputePrefixSumProb(pop_scores, &pop_selection_probs);
      
     // Do cross over
     int ct = 0;
