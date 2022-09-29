@@ -963,7 +963,7 @@ State CrossOverState(const SearchTask& task, std::mt19937* random_gen, const Sta
 
   //single crossover
   int length=static_cast<int>(p1->stages.size());
-  int single_point=(int)(rand()*(length-1));
+  int single_point=rand()%length;
   bool flag=false;
   for (int t=length-1; t >= 0; --t) {
 
