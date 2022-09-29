@@ -12,7 +12,7 @@
 ~h
 # Command Line History (newest to oldest):
 :wq
-|2,0,1663476447,,"wq"
+|2,0,1664457921,,"wq"
 :q
 |2,0,1662438793,,"q"
 
@@ -27,18 +27,30 @@
 # Registers:
 
 # File marks:
-'0  1  18  ~/.git/COMMIT_EDITMSG
-|4,48,1,18,1663476447,"~/.git/COMMIT_EDITMSG"
-'1  1536  3  ~/src/ansor/search_policy/sketch_search_policy.cc
-|4,49,1536,3,1662438793,"~/src/ansor/search_policy/sketch_search_policy.cc"
+'0  1  21  ~/.git/COMMIT_EDITMSG
+|4,48,1,21,1664457921,"~/.git/COMMIT_EDITMSG"
+'1  1  18  ~/.git/COMMIT_EDITMSG
+|4,49,1,18,1663476447,"~/.git/COMMIT_EDITMSG"
+'2  1536  3  ~/src/ansor/search_policy/sketch_search_policy.cc
+|4,50,1536,3,1662438793,"~/src/ansor/search_policy/sketch_search_policy.cc"
 
 # Jumplist (newest first):
+-'  1  21  ~/.git/COMMIT_EDITMSG
+|4,39,1,21,1664457921,"~/.git/COMMIT_EDITMSG"
 -'  1  18  ~/.git/COMMIT_EDITMSG
 |4,39,1,18,1663476447,"~/.git/COMMIT_EDITMSG"
 -'  1536  3  ~/src/ansor/search_policy/sketch_search_policy.cc
 |4,39,1536,3,1662438793,"~/src/ansor/search_policy/sketch_search_policy.cc"
 -'  1536  3  ~/src/ansor/search_policy/sketch_search_policy.cc
 |4,39,1536,3,1662438793,"~/src/ansor/search_policy/sketch_search_policy.cc"
+-'  1536  3  ~/src/ansor/search_policy/sketch_search_policy.cc
+|4,39,1536,3,1662438793,"~/src/ansor/search_policy/sketch_search_policy.cc"
+-'  1536  3  ~/src/ansor/search_policy/sketch_search_policy.cc
+|4,39,1536,3,1662438793,"~/src/ansor/search_policy/sketch_search_policy.cc"
+-'  1  0  ~/src/ansor/search_policy/sketch_search_policy.cc
+|4,39,1,0,1662438760,"~/src/ansor/search_policy/sketch_search_policy.cc"
+-'  1  0  ~/src/ansor/search_policy/sketch_search_policy.cc
+|4,39,1,0,1662438760,"~/src/ansor/search_policy/sketch_search_policy.cc"
 -'  1  0  ~/src/ansor/search_policy/sketch_search_policy.cc
 |4,39,1,0,1662438760,"~/src/ansor/search_policy/sketch_search_policy.cc"
 -'  1  0  ~/src/ansor/search_policy/sketch_search_policy.cc
@@ -47,11 +59,11 @@
 # History of marks within files (newest to oldest):
 
 > ~/.git/COMMIT_EDITMSG
-	*	1663476446	0
-	"	1	18
-	^	1	19
-	.	1	18
-	+	1	18
+	*	1664457920	0
+	"	1	21
+	^	1	22
+	.	1	21
+	+	1	21
 
 > ~/src/ansor/search_policy/sketch_search_policy.cc
 	*	1662438781	0

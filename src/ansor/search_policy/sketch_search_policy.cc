@@ -1482,26 +1482,26 @@ void SketchSearchPolicyNode::EvolutionarySearch(
 
     //champion selectionn
     
-     std::vector<float> cs_pop_scores;
+    //  std::vector<float> cs_pop_scores;
      
-     cs_pop_scores.reserve(population);
-     size_t tao=1230;//2048*0.6
-     std::uniform_real_distribution<> dis(0.0, 1.0);
+    //  cs_pop_scores.reserve(population);
+    //  size_t tao=1230;//2048*0.6
+    //  std::uniform_real_distribution<> dis(0.0, 1.0);
 
-     for(size_t i=0;i<pop_scores.size();++i){
-	    std::vector<float> cs_scores;
-     	for(size_t j=0;j<tao;++j){
-    	  double x = dis(rand_gen_);
-        cs_scores.push_back(pop_scores[int(pop_scores.size()*x)]);
-	    }
-	    float new_score=*max_element(cs_scores.begin(),cs_scores.end());
-      if(new_score>max_score_i) {
-        max_score_i=new_score;
-      }
-     	cs_pop_scores.push_back(new_score);
-    }
+    //  for(size_t i=0;i<pop_scores.size();++i){
+	  //   std::vector<float> cs_scores;
+    //  	for(size_t j=0;j<tao;++j){
+    // 	  double x = dis(rand_gen_);
+    //     cs_scores.push_back(pop_scores[int(pop_scores.size()*x)]);
+	  //   }
+	  //   float new_score=*max_element(cs_scores.begin(),cs_scores.end());
+    //   if(new_score>max_score_i) {
+    //     max_score_i=new_score;
+    //   }
+    //  	cs_pop_scores.push_back(new_score);
+    // }
     
-    ComputePrefixSumProb(cs_pop_scores, &pop_selection_probs);
+    ComputePrefixSumProb(pop_scores, &pop_selection_probs);
      
     // Do cross over
     int ct = 0;
