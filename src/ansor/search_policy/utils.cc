@@ -961,10 +961,9 @@ State CrossOverState(const SearchTask& task, std::mt19937* random_gen, const Sta
   std::unordered_map<std::string, int> stage_out_to_states;
   int p1_selected = 0, p2_selected = 0;
 
-  //single crossover
+  //half-uniform crossover
   int length=static_cast<int>(p1->stages.size());
-  int single_point=rand()%length;
-  bool flag=false;
+
   for (int t=length-1; t >= 0; --t) {
 
     // Don't do crossover only when the stage names are different
@@ -984,16 +983,13 @@ State CrossOverState(const SearchTask& task, std::mt19937* random_gen, const Sta
       continue;
     } 
 
-    if(t==single_point) flag=true;
-
-    if(!flag){
+    //前半段直接从p2取,后半段p1和p2选
+    if(t<length/2 || proportion<50){
       stage_out_to_states[p2->stages[t]->op->name] = sync_p2.id;
       if (p2->stages[t]->compute_at != kInlined) {
         p2_selected++;
       }
-    }
-
-    if(flag){
+    }else{
       stage_out_to_states[p1->stages[t]->op->name] = sync_p1.id;
       if (p1->stages[t]->compute_at != kInlined) {
         p1_selected++;

@@ -1409,8 +1409,6 @@ void SketchSearchPolicyNode::EvolutionarySearch(
     rule_weights[2] = 0.0;
   }
   ComputePrefixSumProb(rule_weights, &rule_selection_probs);
-  
-  double max_score_i=0.00;
 
   // std::time_t t = std::time(0); 
   // StdCout(verbose)<<"time:"<<t<<std::endl;
@@ -1418,7 +1416,7 @@ void SketchSearchPolicyNode::EvolutionarySearch(
   std::fstream fout;
   fout.open("./data.txt",std::ios::app);
   
-
+  //size_t max_i=0;
   int k = 0;
   // Genetic Algorithm
   for (; k < num_iters + 1; ++k) {
@@ -1456,6 +1454,7 @@ void SketchSearchPolicyNode::EvolutionarySearch(
         }
         if (pop_scores[i] > max_score) {
           max_score = pop_scores[i];
+          //max_i=i;
         }
       }
     }
