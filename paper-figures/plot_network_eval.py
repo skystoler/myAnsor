@@ -33,15 +33,16 @@ def load_data(networks, baseline_file, device, backend, methods):
 def two_d_dict_max(obj, min_value):
     return {k: {a : max(min_value, b) for a, b in v.items()} for k, v in data.items()}
 
-networks = ['resnet_50', 'mobilenet_v2', 'resnet3d_18', 'dcgan', 'bert']
+#networks = ['resnet_50', 'mobilenet_v2', 'resnet3d_18', 'dcgan', 'bert']
+networks = ['resnet_50']
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--baseline-file", type=str, default="baseline/results.tsv")
+    parser.add_argument("--baseline-file", type=str, default="baseline/myresult.tsv")
     parser.add_argument("--device", type=str, required=True,
                         choices=['Intel-Platinum-8269CY-2.50GHz', 'Intel-Platinum-8124M-3.00GHz',
                                  'Intel-E5-2670-v3-2.30Ghz', 'Intel-i7-8750H-2.20Ghz',
-                                 'Tesla V100-SXM2-16GB', 'aarch64-Cortex-A53-1.4Ghz'])
+                                 'Tesla V100-SXM2-16GB', 'aarch64-Cortex-A53-1.4Ghz','Intel-E5-2650-v4-2.20GHz'])
     parser.add_argument("--out-file", type=str)
     parser.add_argument("--batch-size", type=int, default=1)
     args = parser.parse_args()
@@ -52,7 +53,7 @@ if __name__ == "__main__":
         methods = ['pytorch', 'tensorflow', 'tensorflow-tensorrt', 'AutoTVM', 'ours']
         backend = 'gpu'
     elif 'Intel' in args.device:
-        methods = ['pytorch', 'tensorflow', 'AutoTVM', 'ours']
+        methods = ['pytorch', 'tensorflow', 'AutoTVM', 'Ansor', 'ours']
         backend = 'cpu'
     else:
         methods = ['tflite', 'AutoTVM', 'ours']
@@ -64,7 +65,6 @@ if __name__ == "__main__":
 
     if args.batch_size > 0:
         networks = ["%s.B%d" % (name, args.batch_size) for name in networks]
-
         data = load_data(networks, args.baseline_file, args.device, backend, methods)
         fig, ax = plt.subplots()
 

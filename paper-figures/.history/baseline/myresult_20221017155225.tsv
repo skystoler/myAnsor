@@ -1,0 +1,23 @@
+#############################################################
+##################### Intel CPU Network #####################
+#############################################################
+
+# PyTorch
+Intel-Xeon-E5-2650-v4-2.20GHz	cpu	network	resnet_50.B1	pytorch	mkldnn	{'costs': [0.030198]}	1593278706.455997
+Intel-Xeon-E5-2650-v4-2.20GHz	cpu	network	resnet_50.B16	pytorch	mkldnn	{'costs': [0.372024]}	1593278710.939302
+
+# Tensorflow
+Intel-Xeon-E5-2650-v4-2.20GHz	cpu	network	resnet_50.B1	tensorflow	mkldnn	{'costs': [0.017872]}	1593144479.729819
+Intel-Xeon-E5-2650-v4-2.20GHz	cpu	network	resnet_50.B16	tensorflow	mkldnn	{'costs': [0.130149]}	1593144486.362137
+
+# AutoTVM
+Intel-Xeon-E5-2650-v4-2.20GHz	cpu	network	resnet_50.B1	AutoTVM	NCHWc	{'costs': [0.005958, 0.005988, 0.006023]}	1595402275.412326
+Intel-Xeon-E5-2650-v4-2.20GHz	cpu	network	resnet_50.B16	AutoTVM	NCHWc	{'costs': [0.073789, 0.073753, 0.074303]}	1595402291.371248
+
+# Ansor
+Intel-Xeon-E5-2650-v4-2.20GHz	cpu	network	resnet_50.B1	Ansor	NHWC	{'costs': [0.005807, 0.005868, 0.00592]}	1595879906.057104
+Intel-Xeon-E5-2650-v4-2.20GHz	cpu	network	resnet_50.B16	Ansor	NHWC	{'costs': [0.066096, 0.066185, 0.066187]}	1595879942.079471
+
+# Ours
+Intel-Xeon-E5-2650-v4-2.20GHz	cpu	network	resnet_50.B1	Ours	NHWC	{'costs': [0.005807, 0.005868, 0.00592]}	1595879906.057104
+Intel-Xeon-E5-2650-v4-2.20GHz	cpu	network	resnet_50.B16	Ours	NHWC	{'costs': [0.066096, 0.066185, 0.066187]}	1595879942.079471

@@ -8,6 +8,7 @@ import numpy as np
 import torch
 import torchvision
 
+import torchvision.models as models
 from utils import log_line, py_benchmark, BenchmarkRecord, shape_dict
 
 USE_TORCH_SCRIPT = False
@@ -531,7 +532,9 @@ def batch_norm(M, N):
 
 # ============ Network ============
 def resnet50(N):
-    my_module = torch.hub.load('pytorch/vision:v0.5.0', 'resnet50', pretrained=False)
+    
+    my_module = models.resnet50(pretrained=False)
+    #my_module = torch.hub.load('pytorch/vision:v0.5.0', 'resnet50', pretrained=False)
     my_module.eval()
 
     A = torch.rand(N, 3, 224, 224)
@@ -753,26 +756,26 @@ def resnet3d_18(N):
 Workload = namedtuple("Workload", ['workload_type', 'workload_name', 'func'])
 
 wkl_list = [
-    Workload("op", "GMM", batch_matmul),
-    Workload("op", "C1D", conv1d),
-    Workload("op", "C2D", conv2d),
-    Workload("op", "C3D", conv3d),
-    Workload("op", "GRP", conv2d),
-    Workload("op", "DIL", conv2d),
-    Workload("op", "DEP", depthwise_conv2d),
-    Workload("op", "T2D", conv2d_transpose),
-    Workload("op", "CAP", conv2d_capsule),
-    Workload("op", "NRM", norm),
+    # Workload("op", "GMM", batch_matmul),
+    # Workload("op", "C1D", conv1d),
+    # Workload("op", "C2D", conv2d),
+    # Workload("op", "C3D", conv3d),
+    # Workload("op", "GRP", conv2d),
+    # Workload("op", "DIL", conv2d),
+    # Workload("op", "DEP", depthwise_conv2d),
+    # Workload("op", "T2D", conv2d_transpose),
+    # Workload("op", "CAP", conv2d_capsule),
+    # Workload("op", "NRM", norm),
     #Workload("op", "SMX", softmax),
-    Workload("subgraph", "conv2d_bn_relu", conv2d_bn_relu),
-    Workload("subgraph", "transpose_batch_matmul", transpose_batch_matmul),
-    Workload("subgraph", "transpose_batch_matmul_softmax", transpose_batch_matmul_softmax),
+    # Workload("subgraph", "conv2d_bn_relu", conv2d_bn_relu),
+    # Workload("subgraph", "transpose_batch_matmul", transpose_batch_matmul),
+    # Workload("subgraph", "transpose_batch_matmul_softmax", transpose_batch_matmul_softmax),
     Workload("network", "resnet_50", resnet50),
-    Workload("network", "mobilenet_v2", mobilenet_v2),
-    Workload("network", "resnet3d_18", resnet3d_18),
-    Workload("network", "dcgan", dcgan),
-    Workload("network", "dqn", dqn),
-    Workload("network", "bert", bert),
+    # Workload("network", "mobilenet_v2", mobilenet_v2),
+    # Workload("network", "resnet3d_18", resnet3d_18),
+    # Workload("network", "dcgan", dcgan),
+    # Workload("network", "dqn", dqn),
+    # Workload("network", "bert", bert),
 ]
 
 import torch

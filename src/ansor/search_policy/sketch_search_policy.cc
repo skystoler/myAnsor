@@ -1361,6 +1361,8 @@ void SketchSearchPolicyNode::EvolutionarySearch(
   states_buf2.reserve(population);
   states_buf1.insert(states_buf1.begin(), init_population.begin(), init_population.end());
 
+  std::vector<float> diversity;
+
   // A heap to keep the best states during evolution
   using StateHeapItem = std::pair<State, float>;
   auto cmp = [](const StateHeapItem& left, const StateHeapItem& right) {
@@ -1410,7 +1412,7 @@ void SketchSearchPolicyNode::EvolutionarySearch(
   }
   ComputePrefixSumProb(rule_weights, &rule_selection_probs);
   
-  double max_score_i=0.00;
+  //double max_score_i=0.00;
 
   // std::time_t t = std::time(0); 
   // StdCout(verbose)<<"time:"<<t<<std::endl;
@@ -1501,6 +1503,26 @@ void SketchSearchPolicyNode::EvolutionarySearch(
      	cs_pop_scores.push_back(new_score);
     }
     */
+    
+    
+    //calculate diversity
+    int n=pop_scores.size();
+    //float max_v=n*(n-1);
+    float distance=0.0;
+    for(int i=0;i<n;++i){
+      distance=0.0;
+      float a=max(pop_scores[i],0.0);
+      for(int j=0;j<n;++j){
+        float b=max(pop_scores[j],0.0);
+        distance+=std::abs(a-b);
+      }
+    }
+    //StdCout(verbose)<<"distance: "<<distance<<std::endl;
+    float f=distance/(n*(n-1));
+    //StdCout(verbose)<<"f: "<<f<<std::endl;
+    diversity.push_back(f);
+
+
     ComputePrefixSumProb(pop_scores, &pop_selection_probs);
      
     // Do cross over
@@ -1518,8 +1540,9 @@ void SketchSearchPolicyNode::EvolutionarySearch(
       int p1 = RandomChoose(pop_selection_probs, &rand_gen_);
       int p2 = RandomChoose(pop_selection_probs, &rand_gen_);
 
-      StdCout(verbose)<<"p1:"<<p1<<" p2:"<<p2<<" ";
-
+      StdCout(verbose)<<"p1:"<<p1<<" p2:"<<p2
+      <<" size:"<<(*pnow)[p1]->stages.size()<<" "<<(*pnow)[p2]->stages.size();
+ 
       float proportion=0.0;
 
       float a=pop_scores[p1];
@@ -1529,8 +1552,7 @@ void SketchSearchPolicyNode::EvolutionarySearch(
         proportion=100.0;
       }else if(b<0){
         proportion=0.0;
-      }
-      proportion=(a/(a+b))*100;
+      }else proportion=(a/(a+b))*100;
 
       if (p1 == p2 || (*pnow)[p1].ToStr() == (*pnow)[p2].ToStr()) {
 	  StdCout(verbose)<<ct<<":equall ";
@@ -1626,6 +1648,9 @@ void SketchSearchPolicyNode::EvolutionarySearch(
                    << std::fixed << std::setprecision(2) << duration << std::endl;
 
   fout<<"Time elapsed:"<<std::fixed << std::setprecision(2) << duration<<std::endl;
+  fout<<std::endl;
+  fout<<"diversity: ";
+  for(auto d:diversity)fout<<std::fixed << std::setprecision(8)<<d<<" ";
   fout<<std::endl;
   fout.close();
 }

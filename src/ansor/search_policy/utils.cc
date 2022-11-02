@@ -961,7 +961,7 @@ State CrossOverState(const SearchTask& task, std::mt19937* random_gen, const Sta
   std::unordered_map<std::string, int> stage_out_to_states;
   int p1_selected = 0, p2_selected = 0;
 
-  //double crossover
+  //doublex----p2+p1+p2
   int length=static_cast<int>(p1->stages.size());
   int one_point=rand() % length;
   int two_point=rand() % length;

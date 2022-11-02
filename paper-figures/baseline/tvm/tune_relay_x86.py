@@ -59,14 +59,14 @@ from utils import str2bool, log_line, BenchmarkRecord, get_network
 # "llvm -mcpu=core-avx2".
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--target", type=str, default='llvm -mcpu=skylake-avx512')
+parser.add_argument("--target", type=str, default='llvm -mcpu=core-avx2')
 parser.add_argument("--network", type=str, required=True)
 parser.add_argument("--min-repeat", type=int, default=800)
 parser.add_argument("--n-trials", type=int, default=1250)
 parser.add_argument("--batch-size", type=int, default=1)
 parser.add_argument("--num-threads", type=int)
 parser.add_argument("--device", type=str, default=platform.processor())
-parser.add_argument("--out-file", type=str, default='results.tsv')
+parser.add_argument("--out-file", type=str, default='myresult.tsv')
 parser.add_argument("--tune", type=str2bool, nargs='?', const=True, default=True)
 parser.add_argument("--kernel-tuner", type=str2bool, nargs='?', const=True, default=True)
 parser.add_argument("--graph-tuner", type=str2bool, nargs='?', const=True, default=True)
@@ -167,17 +167,21 @@ def tune_and_evaluate(tuning_opt):
         tasks = autotvm.task.extract_from_program(mod["main"], target=target,
                                                   params=params,
                                                   ops=(relay.op.get("nn.conv2d"),
+                                                  """
                                                        relay.op.get("nn.conv3d"),
                                                        relay.op.get("nn.conv2d_transpose"),
                                                        relay.op.get('nn.dense'),
-                                                       relay.op.get('nn.batch_matmul')))
+                                                       relay.op.get('nn.batch_matmul')
+                                                       """))
+        sleep(5)
 
         # run tuning tasks
         if args.kernel_tuner:
             tune_kernels(tasks, **tuning_opt)
         if args.graph_tuner:
             tune_graph(mod["main"], data_name, data_shape, log_file, graph_opt_sch_file)
-
+        
+        sleep(5)
     # compile kernels with graph-level best records
     ctx = None
     if args.graph_tuner:

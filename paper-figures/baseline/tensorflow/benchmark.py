@@ -11,7 +11,7 @@ import multiprocessing
 import numpy as np
 import tensorflow as tf
 from tensorflow.python.framework.ops import disable_eager_execution
-from tensorflow.python import _pywrap_util_port
+#from tensorflow.python import _pywrap_util_port
 
 from tf_models import resnet, resnet_3d, bert as bert_model
 from tf_models.dcgan import dcgan as dcgan_model
@@ -378,10 +378,10 @@ wkl_list = [
     #Workload("subgraph", "conv2d_bn_relu", conv2d_bn_relu),
     #Workload("subgraph", "transpose_batch_matmul", transpose_batch_matmul),
     Workload("network", "resnet_50", resnet50),
-    Workload("network", "resnet3d_18", resnet3d_18),
-    Workload("network", "dcgan", dcgan),
-    Workload("network", "mobilenet_v2", mobilenet_v2),
-    Workload("network", "bert", bert),
+    # Workload("network", "resnet3d_18", resnet3d_18),
+    # Workload("network", "dcgan", dcgan),
+    # Workload("network", "mobilenet_v2", mobilenet_v2),
+    # Workload("network", "bert", bert),
 ]
 
 if __name__ == "__main__":
@@ -416,6 +416,7 @@ if __name__ == "__main__":
     if args.backend == 'cpu':
         device = '/CPU:0'
         data_format = 'channels_last'
+        """
         try:
             if _pywrap_util_port.IsMklEnabled():
                 print("MKL-DNN is enabled in tensorflow")
@@ -424,8 +425,9 @@ if __name__ == "__main__":
                 print("WARNING: MKL-DNN is not enabled in tensorflow!!")
                 algorithm = 'default'
         except:
+            """
             # Not able to check mkldnn
-            algorithm = 'default'
+        algorithm = 'default'
     else:
         device = '/GPU:0'
         data_format = 'channels_first'

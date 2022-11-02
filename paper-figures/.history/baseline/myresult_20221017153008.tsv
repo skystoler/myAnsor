@@ -1,0 +1,861 @@
+#############################################################
+##################### Intel CPU Network #####################
+#############################################################
+
+# PyTorch
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet_50.B1	pytorch	mkldnn	{'costs': [0.030198]}	1593278706.455997
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet_50.B16	pytorch	mkldnn	{'costs': [0.372024]}	1593278710.939302
+Intel-Platinum-8124M-3.00GHz	cpu	network	mobilenet_v2.B1	pytorch	mkldnn	{'costs': [0.012846]}	1593278712.155619
+Intel-Platinum-8124M-3.00GHz	cpu	network	mobilenet_v2.B16	pytorch	mkldnn	{'costs': [0.154665]}	1593278713.957864
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet3d_18.B1	pytorch	mkldnn	{'costs': [0.284689]}	1593278717.544752
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet3d_18.B16	pytorch	mkldnn	{'costs': [4.729389]}	1593278770.073774
+Intel-Platinum-8124M-3.00GHz	cpu	network	dcgan.B1	pytorch	mkldnn	{'costs': [0.004472]}	1593278772.181852
+Intel-Platinum-8124M-3.00GHz	cpu	network	dcgan.B16	pytorch	mkldnn	{'costs': [0.052885]}	1593278773.828731
+Intel-Platinum-8124M-3.00GHz	cpu	network	bert.B1	pytorch	mkldnn	{'costs': [0.033626]}	1593278793.279799
+Intel-Platinum-8124M-3.00GHz	cpu	network	bert.B16	pytorch	mkldnn	{'costs': [0.322732]}	1593278799.217054
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet_50.B1	pytorch	mkldnn-jit	{'costs': [0.027829]}	1593278802.511040
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet_50.B16	pytorch	mkldnn-jit	{'costs': [0.36622]}	1593278807.163225
+Intel-Platinum-8124M-3.00GHz	cpu	network	mobilenet_v2.B1	pytorch	mkldnn-jit	{'costs': [0.010068]}	1593278810.151669
+Intel-Platinum-8124M-3.00GHz	cpu	network	mobilenet_v2.B16	pytorch	mkldnn-jit	{'costs': [0.147271]}	1593278812.173326
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet3d_18.B1	pytorch	mkldnn-jit	{'costs': [0.252418]}	1593278815.628829
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet3d_18.B16	pytorch	mkldnn-jit	{'costs': [4.641203]}	1593278867.355990
+Intel-Platinum-8124M-3.00GHz	cpu	network	dcgan.B1	pytorch	mkldnn-jit	{'costs': [0.00451]}	1593278868.520698
+Intel-Platinum-8124M-3.00GHz	cpu	network	dcgan.B16	pytorch	mkldnn-jit	{'costs': [0.057065]}	1593278870.270697
+Intel-Platinum-8124M-3.00GHz	cpu	network	bert.B1	pytorch	mkldnn-jit	{'costs': [0.026261]}	1593318543.903292
+Intel-Platinum-8124M-3.00GHz	cpu	network	bert.B16	pytorch	mkldnn-jit	{'costs': [0.261714]}	1593318551.281967
+
+# Tensorflow
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet_50.B1	tensorflow	mkldnn	{'costs': [0.017872]}	1593144479.729819
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet_50.B16	tensorflow	mkldnn	{'costs': [0.130149]}	1593144486.362137
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet3d_18.B1	tensorflow	mkldnn	{'costs': [0.053427]}	1593144489.824372
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet3d_18.B16	tensorflow	mkldnn	{'costs': [0.853007]}	1593144501.759823
+Intel-Platinum-8124M-3.00GHz	cpu	network	dcgan.B1	tensorflow	mkldnn	{'costs': [0.006007]}	1593144504.140300
+Intel-Platinum-8124M-3.00GHz	cpu	network	dcgan.B16	tensorflow	mkldnn	{'costs': [0.014299]}	1593144505.629729
+Intel-Platinum-8124M-3.00GHz	cpu	network	mobilenet_v2.B1	tensorflow	mkldnn	{'costs': [0.006824]}	1593144511.459045
+Intel-Platinum-8124M-3.00GHz	cpu	network	mobilenet_v2.B16	tensorflow	mkldnn	{'costs': [0.042555]}	1593144516.032931
+Intel-Platinum-8124M-3.00GHz	cpu	network	bert.B1	tensorflow	mkldnn	{'costs': [0.056929]}	1593144520.443749
+Intel-Platinum-8124M-3.00GHz	cpu	network	bert.B16	tensorflow	mkldnn	{'costs': [0.295699]}	1593144526.465379
+
+# AutoTVM
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet_50.B1	AutoTVM	NCHWc	{'costs': [0.005958, 0.005988, 0.006023]}	1595402275.412326
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet_50.B16	AutoTVM	NCHWc	{'costs': [0.073789, 0.073753, 0.074303]}	1595402291.371248
+Intel-Platinum-8124M-3.00GHz	cpu	network	mobilenet_v2.B1	AutoTVM	NCHWc	{'costs': [0.001409, 0.001458, 0.001494]}	1595402310.443635
+Intel-Platinum-8124M-3.00GHz	cpu	network	mobilenet_v2.B16	AutoTVM	NCHWc	{'costs': [0.027323, 0.027271, 0.027265]}	1595402331.053667
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet3d_18.B1	AutoTVM	NCHWc	{'costs': [0.042703, 0.042725, 0.042622]}	1595402345.946934
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet3d_18.B16	AutoTVM	NCHWc	{'costs': [0.690934, 0.690616, 0.69072]}	1595402382.072002
+Intel-Platinum-8124M-3.00GHz	cpu	network	dcgan.B1	AutoTVM	NCHWc	{'costs': [0.013249, 0.013421, 0.013598]}	1595402389.469726
+Intel-Platinum-8124M-3.00GHz	cpu	network	dcgan.B16	AutoTVM	NCHWc	{'costs': [0.070301, 0.070429, 0.070277]}	1595402398.450094
+Intel-Platinum-8124M-3.00GHz	cpu	network	bert.B1	AutoTVM	NCHWc	{'costs': [0.062407, 0.062356, 0.062337]}	1595402472.538464
+Intel-Platinum-8124M-3.00GHz	cpu	network	bert.B16	AutoTVM	NCHWc	{'costs': [0.952432, 0.953287, 0.95986]}	1595402586.736569
+
+# Ours
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet_50.B1	ours	NHWC	{'costs': [0.005807, 0.005868, 0.00592]}	1595879906.057104
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet_50.B16	ours	NHWC	{'costs': [0.066096, 0.066185, 0.066187]}	1595879942.079471
+Intel-Platinum-8124M-3.00GHz	cpu	network	mobilenet_v2.B1	ours	NHWC	{'costs': [0.000867, 0.000883, 0.000891]}	1595879956.635193
+Intel-Platinum-8124M-3.00GHz	cpu	network	mobilenet_v2.B16	ours	NHWC	{'costs': [0.011553, 0.011567, 0.011593]}	1595879971.433867
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet3d_18.B1	ours	NHWC	{'costs': [0.032989, 0.033033, 0.033029]}	1595879992.941969
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet3d_18.B16	ours	NHWC	{'costs': [0.504502, 0.503922, 0.503868]}	1595880033.029559
+Intel-Platinum-8124M-3.00GHz	cpu	network	dcgan.B1	ours	NHWC	{'costs': [0.001167, 0.001168, 0.001169]}	1595880042.776374
+Intel-Platinum-8124M-3.00GHz	cpu	network	dcgan.B16	ours	NHWC	{'costs': [0.009738, 0.009736, 0.009741]}	1595880050.725431
+Intel-Platinum-8124M-3.00GHz	cpu	network	bert.B1	ours	NHWC	{'costs': [0.023728, 0.024393, 0.02442]}	1595880132.646025
+Intel-Platinum-8124M-3.00GHz	cpu	network	bert.B16	ours	NHWC	{'costs': [0.258369, 0.257808, 0.256018]}	1595880232.390687
+
+#############################################################
+###################### ARM CPU Network ######################
+#############################################################
+aarch64-Cortex-A53-1.4Ghz	cpu	network	resnet_50.B1	tflite	4-core(s)	{'costs': [1.13101]}	-1
+aarch64-Cortex-A53-1.4Ghz	cpu	network	mobilenet_v2.B1	tflite	4-core(s)	{'costs': [0.18771]}	-1
+aarch64-Cortex-A53-1.4Ghz	cpu	network	bert.B1	tflite	4-core(s)	{'costs': [6.78807]}	-1
+aarch64-Cortex-A53-1.4Ghz	cpu	network	resnet_50.B1	AutoTVM	4-core(s)	{'costs': [0.63718]}	-1
+aarch64-Cortex-A53-1.4Ghz	cpu	network	mobilenet_v2.B1	AutoTVM	4-core(s)	{'costs': [0.1116]}	-1
+aarch64-Cortex-A53-1.4Ghz	cpu	network	dcgan.B1	AutoTVM	4-core(s)	{'costs': [0.36836]}	-1
+aarch64-Cortex-A53-1.4Ghz	cpu	network	bert.B1	AutoTVM	4-core(s)	{'costs': [6.41887]}	-1
+aarch64-Cortex-A53-1.4Ghz	cpu	network	resnet3d_18.B1	AutoTVM	4-core(s)	{'costs': [13.25731]}	-1
+aarch64-Cortex-A53-1.4Ghz	cpu	network	resnet_50.B1	ours	4-core(s)	{'costs': [0.506]}	-1
+aarch64-Cortex-A53-1.4Ghz	cpu	network	mobilenet_v2.B1	ours	4-core(s)	{'costs': [0.06729]}	-1
+aarch64-Cortex-A53-1.4Ghz	cpu	network	dcgan.B1	ours	4-core(s)	{'costs': [0.13949]}	-1
+aarch64-Cortex-A53-1.4Ghz	cpu	network	bert.B1	ours	4-core(s)	{'costs': [3.10961]}	-1
+aarch64-Cortex-A53-1.4Ghz	cpu	network	resnet3d_18.B1	ours	4-core(s)	{'costs': [5.18996]}	-1
+
+#############################################################
+##################### NVIDIA GPU Network ####################
+#############################################################
+
+# PyTorch
+Tesla V100-SXM2-16GB	gpu	network	resnet_50.B1	pytorch	cudnn	{'costs': [0.006006]}	1593655586.706421
+Tesla V100-SXM2-16GB	gpu	network	resnet_50.B16	pytorch	cudnn	{'costs': [0.015257]}	1593655589.528939
+Tesla V100-SXM2-16GB	gpu	network	mobilenet_v2.B1	pytorch	cudnn	{'costs': [0.005016]}	1593655591.768975
+Tesla V100-SXM2-16GB	gpu	network	mobilenet_v2.B16	pytorch	cudnn	{'costs': [0.005218]}	1593655593.011361
+Tesla V100-SXM2-16GB	gpu	network	resnet3d_18.B1	pytorch	cudnn	{'costs': [0.009618]}	1593655595.879534
+Tesla V100-SXM2-16GB	gpu	network	resnet3d_18.B16	pytorch	cudnn	{'costs': [0.102018]}	1593655598.000121
+Tesla V100-SXM2-16GB	gpu	network	dcgan.B1	pytorch	cudnn	{'costs': [0.000667]}	1593655601.114478
+Tesla V100-SXM2-16GB	gpu	network	dcgan.B16	pytorch	cudnn	{'costs': [0.001891]}	1593655603.251879
+Tesla V100-SXM2-16GB	gpu	network	bert.B1	pytorch	cudnn	{'costs': [0.01341]}	1593655739.159426
+Tesla V100-SXM2-16GB	gpu	network	bert.B16	pytorch	cudnn	{'costs': [0.035739]}	1593655744.625180
+Tesla V100-SXM2-16GB	gpu	network	resnet_50.B1	pytorch	cudnn-jit	{'costs': [0.004651]}	1593655614.755393
+Tesla V100-SXM2-16GB	gpu	network	resnet_50.B16	pytorch	cudnn-jit	{'costs': [0.015264]}	1593655617.914792
+Tesla V100-SXM2-16GB	gpu	network	mobilenet_v2.B1	pytorch	cudnn-jit	{'costs': [0.004021]}	1593655621.245163
+Tesla V100-SXM2-16GB	gpu	network	mobilenet_v2.B16	pytorch	cudnn-jit	{'costs': [0.004927]}	1593655622.890831
+Tesla V100-SXM2-16GB	gpu	network	resnet3d_18.B1	pytorch	cudnn-jit	{'costs': [0.009591]}	1593655627.036227
+Tesla V100-SXM2-16GB	gpu	network	resnet3d_18.B16	pytorch	cudnn-jit	{'costs': [0.102047]}	1593655629.366307
+Tesla V100-SXM2-16GB	gpu	network	dcgan.B1	pytorch	cudnn-jit	{'costs': [0.000532]}	1593655635.534133
+Tesla V100-SXM2-16GB	gpu	network	dcgan.B16	pytorch	cudnn-jit	{'costs': [0.001908]}	1593655637.693798
+Tesla V100-SXM2-16GB	gpu	network	bert.B1	pytorch	cudnn-jit	{'costs': [0.007892]}	1593655754.773598
+Tesla V100-SXM2-16GB	gpu	network	bert.B16	pytorch	cudnn-jit	{'costs': [0.035603]}	1593655760.391342
+
+# Tensorflow
+Tesla V100-SXM2-16GB	gpu	network	resnet_50.B1	tensorflow	cudnn	{'costs': [0.005053]}	1593656203.319731
+Tesla V100-SXM2-16GB	gpu	network	resnet_50.B16	tensorflow	cudnn	{'costs': [0.015004]}	1593656210.431876
+Tesla V100-SXM2-16GB	gpu	network	resnet3d_18.B1	tensorflow	cudnn	{'costs': [0.011977]}	1593656213.943317
+Tesla V100-SXM2-16GB	gpu	network	resnet3d_18.B16	tensorflow	cudnn	{'costs': [0.108196]}	1593656219.594419
+Tesla V100-SXM2-16GB	gpu	network	dcgan.B1	tensorflow	cudnn	{'costs': [0.00165]}	1593656222.207805
+Tesla V100-SXM2-16GB	gpu	network	dcgan.B16	tensorflow	cudnn	{'costs': [0.003084]}	1593656223.623325
+Tesla V100-SXM2-16GB	gpu	network	mobilenet_v2.B1	tensorflow	cudnn	{'costs': [0.002298]}	1593656228.819310
+Tesla V100-SXM2-16GB	gpu	network	mobilenet_v2.B16	tensorflow	cudnn	{'costs': [0.00516]}	1593656234.375393
+Tesla V100-SXM2-16GB	gpu	network	bert.B1	tensorflow	cudnn	{'costs': [0.004606]}	1593656238.607494
+Tesla V100-SXM2-16GB	gpu	network	bert.B16	tensorflow	cudnn	{'costs': [0.04048]}	1593656242.362184
+
+# Tensorflow tensorrt
+Tesla V100-SXM2-16GB	gpu	network	resnet_50.B1	tensorflow-tensorrt	cudnn	{'costs': [0.002643]}	1593656662.682616
+Tesla V100-SXM2-16GB	gpu	network	resnet_50.B16	tensorflow-tensorrt	cudnn	{'costs': [0.013365]}	1593656668.461152
+Tesla V100-SXM2-16GB	gpu	network	resnet3d_18.B1	tensorflow-tensorrt	cudnn	{'costs': [0.01106]}	1593656793.018709
+Tesla V100-SXM2-16GB	gpu	network	resnet3d_18.B16	tensorflow-tensorrt	cudnn	{'costs': [0.103839]}	1593656803.947341
+Tesla V100-SXM2-16GB	gpu	network	dcgan.B1	tensorflow-tensorrt	cudnn	{'costs': [0.000653]}	1593657086.119819
+Tesla V100-SXM2-16GB	gpu	network	dcgan.B16	tensorflow-tensorrt	cudnn	{'costs': [0.002068]}	1593657091.540246
+Tesla V100-SXM2-16GB	gpu	network	mobilenet_v2.B1	tensorflow-tensorrt	cudnn	{'costs': [0.001129]}	1593657164.022624
+Tesla V100-SXM2-16GB	gpu	network	mobilenet_v2.B16	tensorflow-tensorrt	cudnn	{'costs': [0.003108]}	1593657170.860068
+Tesla V100-SXM2-16GB	gpu	network	bert.B1	tensorflow-tensorrt	cudnn	{'costs': [0.004313]}	1593656947.039442
+Tesla V100-SXM2-16GB	gpu	network	bert.B16	tensorflow-tensorrt	cudnn	{'costs': [0.038293]}	1593656972.141178
+
+# AutoTVM
+Tesla V100-SXM2-16GB	gpu	network	resnet_50.B1	AutoTVM	NCHWc	{'costs': [0.002099, 0.002097, 0.002098]}	1595406150.307132
+Tesla V100-SXM2-16GB	gpu	network	resnet_50.B16	AutoTVM	NCHWc	{'costs': [0.012429, 0.012439, 0.012433]}	1595406175.418354
+Tesla V100-SXM2-16GB	gpu	network	mobilenet_v2.B1	AutoTVM	NCHWc	{'costs': [0.000491, 0.000491, 0.000491]}	1595406201.437032
+Tesla V100-SXM2-16GB	gpu	network	mobilenet_v2.B16	AutoTVM	NCHWc	{'costs': [0.002276, 0.002274, 0.002274]}	1595406230.729254
+Tesla V100-SXM2-16GB	gpu	network	resnet3d_18.B1	AutoTVM	NCHWc	{'costs': [0.00859, 0.008592, 0.008592]}	1595406260.184079
+Tesla V100-SXM2-16GB	gpu	network	resnet3d_18.B16	AutoTVM	NCHWc	{'costs': [0.111362, 0.111662, 0.111795]}	1595406283.748749
+Tesla V100-SXM2-16GB	gpu	network	dcgan.B1	AutoTVM	NCHWc	{'costs': [0.001304, 0.001304, 0.001304]}	1595406299.541745
+Tesla V100-SXM2-16GB	gpu	network	dcgan.B16	AutoTVM	NCHWc	{'costs': [0.006027, 0.006025, 0.006025]}	1595406310.145997
+Tesla V100-SXM2-16GB	gpu	network	bert.B1	AutoTVM	NCHWc	{'costs': [0.008108, 0.008108, 0.008108]}	1595406410.046851
+Tesla V100-SXM2-16GB	gpu	network	bert.B16	AutoTVM	NCHWc	{'costs': [0.046195, 0.046273, 0.046331]}	1595406527.688481
+
+# Ours
+Tesla V100-SXM2-16GB	gpu	network	resnet_50.B1	ours	NHWC	{'costs': [0.00154, 0.00154, 0.00154]}	1597834932.413171
+Tesla V100-SXM2-16GB	gpu	network	resnet_50.B16	ours	NHWC	{'costs': [0.010754, 0.010757, 0.010758]}	1597834991.429425
+Tesla V100-SXM2-16GB	gpu	network	mobilenet_v2.B1	ours	NHWC	{'costs': [0.000457, 0.000457, 0.000457]}	1597835015.616829
+Tesla V100-SXM2-16GB	gpu	network	mobilenet_v2.B16	ours	NHWC	{'costs': [0.001867, 0.001865, 0.001866]}	1597835040.492512
+Tesla V100-SXM2-16GB	gpu	network	resnet3d_18.B1	ours	NHWC	{'costs': [0.007042, 0.007037, 0.00703]}	1597835072.394809
+Tesla V100-SXM2-16GB	gpu	network	resnet3d_18.B16	ours	NHWC	{'costs': [0.09702, 0.097087, 0.096936]}	1597835103.666643
+Tesla V100-SXM2-16GB	gpu	network	dcgan.B1	ours	NHWC	{'costs': [0.000313, 0.000313, 0.000313]}	1597835116.226094
+Tesla V100-SXM2-16GB	gpu	network	dcgan.B16	ours	NHWC	{'costs': [0.001291, 0.001291, 0.001291]}	1597835129.929596
+Tesla V100-SXM2-16GB	gpu	network	bert.B1	ours	NHWC	{'costs': [0.004222, 0.004222, 0.004221]}	1597835241.783222
+Tesla V100-SXM2-16GB	gpu	network	bert.B16	ours	NHWC	{'costs': [0.035384, 0.035437, 0.035512]}	1597835377.355687
+
+#############################################################
+############### Intel CPU Single Op & Subgraph ##############
+#############################################################
+
+# PyTorch
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(1, 128, 128, 128)	pytorch	mkldnn	{'costs': [1.7e-05]}	1593277503.991113
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(1, 512, 32, 512)	pytorch	mkldnn	{'costs': [2.4e-05]}	1593277507.864160
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(1, 512, 512, 512)	pytorch	mkldnn	{'costs': [0.000238]}	1593277510.847527
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(1, 1024, 1024, 1024)	pytorch	mkldnn	{'costs': [0.001501]}	1593277513.885711
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(16, 128, 128, 128)	pytorch	mkldnn	{'costs': [5.8e-05]}	1593277515.818964
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(16, 512, 32, 512)	pytorch	mkldnn	{'costs': [0.000197]}	1593277517.823513
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(16, 512, 512, 512)	pytorch	mkldnn	{'costs': [0.003443]}	1593277519.939473
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(16, 1024, 1024, 1024)	pytorch	mkldnn	{'costs': [0.028936]}	1593277521.591911
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(1, 256, 64, 128, 3, 2, 1)	pytorch	mkldnn	{'costs': [7.2e-05]}	1593277523.487607
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(1, 128, 128, 256, 1, 2, 0)	pytorch	mkldnn	{'costs': [6.3e-05]}	1593277525.364247
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(1, 64, 256, 256, 5, 1, 2)	pytorch	mkldnn	{'costs': [8.9e-05]}	1593277528.355668
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(1, 32, 512, 512, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.000104]}	1593277530.282269
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(16, 256, 64, 128, 3, 2, 1)	pytorch	mkldnn	{'costs': [0.000137]}	1593277532.265619
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(16, 128, 128, 256, 1, 2, 0)	pytorch	mkldnn	{'costs': [0.000119]}	1593277534.271847
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(16, 64, 256, 256, 5, 1, 2)	pytorch	mkldnn	{'costs': [0.000387]}	1593277535.291522
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(16, 32, 512, 512, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.000575]}	1593277536.350044
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(1, 224, 224, 3, 64, 7, 2, 3)	pytorch	mkldnn	{'costs': [0.000248]}	1593277537.357887
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(1, 56, 56, 64, 64, 1, 1, 0)	pytorch	mkldnn	{'costs': [0.000116]}	1593277538.411165
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(1, 14, 14, 256, 256, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.000159]}	1593277540.392284
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(1, 7, 7, 512, 512, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.000262]}	1593277542.401368
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(16, 224, 224, 3, 64, 7, 2, 3)	pytorch	mkldnn	{'costs': [0.010796]}	1593277543.536271
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(16, 56, 56, 64, 64, 1, 1, 0)	pytorch	mkldnn	{'costs': [0.000738]}	1593277545.537079
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(16, 14, 14, 256, 256, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.001518]}	1593277546.572653
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(16, 7, 7, 512, 512, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.001583]}	1593277548.610715
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(1, 16, 224, 224, 3, 64, 7, 2, 3)	pytorch	mkldnn	{'costs': [0.054521]}	1593277550.263458
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(1, 16, 56, 56, 64, 64, 1, 1, 0)	pytorch	mkldnn	{'costs': [0.001682]}	1593277551.643206
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(1, 16, 14, 14, 256, 256, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.016086]}	1593277553.842935
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(1, 16, 7, 7, 512, 512, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.015457]}	1593277555.066008
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(16, 16, 224, 224, 3, 64, 7, 2, 3)	pytorch	mkldnn	{'costs': [0.860446]}	1593277564.773887
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(16, 16, 56, 56, 64, 64, 1, 1, 0)	pytorch	mkldnn	{'costs': [0.043371]}	1593277566.615860
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(16, 16, 14, 14, 256, 256, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.250122]}	1593277569.457678
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(16, 16, 7, 7, 512, 512, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.243273]}	1593277572.216260
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(1, 56, 56, 64, 128, 3, 2, 1, 1, 4)	pytorch	mkldnn	{'costs': [8.8e-05]}	1593277574.037528
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(1, 56, 56, 64, 64, 1, 1, 0, 1, 4)	pytorch	mkldnn	{'costs': [9.1e-05]}	1593277575.082960
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(1, 14, 14, 256, 256, 3, 1, 1, 1, 4)	pytorch	mkldnn	{'costs': [8.1e-05]}	1593277577.083040
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(1, 7, 7, 512, 512, 3, 1, 1, 1, 4)	pytorch	mkldnn	{'costs': [0.000108]}	1593277579.132113
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(16, 56, 56, 64, 128, 3, 2, 1, 1, 4)	pytorch	mkldnn	{'costs': [0.000569]}	1593277581.139710
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(16, 56, 56, 64, 64, 1, 1, 0, 1, 4)	pytorch	mkldnn	{'costs': [0.000716]}	1593277584.119843
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(16, 14, 14, 256, 256, 3, 1, 1, 1, 4)	pytorch	mkldnn	{'costs': [0.00047]}	1593277586.100160
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(16, 7, 7, 512, 512, 3, 1, 1, 1, 4)	pytorch	mkldnn	{'costs': [0.000442]}	1593277588.122488
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(1, 224, 224, 3, 64, 7, 2, 3, 2)	pytorch	mkldnn	{'costs': [0.002059]}	1593277590.289212
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(1, 56, 56, 64, 64, 1, 1, 0, 2)	pytorch	mkldnn	{'costs': [0.000266]}	1593277592.285709
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(1, 14, 14, 256, 256, 3, 1, 1, 2)	pytorch	mkldnn	{'costs': [0.0006]}	1593277594.290088
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(1, 7, 7, 512, 512, 3, 1, 1, 2)	pytorch	mkldnn	{'costs': [0.00046]}	1593277596.297940
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(16, 224, 224, 3, 64, 7, 2, 3, 2)	pytorch	mkldnn	{'costs': [0.036641]}	1593277597.738822
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(16, 56, 56, 64, 64, 1, 1, 0, 2)	pytorch	mkldnn	{'costs': [0.003845]}	1593277599.799496
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(16, 14, 14, 256, 256, 3, 1, 1, 2)	pytorch	mkldnn	{'costs': [0.009123]}	1593277600.910772
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(16, 7, 7, 512, 512, 3, 1, 1, 2)	pytorch	mkldnn	{'costs': [0.006916]}	1593277602.003180
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(1, 112, 112, 32, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.000238]}	1593277603.410093
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(1, 112, 112, 64, 3, 2, 1)	pytorch	mkldnn	{'costs': [0.000162]}	1593277604.593590
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(1, 14, 14, 512, 3, 2, 1)	pytorch	mkldnn	{'costs': [5.1e-05]}	1593277609.487997
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(1, 7, 7, 1024, 3, 1, 1)	pytorch	mkldnn	{'costs': [5.2e-05]}	1593277611.311080
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(16, 112, 112, 32, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.002528]}	1593277613.369110
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(16, 112, 112, 64, 3, 2, 1)	pytorch	mkldnn	{'costs': [0.002637]}	1593277615.453326
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(16, 14, 14, 512, 3, 2, 1)	pytorch	mkldnn	{'costs': [0.000113]}	1593277618.364257
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(16, 7, 7, 1024, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.00012]}	1593277620.290322
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(1, 4, 4, 512, 256, 4, 2, 1)	pytorch	mkldnn	{'costs': [0.00042]}	1593277626.265518
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(1, 8, 8, 256, 128, 4, 2, 1)	pytorch	mkldnn	{'costs': [0.000339]}	1593277629.234445
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(1, 16, 16, 128, 64, 4, 2, 1)	pytorch	mkldnn	{'costs': [0.00043]}	1593277631.221375
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(1, 32, 32, 64, 3, 4, 2, 1)	pytorch	mkldnn	{'costs': [8.5e-05]}	1593277634.131361
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(16, 4, 4, 512, 256, 4, 2, 1)	pytorch	mkldnn	{'costs': [0.006275]}	1593277637.209474
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(16, 8, 8, 256, 128, 4, 2, 1)	pytorch	mkldnn	{'costs': [0.004945]}	1593277641.260159
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(16, 16, 16, 128, 64, 4, 2, 1)	pytorch	mkldnn	{'costs': [0.006143]}	1593277643.328720
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(16, 32, 32, 64, 3, 4, 2, 1)	pytorch	mkldnn	{'costs': [0.001136]}	1593277646.339094
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(1, 16, 16, 32, 32, 3, 2, 1)	pytorch	mkldnn	{'costs': [0.010043]}	1593277647.458475
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(1, 8, 8, 32, 32, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.010025]}	1593277648.572993
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(1, 16, 16, 8, 16, 3, 2, 1)	pytorch	mkldnn	{'costs': [0.009889]}	1593277649.691324
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(1, 8, 8, 16, 16, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.009896]}	1593277650.810414
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(16, 16, 16, 32, 32, 3, 2, 1)	pytorch	mkldnn	{'costs': [0.014747]}	1593277651.998163
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(16, 8, 8, 32, 32, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.014124]}	1593277653.166079
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(16, 16, 16, 8, 16, 3, 2, 1)	pytorch	mkldnn	{'costs': [0.012571]}	1593277654.314969
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(16, 8, 8, 16, 16, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.012655]}	1593277656.470965
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(1, 256, 256)	pytorch	mkldnn	{'costs': [4.4e-05]}	1593277659.533153
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(1, 512, 512)	pytorch	mkldnn	{'costs': [4.2e-05]}	1593277662.485450
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(1, 1024, 1024)	pytorch	mkldnn	{'costs': [5.3e-05]}	1593277664.434133
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(1, 4096, 1024)	pytorch	mkldnn	{'costs': [0.000239]}	1593277666.415867
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(16, 256, 256)	pytorch	mkldnn	{'costs': [5.5e-05]}	1593277670.267246
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(16, 512, 512)	pytorch	mkldnn	{'costs': [0.000251]}	1593277674.254557
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(16, 1024, 1024)	pytorch	mkldnn	{'costs': [0.006886]}	1593277676.445843
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(16, 4096, 1024)	pytorch	mkldnn	{'costs': [0.026077]}	1593277678.173662
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(1, 224, 224, 3, 64, 7, 2, 3)	pytorch	mkldnn	{'costs': [0.001067]}	1593277682.070559
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(1, 56, 56, 64, 128, 3, 2, 1)	pytorch	mkldnn	{'costs': [0.000225]}	1593277684.107528
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(1, 28, 28, 128, 256, 1, 2, 0)	pytorch	mkldnn	{'costs': [0.000144]}	1593277686.028284
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(1, 7, 7, 512, 512, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.000346]}	1593277688.028476
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(16, 224, 224, 3, 64, 7, 2, 3)	pytorch	mkldnn	{'costs': [0.026345]}	1593277689.335111
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(16, 56, 56, 64, 128, 3, 2, 1)	pytorch	mkldnn	{'costs': [0.00136]}	1593277691.358478
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(16, 28, 28, 128, 256, 1, 2, 0)	pytorch	mkldnn	{'costs': [0.000341]}	1593277693.314391
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(16, 7, 7, 512, 512, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.001712]}	1593277695.353614
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(1, 128, 12, 64)	pytorch	mkldnn	{'costs': [0.000105]}	1593277698.281378
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(1, 128, 16, 64)	pytorch	mkldnn	{'costs': [0.000129]}	1593277701.255517
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(1, 64, 12, 128)	pytorch	mkldnn	{'costs': [9.6e-05]}	1593277704.189015
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(1, 128, 12, 128)	pytorch	mkldnn	{'costs': [0.00013]}	1593277707.153901
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(16, 128, 12, 64)	pytorch	mkldnn	{'costs': [0.000625]}	1593277710.160547
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(16, 128, 16, 64)	pytorch	mkldnn	{'costs': [0.001023]}	1593277713.093863
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(16, 64, 12, 128)	pytorch	mkldnn	{'costs': [0.00032]}	1593277716.072556
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(16, 128, 12, 128)	pytorch	mkldnn	{'costs': [0.002063]}	1593277717.189909
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(1, 224, 224, 3, 64, 7, 2, 3)	pytorch	mkldnn-jit	{'costs': [0.00105]}	1593277721.141684
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(1, 56, 56, 64, 128, 3, 2, 1)	pytorch	mkldnn-jit	{'costs': [0.000216]}	1593277723.123694
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(1, 28, 28, 128, 256, 1, 2, 0)	pytorch	mkldnn-jit	{'costs': [0.000143]}	1593277725.056426
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(1, 7, 7, 512, 512, 3, 1, 1)	pytorch	mkldnn-jit	{'costs': [0.00034]}	1593277727.059194
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(16, 224, 224, 3, 64, 7, 2, 3)	pytorch	mkldnn-jit	{'costs': [0.025664]}	1593277729.387268
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(16, 56, 56, 64, 128, 3, 2, 1)	pytorch	mkldnn-jit	{'costs': [0.001572]}	1593277730.486424
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(16, 28, 28, 128, 256, 1, 2, 0)	pytorch	mkldnn-jit	{'costs': [0.000358]}	1593277732.407479
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(16, 7, 7, 512, 512, 3, 1, 1)	pytorch	mkldnn-jit	{'costs': [0.001729]}	1593277734.442975
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(1, 128, 12, 64)	pytorch	mkldnn-jit	{'costs': [0.000113]}	1593277736.340526
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(1, 128, 16, 64)	pytorch	mkldnn-jit	{'costs': [0.000135]}	1593277739.286338
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(1, 64, 12, 128)	pytorch	mkldnn-jit	{'costs': [0.000102]}	1593277743.216100
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(1, 128, 12, 128)	pytorch	mkldnn-jit	{'costs': [0.000136]}	1593277745.182449
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(16, 128, 12, 64)	pytorch	mkldnn-jit	{'costs': [0.000799]}	1593277748.110064
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(16, 128, 16, 64)	pytorch	mkldnn-jit	{'costs': [0.00103]}	1593277750.833586
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(16, 64, 12, 128)	pytorch	mkldnn-jit	{'costs': [0.000326]}	1593277753.549945
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(16, 128, 12, 128)	pytorch	mkldnn-jit	{'costs': [0.001422]}	1593277757.375198
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(1, 128, 12, 64)	pytorch	mkldnn	{'costs': [0.0004]}	1594099637.386210
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(1, 128, 16, 64)	pytorch	mkldnn	{'costs': [0.000478]}	1594099638.479961
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(1, 64, 12, 128)	pytorch	mkldnn	{'costs': [0.000112]}	1594099641.383258
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(1, 128, 12, 128)	pytorch	mkldnn	{'costs': [0.000158]}	1594099644.279784
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(16, 128, 12, 64)	pytorch	mkldnn	{'costs': [0.003057]}	1594099646.332206
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(16, 128, 16, 64)	pytorch	mkldnn	{'costs': [0.004309]}	1594099647.441021
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(16, 64, 12, 128)	pytorch	mkldnn	{'costs': [0.000451]}	1594099650.388298
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(16, 128, 12, 128)	pytorch	mkldnn	{'costs': [0.001788]}	1594099652.427131
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(1, 128, 12, 64)	pytorch	mkldnn	{'costs': [0.000418]}	1594099659.099581
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(1, 128, 16, 64)	pytorch	mkldnn	{'costs': [0.000541]}	1594099660.115781
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(1, 64, 12, 128)	pytorch	mkldnn	{'costs': [0.000117]}	1594099662.046449
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(1, 128, 12, 128)	pytorch	mkldnn	{'costs': [0.000529]}	1594099665.034428
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(16, 128, 12, 64)	pytorch	mkldnn	{'costs': [0.002961]}	1594099666.089538
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(16, 128, 16, 64)	pytorch	mkldnn	{'costs': [0.004132]}	1594099667.168561
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(16, 64, 12, 128)	pytorch	mkldnn	{'costs': [0.000442]}	1594099670.150005
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(16, 128, 12, 128)	pytorch	mkldnn	{'costs': [0.004566]}	1594099671.233877
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(1, 128, 12, 64)	pytorch	mkldnn-jit	{'costs': [0.000244]}	1594099673.869435
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(1, 128, 16, 64)	pytorch	mkldnn-jit	{'costs': [0.000309]}	1594099675.391924
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(1, 64, 12, 128)	pytorch	mkldnn-jit	{'costs': [0.000113]}	1594099677.327664
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(1, 128, 12, 128)	pytorch	mkldnn-jit	{'costs': [0.000166]}	1594099680.016511
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(16, 128, 12, 64)	pytorch	mkldnn-jit	{'costs': [0.002273]}	1594099682.064087
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(16, 128, 16, 64)	pytorch	mkldnn-jit	{'costs': [0.001649]}	1594099685.627036
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(16, 64, 12, 128)	pytorch	mkldnn-jit	{'costs': [0.000573]}	1594099687.597561
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(16, 128, 12, 128)	pytorch	mkldnn-jit	{'costs': [0.001805]}	1594099691.404541
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(1, 128, 12, 64)	pytorch	mkldnn-jit	{'costs': [0.00014]}	1594099693.828910
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(1, 128, 16, 64)	pytorch	mkldnn-jit	{'costs': [0.000164]}	1594099697.405074
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(1, 64, 12, 128)	pytorch	mkldnn-jit	{'costs': [0.000112]}	1594099699.318599
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(1, 128, 12, 128)	pytorch	mkldnn-jit	{'costs': [0.000161]}	1594099702.995585
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(16, 128, 12, 64)	pytorch	mkldnn-jit	{'costs': [0.002758]}	1594099705.266988
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(16, 128, 16, 64)	pytorch	mkldnn-jit	{'costs': [0.002891]}	1594099707.271477
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(16, 64, 12, 128)	pytorch	mkldnn-jit	{'costs': [0.000459]}	1594099711.106536
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(16, 128, 12, 128)	pytorch	mkldnn-jit	{'costs': [0.002148]}	1594099714.087470
+
+# Halide
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(1, 128, 128, 128)	halide	adam19-tune	{'costs': [6.2e-05]}	1593147215.593684
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(1, 512, 32, 512)	halide	adam19-tune	{'costs': [6.1e-05]}	1593148837.259244
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(1, 512, 512, 512)	halide	adam19-tune	{'costs': [0.000414]}	1593150463.406202
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(1, 1024, 1024, 1024)	halide	adam19-tune	{'costs': [0.004107]}	1593152130.377964
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(1, 256, 64, 128, 3, 2, 1)	halide	adam19-tune	{'costs': [6.5e-05]}	1593153772.329292
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(1, 128, 128, 256, 1, 2, 0)	halide	adam19-tune	{'costs': [5.7e-05]}	1593155390.113765
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(1, 64, 256, 256, 5, 1, 2)	halide	adam19-tune	{'costs': [0.000125]}	1593156983.502695
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(1, 32, 512, 512, 3, 1, 1)	halide	adam19-tune	{'costs': [0.000167]}	1593158614.202754
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(1, 224, 224, 3, 64, 7, 2, 3)	halide	adam19-tune	{'costs': [0.00022]}	1593160353.462402
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(1, 56, 56, 64, 64, 1, 1, 0)	halide	adam19-tune	{'costs': [6.7e-05]}	1593161954.113801
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(1, 14, 14, 256, 256, 3, 1, 1)	halide	adam19-tune	{'costs': [0.00054]}	1593163595.348414
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(1, 7, 7, 512, 512, 3, 1, 1)	halide	adam19-tune	{'costs': [0.00078]}	1593165283.695624
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(1, 16, 224, 224, 3, 64, 7, 2, 3)	halide	adam19-tune	{'costs': [0.010105]}	1593168210.940897
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(1, 16, 56, 56, 64, 64, 1, 1, 0)	halide	adam19-tune	{'costs': [0.000349]}	1593170094.210297
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(1, 16, 14, 14, 256, 256, 3, 1, 1)	halide	adam19-tune	{'costs': [0.025269]}	1593172147.129504
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(1, 16, 7, 7, 512, 512, 3, 1, 1)	halide	adam19-tune	{'costs': [0.067927]}	1593174459.806624
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(1, 56, 56, 64, 128, 3, 2, 1, 1, 4)	halide	adam19-tune	{'costs': [7.2e-05]}	1593176096.213699
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(1, 56, 56, 64, 64, 1, 1, 0, 1, 4)	halide	adam19-tune	{'costs': [5.8e-05]}	1593177719.094766
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(1, 14, 14, 256, 256, 3, 1, 1, 1, 4)	halide	adam19-tune	{'costs': [9.6e-05]}	1593179374.974474
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(1, 7, 7, 512, 512, 3, 1, 1, 1, 4)	halide	adam19-tune	{'costs': [0.000174]}	1593181023.169252
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(1, 224, 224, 3, 64, 7, 2, 3, 2)	halide	adam19-tune	{'costs': [0.000222]}	1593182761.840661
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(1, 56, 56, 64, 64, 1, 1, 0, 2)	halide	adam19-tune	{'costs': [6.9e-05]}	1593184361.947798
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(1, 14, 14, 256, 256, 3, 1, 1, 2)	halide	adam19-tune	{'costs': [0.000436]}	1593186009.224055
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(1, 7, 7, 512, 512, 3, 1, 1, 2)	halide	adam19-tune	{'costs': [0.000429]}	1593187710.291075
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(1, 112, 112, 32, 3, 1, 1)	halide	adam19-tune	{'costs': [6.5e-05]}	1593189356.546271
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(1, 112, 112, 64, 3, 2, 1)	halide	adam19-tune	{'costs': [5.9e-05]}	1593191049.968517
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(1, 14, 14, 512, 3, 2, 1)	halide	adam19-tune	{'costs': [6e-05]}	1593192758.394261
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(1, 7, 7, 1024, 3, 1, 1)	halide	adam19-tune	{'costs': [6e-05]}	1593194462.941860
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(1, 4, 4, 512, 256, 4, 2, 1)	halide	adam19-tune	{'costs': [0.000767]}	1593196141.375269
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(1, 8, 8, 256, 128, 4, 2, 1)	halide	adam19-tune	{'costs': [0.000601]}	1593197775.850815
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(1, 16, 16, 128, 64, 4, 2, 1)	halide	adam19-tune	{'costs': [0.000242]}	1593199435.426307
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(1, 32, 32, 64, 3, 4, 2, 1)	halide	adam19-tune	{'costs': [9.1e-05]}	1593201041.153228
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(1, 16, 16, 32, 32, 3, 2, 1)	halide	adam19-tune	{'costs': [0.000126]}	1593202775.253201
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(1, 8, 8, 32, 32, 3, 1, 1)	halide	adam19-tune	{'costs': [0.000118]}	1593204489.488527
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(1, 16, 16, 8, 16, 3, 2, 1)	halide	adam19-tune	{'costs': [5.7e-05]}	1593206158.559256
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(1, 8, 8, 16, 16, 3, 1, 1)	halide	adam19-tune	{'costs': [6.4e-05]}	1593207885.654566
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(1, 256, 256)	halide	adam19-tune	{'costs': [0.00011]}	1593209353.332747
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(1, 512, 512)	halide	adam19-tune	{'costs': [0.00044]}	1593210841.286150
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(1, 1024, 1024)	halide	adam19-tune	{'costs': [0.001761]}	1593212319.221040
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(1, 4096, 1024)	halide	adam19-tune	{'costs': [0.007044]}	1593213994.261846
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(1, 224, 224, 3, 64, 7, 2, 3)	halide	adam19-tune	{'costs': [0.000242]}	1593215807.289168
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(1, 56, 56, 64, 128, 3, 2, 1)	halide	adam19-tune	{'costs': [0.000164]}	1593217543.611195
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(1, 28, 28, 128, 256, 1, 2, 0)	halide	adam19-tune	{'costs': [6.5e-05]}	1593219177.467741
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(1, 7, 7, 512, 512, 3, 1, 1)	halide	adam19-tune	{'costs': [0.000769]}	1593220869.567738
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(1, 128, 12, 64)	halide	adam19-tune	{'costs': [7.7e-05]}	1593222479.807311
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(1, 128, 16, 64)	halide	adam19-tune	{'costs': [8.1e-05]}	1593224090.068620
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(1, 64, 12, 128)	halide	adam19-tune	{'costs': [6.5e-05]}	1593225689.219876
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(1, 128, 12, 128)	halide	adam19-tune	{'costs': [9.4e-05]}	1593227313.053825
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(16, 128, 128, 128)	halide	adam19-tune	{'costs': [9.7e-05]}	1593228916.553130
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(16, 512, 32, 512)	halide	adam19-tune	{'costs': [0.000271]}	1593230781.402572
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(16, 512, 512, 512)	halide	adam19-tune	{'costs': [0.006851]}	1593232821.929101
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(16, 1024, 1024, 1024)	halide	adam19-tune	{'costs': [0.067806]}	1593236494.032741
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(16, 256, 64, 128, 3, 2, 1)	halide	adam19-tune	{'costs': [0.000117]}	1593238149.889737
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(16, 128, 128, 256, 1, 2, 0)	halide	adam19-tune	{'costs': [0.000101]}	1593239766.312181
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(16, 64, 256, 256, 5, 1, 2)	halide	adam19-tune	{'costs': [0.001214]}	1593241400.679510
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(16, 32, 512, 512, 3, 1, 1)	halide	adam19-tune	{'costs': [0.001619]}	1593243073.985653
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(16, 224, 224, 3, 64, 7, 2, 3)	halide	adam19-tune	{'costs': [0.002963]}	1593245404.839025
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(16, 56, 56, 64, 64, 1, 1, 0)	halide	adam19-tune	{'costs': [0.000344]}	1593247256.315044
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(16, 14, 14, 256, 256, 3, 1, 1)	halide	adam19-tune	{'costs': [0.007324]}	1593249202.429368
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(16, 7, 7, 512, 512, 3, 1, 1)	halide	adam19-tune	{'costs': [0.009787]}	1593250971.360761
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(16, 16, 224, 224, 3, 64, 7, 2, 3)	halide	adam19-tune	{'costs': [0.168365]}	1593258959.485565
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(16, 16, 56, 56, 64, 64, 1, 1, 0)	halide	adam19-tune	{'costs': [0.006688]}	1593263702.662146
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(16, 16, 14, 14, 256, 256, 3, 1, 1)	halide	adam19-tune	{'costs': [0.395052]}	1593268614.471667
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(16, 16, 7, 7, 512, 512, 3, 1, 1)	halide	adam19-tune	{'costs': [1.23109]}	1593277130.475358
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(16, 56, 56, 64, 128, 3, 2, 1, 1, 4)	halide	adam19-tune	{'costs': [0.000424]}	1593279159.742064
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(16, 56, 56, 64, 64, 1, 1, 0, 1, 4)	halide	adam19-tune	{'costs': [0.000156]}	1593281006.796511
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(16, 14, 14, 256, 256, 3, 1, 1, 1, 4)	halide	adam19-tune	{'costs': [0.00086]}	1593282795.972159
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(16, 7, 7, 512, 512, 3, 1, 1, 1, 4)	halide	adam19-tune	{'costs': [0.002055]}	1593284567.436561
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(16, 224, 224, 3, 64, 7, 2, 3, 2)	halide	adam19-tune	{'costs': [0.003216]}	1593286902.931247
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(16, 56, 56, 64, 64, 1, 1, 0, 2)	halide	adam19-tune	{'costs': [0.000345]}	1593288768.354323
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(16, 14, 14, 256, 256, 3, 1, 1, 2)	halide	adam19-tune	{'costs': [0.005141]}	1593290701.437973
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(16, 7, 7, 512, 512, 3, 1, 1, 2)	halide	adam19-tune	{'costs': [0.004398]}	1593292438.147785
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(16, 112, 112, 32, 3, 1, 1)	halide	adam19-tune	{'costs': [0.000491]}	1593294631.882435
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(16, 112, 112, 64, 3, 2, 1)	halide	adam19-tune	{'costs': [0.000607]}	1593297269.305836
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(16, 14, 14, 512, 3, 2, 1)	halide	adam19-tune	{'costs': [8e-05]}	1593299055.993296
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(16, 7, 7, 1024, 3, 1, 1)	halide	adam19-tune	{'costs': [8.7e-05]}	1593300779.541799
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(16, 4, 4, 512, 256, 4, 2, 1)	halide	adam19-tune	{'costs': [0.009808]}	1593302599.887322
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(16, 8, 8, 256, 128, 4, 2, 1)	halide	adam19-tune	{'costs': [0.007696]}	1593304367.821510
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(16, 16, 16, 128, 64, 4, 2, 1)	halide	adam19-tune	{'costs': [0.003241]}	1593306200.762419
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(16, 32, 32, 64, 3, 4, 2, 1)	halide	adam19-tune	{'costs': [0.000381]}	1593311563.891031
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(16, 16, 16, 32, 32, 3, 2, 1)	halide	adam19-tune	{'costs': [0.001237]}	1593313533.512077
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(16, 8, 8, 32, 32, 3, 1, 1)	halide	adam19-tune	{'costs': [0.00121]}	1593315453.822560
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(16, 16, 16, 8, 16, 3, 2, 1)	halide	adam19-tune	{'costs': [0.000166]}	1593317253.139296
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(16, 8, 8, 16, 16, 3, 1, 1)	halide	adam19-tune	{'costs': [0.000302]}	1593319078.632555
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(16, 256, 256)	halide	adam19-tune	{'costs': [0.000149]}	1593320733.306689
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(16, 512, 512)	halide	adam19-tune	{'costs': [0.000599]}	1593322573.028665
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(16, 1024, 1024)	halide	adam19-tune	{'costs': [0.002779]}	1593325132.434520
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(16, 4096, 1024)	halide	adam19-tune	{'costs': [0.012114]}	1593330375.615073
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(16, 224, 224, 3, 64, 7, 2, 3)	halide	adam19-tune	{'costs': [0.003147]}	1593333175.451930
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(16, 56, 56, 64, 128, 3, 2, 1)	halide	adam19-tune	{'costs': [0.001531]}	1593336027.160527
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(16, 28, 28, 128, 256, 1, 2, 0)	halide	adam19-tune	{'costs': [0.000192]}	1593337750.082443
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(16, 7, 7, 512, 512, 3, 1, 1)	halide	adam19-tune	{'costs': [0.010203]}	1593339589.766036
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(16, 128, 12, 64)	halide	adam19-tune	{'costs': [0.000432]}	1593341505.997968
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(16, 128, 16, 64)	halide	adam19-tune	{'costs': [0.000619]}	1593343543.690378
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(16, 64, 12, 128)	halide	adam19-tune	{'costs': [0.000266]}	1593345417.659382
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(16, 128, 12, 128)	halide	adam19-tune	{'costs': [0.000835]}	1593347484.327224
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(1, 128, 12, 64)	halide	adam19-tune	{'costs': [0.00012]}	1594111013.805693
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(1, 128, 16, 64)	halide	adam19-tune	{'costs': [0.000123]}	1594112917.574494
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(1, 64, 12, 128)	halide	adam19-tune	{'costs': [8.9e-05]}	1594114703.156466
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(1, 128, 12, 128)	halide	adam19-tune	{'costs': [0.000164]}	1594116651.293335
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(16, 128, 12, 64)	halide	adam19-tune	{'costs': [0.000687]}	1594119003.296242
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(16, 128, 16, 64)	halide	adam19-tune	{'costs': [0.001304]}	1594121923.747439
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(16, 64, 12, 128)	halide	adam19-tune	{'costs': [0.00037]}	1594124365.063829
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(16, 128, 12, 128)	halide	adam19-tune	{'costs': [0.001457]}	1594127838.430211
+
+# FlexTensor
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(1, 128, 128, 128)	FlexTensor	default	{'costs': [7e-06]}	1593459514.261018
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(1, 512, 32, 512)	FlexTensor	default	{'costs': [1.4e-05]}	1593459516.410799
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(1, 512, 512, 512)	FlexTensor	default	{'costs': [0.000264]}	1593459523.287402
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(1, 1024, 1024, 1024)	FlexTensor	default	{'costs': [0.002437]}	1593459532.890851
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(1, 256, 64, 128, 3, 2, 1)	FlexTensor	default	{'costs': [9e-06]}	1593459534.859424
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(1, 128, 128, 256, 1, 2, 0)	FlexTensor	default	{'costs': [7e-06]}	1593459538.034181
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(1, 64, 256, 256, 5, 1, 2)	FlexTensor	default	{'costs': [4.7e-05]}	1593459540.927700
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(1, 32, 512, 512, 3, 1, 1)	FlexTensor	default	{'costs': [6.2e-05]}	1593459543.773260
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(1, 224, 224, 3, 64, 7, 2, 3)	FlexTensor	default	{'costs': [0.00024]}	1593459553.260923
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(1, 56, 56, 64, 64, 1, 1, 0)	FlexTensor	default	{'costs': [1.9e-05]}	1593459555.701717
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(1, 14, 14, 256, 256, 3, 1, 1)	FlexTensor	default	{'costs': [0.00038]}	1593459562.548741
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(1, 7, 7, 512, 512, 3, 1, 1)	FlexTensor	default	{'costs': [0.000941]}	1593459565.441496
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(1, 16, 224, 224, 3, 64, 7, 2, 3)	FlexTensor	default	{'costs': [0.010304]}	1593459574.566766
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(1, 16, 56, 56, 64, 64, 1, 1, 0)	FlexTensor	default	{'costs': [0.000273]}	1593459577.354361
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(1, 16, 14, 14, 256, 256, 3, 1, 1)	FlexTensor	default	{'costs': [0.01291]}	1593459580.792234
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(1, 16, 7, 7, 512, 512, 3, 1, 1)	FlexTensor	default	{'costs': [0.021426]}	1593459589.783464
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(1, 56, 56, 64, 128, 3, 2, 1, 1, 4)	FlexTensor	default	{'costs': [2.6e-05]}	1593459592.474030
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(1, 56, 56, 64, 64, 1, 1, 0, 1, 4)	FlexTensor	default	{'costs': [7e-06]}	1593459595.673056
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(1, 14, 14, 256, 256, 3, 1, 1, 1, 4)	FlexTensor	default	{'costs': [7.2e-05]}	1593459596.839103
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(1, 7, 7, 512, 512, 3, 1, 1, 1, 4)	FlexTensor	default	{'costs': [0.000146]}	1593459598.420677
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(1, 224, 224, 3, 64, 7, 2, 3, 2)	FlexTensor	default	{'costs': [0.000281]}	1593459605.763798
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(1, 56, 56, 64, 64, 1, 1, 0, 2)	FlexTensor	default	{'costs': [2.2e-05]}	1593459608.343511
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(1, 14, 14, 256, 256, 3, 1, 1, 2)	FlexTensor	default	{'costs': [0.000171]}	1593459611.677794
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(1, 7, 7, 512, 512, 3, 1, 1, 2)	FlexTensor	default	{'costs': [0.000266]}	1593459615.202801
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(1, 112, 112, 32, 3, 1, 1)	FlexTensor	default	{'costs': [1.3e-05]}	1593459617.240265
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(1, 112, 112, 64, 3, 2, 1)	FlexTensor	default	{'costs': [8e-06]}	1593459619.263786
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(1, 14, 14, 512, 3, 2, 1)	FlexTensor	default	{'costs': [5e-06]}	1593459621.267070
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(1, 7, 7, 1024, 3, 1, 1)	FlexTensor	default	{'costs': [5e-06]}	1593459622.825356
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(1, 4, 4, 512, 256, 4, 2, 1)	FlexTensor	default	{'costs': [0.000531]}	1593459728.548351
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(1, 8, 8, 256, 128, 4, 2, 1)	FlexTensor	default	{'costs': [0.000271]}	1593459729.934428
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(1, 16, 16, 128, 64, 4, 2, 1)	FlexTensor	default	{'costs': [0.00023]}	1593459731.097773
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(1, 32, 32, 64, 3, 4, 2, 1)	FlexTensor	default	{'costs': [6.4e-05]}	1593459733.780860
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(1, 16, 16, 32, 32, 3, 2, 1)	FlexTensor	default	{'costs': [6.5e-05]}	1593459734.974961
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(1, 8, 8, 32, 32, 3, 1, 1)	FlexTensor	default	{'costs': [7.3e-05]}	1593459737.803832
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(1, 16, 16, 8, 16, 3, 2, 1)	FlexTensor	default	{'costs': [1.2e-05]}	1593459740.383542
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(1, 8, 8, 16, 16, 3, 1, 1)	FlexTensor	default	{'costs': [2.5e-05]}	1593459743.147066
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(16, 128, 128, 128)	FlexTensor	default	{'costs': [5.2e-05]}	1593459625.901747
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(16, 512, 32, 512)	FlexTensor	default	{'costs': [0.000179]}	1593459627.075601
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(16, 512, 512, 512)	FlexTensor	default	{'costs': [0.003643]}	1593459628.995317
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(16, 1024, 1024, 1024)	FlexTensor	default	{'costs': [0.04156]}	1593459634.972277
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(16, 256, 64, 128, 3, 2, 1)	FlexTensor	default	{'costs': [7.5e-05]}	1593459636.123009
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(16, 128, 128, 256, 1, 2, 0)	FlexTensor	default	{'costs': [5.3e-05]}	1593459637.282870
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(16, 64, 256, 256, 5, 1, 2)	FlexTensor	default	{'costs': [0.000638]}	1593459645.103438
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(16, 32, 512, 512, 3, 1, 1)	FlexTensor	default	{'costs': [0.000749]}	1593459646.372590
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(16, 224, 224, 3, 64, 7, 2, 3)	FlexTensor	default	{'costs': [0.003761]}	1593459647.971182
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(16, 56, 56, 64, 64, 1, 1, 0)	FlexTensor	default	{'costs': [0.000284]}	1593459649.152706
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(16, 14, 14, 256, 256, 3, 1, 1)	FlexTensor	default	{'costs': [0.003509]}	1593459650.663607
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(16, 7, 7, 512, 512, 3, 1, 1)	FlexTensor	default	{'costs': [0.003892]}	1593459655.288690
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(16, 16, 224, 224, 3, 64, 7, 2, 3)	FlexTensor	default	{'costs': [0.559867]}	1593459665.059616
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(16, 16, 56, 56, 64, 64, 1, 1, 0)	FlexTensor	default	{'costs': [0.006605]}	1593459669.821374
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(16, 16, 14, 14, 256, 256, 3, 1, 1)	FlexTensor	default	{'costs': [0.171727]}	1593459673.530922
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(16, 16, 7, 7, 512, 512, 3, 1, 1)	FlexTensor	default	{'costs': [0.44387]}	1593459686.999016
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(16, 56, 56, 64, 128, 3, 2, 1, 1, 4)	FlexTensor	default	{'costs': [0.000394]}	1593459688.398901
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(16, 56, 56, 64, 64, 1, 1, 0, 1, 4)	FlexTensor	default	{'costs': [0.000119]}	1593459689.551540
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(16, 14, 14, 256, 256, 3, 1, 1, 1, 4)	FlexTensor	default	{'costs': [0.00081]}	1593459690.862686
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(16, 7, 7, 512, 512, 3, 1, 1, 1, 4)	FlexTensor	default	{'costs': [0.000981]}	1593459703.146516
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(16, 224, 224, 3, 64, 7, 2, 3, 2)	FlexTensor	default	{'costs': [0.003329]}	1593459704.608514
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(16, 56, 56, 64, 64, 1, 1, 0, 2)	FlexTensor	default	{'costs': [0.000283]}	1593459705.796490
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(16, 14, 14, 256, 256, 3, 1, 1, 2)	FlexTensor	default	{'costs': [0.002735]}	1593459710.458019
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(16, 7, 7, 512, 512, 3, 1, 1, 2)	FlexTensor	default	{'costs': [0.002292]}	1593459713.585567
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(16, 112, 112, 32, 3, 1, 1)	FlexTensor	default	{'costs': [0.000463]}	1593459716.127564
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(16, 112, 112, 64, 3, 2, 1)	FlexTensor	default	{'costs': [0.000598]}	1593459720.215684
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(16, 14, 14, 512, 3, 2, 1)	FlexTensor	default	{'costs': [1.9e-05]}	1593459722.951966
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(16, 7, 7, 1024, 3, 1, 1)	FlexTensor	default	{'costs': [2.3e-05]}	1593459725.541019
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(16, 4, 4, 512, 256, 4, 2, 1)	FlexTensor	default	{'costs': [0.003831]}	1593459746.641490
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(16, 8, 8, 256, 128, 4, 2, 1)	FlexTensor	default	{'costs': [0.003671]}	1593459748.956902
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(16, 16, 16, 128, 64, 4, 2, 1)	FlexTensor	default	{'costs': [0.002889]}	1593459750.231430
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(16, 32, 32, 64, 3, 4, 2, 1)	FlexTensor	default	{'costs': [0.001454]}	1593459751.392081
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(16, 16, 16, 32, 32, 3, 2, 1)	FlexTensor	default	{'costs': [0.000864]}	1593459752.734601
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(16, 8, 8, 32, 32, 3, 1, 1)	FlexTensor	default	{'costs': [0.00092]}	1593459754.041533
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(16, 16, 16, 8, 16, 3, 2, 1)	FlexTensor	default	{'costs': [0.000115]}	1593459757.026827
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(16, 8, 8, 16, 16, 3, 1, 1)	FlexTensor	default	{'costs': [0.000321]}	1593459760.033341
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(1, 224, 224, 3, 64, 7, 2, 3)	FlexTensor	default	{'costs': [0.000289]}	1593553408.988487
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(1, 56, 56, 64, 128, 3, 2, 1)	FlexTensor	default	{'costs': [0.000179]}	1593553410.707378
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(1, 28, 28, 128, 256, 1, 2, 0)	FlexTensor	default	{'costs': [2e-05]}	1593553413.370664
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(1, 7, 7, 512, 512, 3, 1, 1)	FlexTensor	default	{'costs': [0.000641]}	1593553418.600235
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(16, 224, 224, 3, 64, 7, 2, 3)	FlexTensor	default	{'costs': [0.008896]}	1593553427.200435
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(16, 56, 56, 64, 128, 3, 2, 1)	FlexTensor	default	{'costs': [0.002139]}	1593553430.533926
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(16, 28, 28, 128, 256, 1, 2, 0)	FlexTensor	default	{'costs': [0.000348]}	1593553432.290585
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(16, 7, 7, 512, 512, 3, 1, 1)	FlexTensor	default	{'costs': [0.003353]}	1593553438.911357
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(1, 128, 12, 64)	FlexTensor	default	{'costs': [3.3e-05]}	1593617643.238642
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(1, 128, 16, 64)	FlexTensor	default	{'costs': [6.9e-05]}	1593617644.442769
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(1, 64, 12, 128)	FlexTensor	default	{'costs': [2.1e-05]}	1593617647.002570
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(1, 128, 12, 128)	FlexTensor	default	{'costs': [7e-05]}	1593617648.088260
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(16, 128, 12, 64)	FlexTensor	default	{'costs': [0.000731]}	1593617651.022422
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(16, 128, 16, 64)	FlexTensor	default	{'costs': [0.001542]}	1593617654.523119
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(16, 64, 12, 128)	FlexTensor	default	{'costs': [0.000292]}	1593617657.852480
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(16, 128, 12, 128)	FlexTensor	default	{'costs': [0.001212]}	1593617661.287450
+
+# AutoTVM
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(1, 128, 128, 128)	AutoTVM	default	{'costs': [1e-05]}	1593334493.423112
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(1, 512, 32, 512)	AutoTVM	default	{'costs': [3.7e-05]}	1593334497.753366
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(1, 512, 512, 512)	AutoTVM	default	{'costs': [0.000529]}	1593334501.957920
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(1, 1024, 1024, 1024)	AutoTVM	default	{'costs': [0.004267]}	1593334506.149572
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(16, 128, 128, 128)	AutoTVM	default	{'costs': [0.000126]}	1593334510.290874
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(16, 512, 32, 512)	AutoTVM	default	{'costs': [0.000528]}	1593334514.508965
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(16, 512, 512, 512)	AutoTVM	default	{'costs': [0.008926]}	1593334517.539048
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(16, 1024, 1024, 1024)	AutoTVM	default	{'costs': [0.074592]}	1593334521.534268
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(1, 256, 64, 128, 3, 2, 1)	AutoTVM	default	{'costs': [1.1e-05]}	1593334523.800628
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(1, 128, 128, 256, 1, 2, 0)	AutoTVM	default	{'costs': [1e-05]}	1593334525.846895
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(1, 64, 256, 256, 5, 1, 2)	AutoTVM	default	{'costs': [7.8e-05]}	1593334528.796093
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(1, 32, 512, 512, 3, 1, 1)	AutoTVM	default	{'costs': [0.00011]}	1593334531.310739
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(16, 256, 64, 128, 3, 2, 1)	AutoTVM	default	{'costs': [0.000112]}	1593334534.350692
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(16, 128, 128, 256, 1, 2, 0)	AutoTVM	default	{'costs': [7e-05]}	1593334536.007897
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(16, 64, 256, 256, 5, 1, 2)	AutoTVM	default	{'costs': [0.001118]}	1593334539.120884
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(16, 32, 512, 512, 3, 1, 1)	AutoTVM	default	{'costs': [0.001592]}	1593334541.916606
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(1, 224, 224, 3, 64, 7, 2, 3)	AutoTVM	default	{'costs': [0.000555]}	1593334544.547047
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(1, 56, 56, 64, 64, 1, 1, 0)	AutoTVM	default	{'costs': [5.1e-05]}	1593334547.090006
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(1, 14, 14, 256, 256, 3, 1, 1)	AutoTVM	default	{'costs': [0.000199]}	1593334549.591046
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(1, 7, 7, 512, 512, 3, 1, 1)	AutoTVM	default	{'costs': [0.000219]}	1593334553.434398
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(16, 224, 224, 3, 64, 7, 2, 3)	AutoTVM	default	{'costs': [0.006483]}	1593334557.341608
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(16, 56, 56, 64, 64, 1, 1, 0)	AutoTVM	default	{'costs': [0.00066]}	1593334561.115642
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(16, 14, 14, 256, 256, 3, 1, 1)	AutoTVM	default	{'costs': [0.003331]}	1593334563.838670
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(16, 7, 7, 512, 512, 3, 1, 1)	AutoTVM	default	{'costs': [0.004148]}	1593334566.659207
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(1, 16, 224, 224, 3, 64, 7, 2, 3)	AutoTVM	default	{'costs': [0.009783]}	1593334569.124177
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(1, 16, 56, 56, 64, 64, 1, 1, 0)	AutoTVM	default	{'costs': [0.0009]}	1593334572.949632
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(1, 16, 14, 14, 256, 256, 3, 1, 1)	AutoTVM	default	{'costs': [0.007825]}	1593334575.312959
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(1, 16, 7, 7, 512, 512, 3, 1, 1)	AutoTVM	default	{'costs': [0.008573]}	1593334577.681618
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(16, 16, 224, 224, 3, 64, 7, 2, 3)	AutoTVM	default	{'costs': [0.182112]}	1593334585.618605
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(16, 16, 56, 56, 64, 64, 1, 1, 0)	AutoTVM	default	{'costs': [0.02086]}	1593334589.470297
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(16, 16, 14, 14, 256, 256, 3, 1, 1)	AutoTVM	default	{'costs': [0.169472]}	1593334595.787631
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(16, 16, 7, 7, 512, 512, 3, 1, 1)	AutoTVM	default	{'costs': [0.179029]}	1593334602.294915
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(1, 56, 56, 64, 128, 3, 2, 1, 1, 4)	AutoTVM	default	{'costs': [5.1e-05]}	1593334605.441695
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(1, 56, 56, 64, 64, 1, 1, 0, 1, 4)	AutoTVM	default	{'costs': [2e-05]}	1593334608.443205
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(1, 14, 14, 256, 256, 3, 1, 1, 1, 4)	AutoTVM	default	{'costs': [6.4e-05]}	1593334610.398317
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(1, 7, 7, 512, 512, 3, 1, 1, 1, 4)	AutoTVM	default	{'costs': [0.000149]}	1593334613.639366
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(16, 56, 56, 64, 128, 3, 2, 1, 1, 4)	AutoTVM	default	{'costs': [0.00101]}	1593334616.896836
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(16, 56, 56, 64, 64, 1, 1, 0, 1, 4)	AutoTVM	default	{'costs': [0.000218]}	1593334620.158019
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(16, 14, 14, 256, 256, 3, 1, 1, 1, 4)	AutoTVM	default	{'costs': [0.000967]}	1593334622.129261
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(16, 7, 7, 512, 512, 3, 1, 1, 1, 4)	AutoTVM	default	{'costs': [0.002243]}	1593334624.128623
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(1, 224, 224, 3, 64, 7, 2, 3, 2)	AutoTVM	default	{'costs': [0.000296]}	1593334627.327042
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(1, 56, 56, 64, 64, 1, 1, 0, 2)	AutoTVM	default	{'costs': [2.3e-05]}	1593334630.450489
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(1, 14, 14, 256, 256, 3, 1, 1, 2)	AutoTVM	default	{'costs': [0.000333]}	1593334632.428760
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(1, 7, 7, 512, 512, 3, 1, 1, 2)	AutoTVM	default	{'costs': [0.000352]}	1593334635.646806
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(16, 224, 224, 3, 64, 7, 2, 3, 2)	AutoTVM	default	{'costs': [0.004808]}	1593334637.694888
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(16, 56, 56, 64, 64, 1, 1, 0, 2)	AutoTVM	default	{'costs': [0.000374]}	1593334640.909330
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(16, 14, 14, 256, 256, 3, 1, 1, 2)	AutoTVM	default	{'costs': [0.004721]}	1593334642.966954
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(16, 7, 7, 512, 512, 3, 1, 1, 2)	AutoTVM	default	{'costs': [0.004708]}	1593334644.959545
+#Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(1, 112, 112, 32, 3, 1, 1)	AutoTVM	default	{'costs': [0.00022]}	1593334649.110008
+#Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(1, 112, 112, 64, 3, 2, 1)	AutoTVM	default	{'costs': [0.000392]}	1593334653.056216
+#Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(1, 14, 14, 512, 3, 2, 1)	AutoTVM	default	{'costs': [6.4e-05]}	1593334656.993140
+#Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(1, 7, 7, 1024, 3, 1, 1)	AutoTVM	default	{'costs': [3.8e-05]}	1593334660.830743
+#Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(16, 112, 112, 32, 3, 1, 1)	AutoTVM	default	{'costs': [0.005858]}	1593334664.762606
+#Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(16, 112, 112, 64, 3, 2, 1)	AutoTVM	default	{'costs': [0.010149]}	1593334667.780096
+#Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(16, 14, 14, 512, 3, 2, 1)	AutoTVM	default	{'costs': [0.000983]}	1593334671.647590
+#Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(16, 7, 7, 1024, 3, 1, 1)	AutoTVM	default	{'costs': [0.000586]}	1593334674.233608
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(1, 112, 112, 32, 3, 1, 1)	AutoTVM	default	{'costs': [4.5e-05]}	1593615313.768582
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(1, 112, 112, 64, 3, 2, 1)	AutoTVM	default	{'costs': [2.6e-05]}	1593615318.456679
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(1, 14, 14, 512, 3, 2, 1)	AutoTVM	default	{'costs': [1.3e-05]}	1593615323.126970
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(1, 7, 7, 1024, 3, 1, 1)	AutoTVM	default	{'costs': [1.3e-05]}	1593615327.212434
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(16, 112, 112, 32, 3, 1, 1)	AutoTVM	default	{'costs': [0.001389]}	1593615331.860919
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(16, 112, 112, 64, 3, 2, 1)	AutoTVM	default	{'costs': [0.000905]}	1593615337.160601
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(16, 14, 14, 512, 3, 2, 1)	AutoTVM	default	{'costs': [0.000166]}	1593615341.835500
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(16, 7, 7, 1024, 3, 1, 1)	AutoTVM	default	{'costs': [0.000159]}	1593615346.503658
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(1, 4, 4, 512, 256, 4, 2, 1)	AutoTVM	default	{'costs': [0.001351]}	1593334677.909411
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(1, 8, 8, 256, 128, 4, 2, 1)	AutoTVM	default	{'costs': [0.000531]}	1593334681.906490
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(1, 16, 16, 128, 64, 4, 2, 1)	AutoTVM	default	{'costs': [0.000407]}	1593334685.985372
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(1, 32, 32, 64, 3, 4, 2, 1)	AutoTVM	default	{'costs': [0.000391]}	1593334690.046514
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(16, 4, 4, 512, 256, 4, 2, 1)	AutoTVM	default	{'costs': [0.005684]}	1593334693.657157
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(16, 8, 8, 256, 128, 4, 2, 1)	AutoTVM	default	{'costs': [0.0045]}	1593334697.939469
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(16, 16, 16, 128, 64, 4, 2, 1)	AutoTVM	default	{'costs': [0.005308]}	1593334702.270530
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(16, 32, 32, 64, 3, 4, 2, 1)	AutoTVM	default	{'costs': [0.006779]}	1593334706.560858
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(1, 16, 16, 32, 32, 3, 2, 1)	AutoTVM	default	{'costs': [0.000125]}	1593334710.675859
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(1, 8, 8, 32, 32, 3, 1, 1)	AutoTVM	default	{'costs': [0.000114]}	1593334713.571089
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(1, 16, 16, 8, 16, 3, 2, 1)	AutoTVM	default	{'costs': [2.4e-05]}	1593334717.521295
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(1, 8, 8, 16, 16, 3, 1, 1)	AutoTVM	default	{'costs': [3.3e-05]}	1593334721.683544
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(16, 16, 16, 32, 32, 3, 2, 1)	AutoTVM	default	{'costs': [0.002117]}	1593334724.566545
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(16, 8, 8, 32, 32, 3, 1, 1)	AutoTVM	default	{'costs': [0.001659]}	1593334727.483054
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(16, 16, 16, 8, 16, 3, 2, 1)	AutoTVM	default	{'costs': [0.000286]}	1593334731.411146
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(16, 8, 8, 16, 16, 3, 1, 1)	AutoTVM	default	{'costs': [0.000422]}	1593334735.419353
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(1, 256, 256)	AutoTVM	default	{'costs': [7.5e-05]}	1593334738.308943
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(1, 512, 512)	AutoTVM	default	{'costs': [0.000303]}	1593334739.837610
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(1, 1024, 1024)	AutoTVM	default	{'costs': [0.00121]}	1593334741.375465
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(1, 4096, 1024)	AutoTVM	default	{'costs': [0.004845]}	1593334742.989965
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(16, 256, 256)	AutoTVM	default	{'costs': [8e-05]}	1593334744.522742
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(16, 512, 512)	AutoTVM	default	{'costs': [0.000312]}	1593334747.486457
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(16, 1024, 1024)	AutoTVM	default	{'costs': [0.001278]}	1593334750.607718
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(16, 4096, 1024)	AutoTVM	default	{'costs': [0.005077]}	1593334754.233659
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(1, 224, 224, 3, 64, 7, 2, 3)	AutoTVM	default	{'costs': [0.00057]}	1593334758.982134
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(1, 56, 56, 64, 128, 3, 2, 1)	AutoTVM	default	{'costs': [0.000131]}	1593334761.991241
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(1, 28, 28, 128, 256, 1, 2, 0)	AutoTVM	default	{'costs': [2.9e-05]}	1593334764.943387
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(1, 7, 7, 512, 512, 3, 1, 1)	AutoTVM	default	{'costs': [0.000269]}	1593334769.402861
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(16, 224, 224, 3, 64, 7, 2, 3)	AutoTVM	default	{'costs': [0.003833]}	1593334772.493355
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(16, 56, 56, 64, 128, 3, 2, 1)	AutoTVM	default	{'costs': [0.001891]}	1593334777.010994
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(16, 28, 28, 128, 256, 1, 2, 0)	AutoTVM	default	{'costs': [0.000207]}	1593334781.174050
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(16, 7, 7, 512, 512, 3, 1, 1)	AutoTVM	default	{'costs': [0.003055]}	1593334784.329368
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(1, 128, 12, 64)	AutoTVM	default	{'costs': [4.7e-05]}	1593334786.474946
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(1, 128, 16, 64)	AutoTVM	default	{'costs': [6e-05]}	1593334788.620100
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(1, 64, 12, 128)	AutoTVM	default	{'costs': [3.6e-05]}	1593334791.962972
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(1, 128, 12, 128)	AutoTVM	default	{'costs': [7.8e-05]}	1593334795.327807
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(16, 128, 12, 64)	AutoTVM	default	{'costs': [0.000443]}	1593334798.782425
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(16, 128, 16, 64)	AutoTVM	default	{'costs': [0.000821]}	1593334802.308745
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(16, 64, 12, 128)	AutoTVM	default	{'costs': [0.000283]}	1593334805.775727
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(16, 128, 12, 128)	AutoTVM	default	{'costs': [0.001282]}	1593334809.231729
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(1, 128, 12, 64)	AutoTVM	default	{'costs': [7.8e-05]}	1594146914.151486
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(1, 128, 16, 64)	AutoTVM	default	{'costs': [0.000112]}	1594146916.469008
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(1, 64, 12, 128)	AutoTVM	default	{'costs': [4.4e-05]}	1594146919.888357
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(1, 128, 12, 128)	AutoTVM	default	{'costs': [0.000109]}	1594146923.325906
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(16, 128, 12, 64)	AutoTVM	default	{'costs': [0.001059]}	1594146926.846095
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(16, 128, 16, 64)	AutoTVM	default	{'costs': [0.001884]}	1594146930.395124
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(16, 64, 12, 128)	AutoTVM	default	{'costs': [0.000393]}	1594146932.511273
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(16, 128, 12, 128)	AutoTVM	default	{'costs': [0.001978]}	1594146936.066784
+
+
+# Ours
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(1, 128, 128, 128)	ours	default	{'costs': [6e-06]}	1593586495.582533
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(16, 128, 128, 128)	ours	default	{'costs': [4.3e-05]}	1593586498.033652
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(1, 512, 32, 512)	ours	default	{'costs': [1.3e-05]}	1593586501.113158
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(16, 512, 32, 512)	ours	default	{'costs': [0.000166]}	1593586505.275059
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(1, 512, 512, 512)	ours	default	{'costs': [0.000252]}	1593586508.140421
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(16, 512, 512, 512)	ours	default	{'costs': [0.003871]}	1593586514.242000
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(1, 1024, 1024, 1024)	ours	default	{'costs': [0.001927]}	1593586521.703597
+Intel-Platinum-8124M-3.00GHz	cpu	op	GMM(16, 1024, 1024, 1024)	ours	default	{'costs': [0.040127]}	1593586582.772136
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(1, 256, 64, 128, 3, 2, 1)	ours	default	{'costs': [8e-06]}	1593586585.937866
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(16, 256, 64, 128, 3, 2, 1)	ours	default	{'costs': [6.7e-05]}	1593586588.627827
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(1, 128, 128, 256, 1, 2, 0)	ours	default	{'costs': [5e-06]}	1593586591.264275
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(16, 128, 128, 256, 1, 2, 0)	ours	default	{'costs': [4.8e-05]}	1593586593.786259
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(1, 64, 256, 256, 5, 1, 2)	ours	default	{'costs': [3.8e-05]}	1593586597.713663
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(16, 64, 256, 256, 5, 1, 2)	ours	default	{'costs': [0.000519]}	1593586602.535448
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(1, 32, 512, 512, 3, 1, 1)	ours	default	{'costs': [5.6e-05]}	1593586606.578414
+Intel-Platinum-8124M-3.00GHz	cpu	op	C1D(16, 32, 512, 512, 3, 1, 1)	ours	default	{'costs': [0.000657]}	1593586611.536185
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(1, 224, 224, 3, 64, 7, 2, 3)	ours	default	{'costs': [0.000159]}	1593586614.344265
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(16, 224, 224, 3, 64, 7, 2, 3)	ours	default	{'costs': [0.002383]}	1593586619.653538
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(1, 56, 56, 64, 64, 1, 1, 0)	ours	default	{'costs': [1.8e-05]}	1593586623.033785
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(16, 56, 56, 64, 64, 1, 1, 0)	ours	default	{'costs': [0.000239]}	1593586627.315048
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(1, 14, 14, 256, 256, 3, 1, 1)	ours	default	{'costs': [0.000184]}	1593586630.465974
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(16, 14, 14, 256, 256, 3, 1, 1)	ours	default	{'costs': [0.002852]}	1593586639.125733
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(1, 7, 7, 512, 512, 3, 1, 1)	ours	default	{'costs': [0.000268]}	1593586644.233730
+Intel-Platinum-8124M-3.00GHz	cpu	op	C2D(16, 7, 7, 512, 512, 3, 1, 1)	ours	default	{'costs': [0.003176]}	1593586654.752122
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(1, 16, 224, 224, 3, 64, 7, 2, 3)	ours	default	{'costs': [0.007772]}	1593586665.961345
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(16, 16, 224, 224, 3, 64, 7, 2, 3)	ours	default	{'costs': [0.126801]}	1593586803.749661
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(1, 16, 56, 56, 64, 64, 1, 1, 0)	ours	default	{'costs': [0.00023]}	1593586808.076177
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(16, 16, 56, 56, 64, 64, 1, 1, 0)	ours	default	{'costs': [0.006592]}	1593586819.987727
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(1, 16, 14, 14, 256, 256, 3, 1, 1)	ours	default	{'costs': [0.007656]}	1593586840.980304
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(16, 16, 14, 14, 256, 256, 3, 1, 1)	ours	default	{'costs': [0.114956]}	1593587132.896335
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(1, 16, 7, 7, 512, 512, 3, 1, 1)	ours	default	{'costs': [0.009756]}	1593587163.167712
+Intel-Platinum-8124M-3.00GHz	cpu	op	C3D(16, 16, 7, 7, 512, 512, 3, 1, 1)	ours	default	{'costs': [0.138975]}	1593587594.172287
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(1, 56, 56, 64, 128, 3, 2, 1, 1, 4)	ours	default	{'costs': [2.2e-05]}	1593587598.011402
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(16, 56, 56, 64, 128, 3, 2, 1, 1, 4)	ours	default	{'costs': [0.000335]}	1593587602.612255
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(1, 56, 56, 64, 64, 1, 1, 0, 1, 4)	ours	default	{'costs': [7e-06]}	1593587606.416124
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(16, 56, 56, 64, 64, 1, 1, 0, 1, 4)	ours	default	{'costs': [9.2e-05]}	1593587610.634756
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(1, 14, 14, 256, 256, 3, 1, 1, 1, 4)	ours	default	{'costs': [5.3e-05]}	1593587613.326061
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(16, 14, 14, 256, 256, 3, 1, 1, 1, 4)	ours	default	{'costs': [0.000633]}	1593587618.283762
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(1, 7, 7, 512, 512, 3, 1, 1, 1, 4)	ours	default	{'costs': [8.3e-05]}	1593587622.904782
+Intel-Platinum-8124M-3.00GHz	cpu	op	GRP(16, 7, 7, 512, 512, 3, 1, 1, 1, 4)	ours	default	{'costs': [0.001071]}	1593587628.734350
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(1, 224, 224, 3, 64, 7, 2, 3, 2)	ours	default	{'costs': [0.000183]}	1593587632.738481
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(16, 224, 224, 3, 64, 7, 2, 3, 2)	ours	default	{'costs': [0.002986]}	1593587639.293453
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(1, 56, 56, 64, 64, 1, 1, 0, 2)	ours	default	{'costs': [1.7e-05]}	1593587642.709283
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(16, 56, 56, 64, 64, 1, 1, 0, 2)	ours	default	{'costs': [0.000238]}	1593587646.990879
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(1, 14, 14, 256, 256, 3, 1, 1, 2)	ours	default	{'costs': [0.000142]}	1593587651.622245
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(16, 14, 14, 256, 256, 3, 1, 1, 2)	ours	default	{'costs': [0.00209]}	1593587660.198854
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(1, 7, 7, 512, 512, 3, 1, 1, 2)	ours	default	{'costs': [0.000154]}	1593587664.798896
+Intel-Platinum-8124M-3.00GHz	cpu	op	DIL(16, 7, 7, 512, 512, 3, 1, 1, 2)	ours	default	{'costs': [0.001825]}	1593587673.335176
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(1, 112, 112, 32, 3, 1, 1)	ours	default	{'costs': [9e-06]}	1593587676.385701
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(16, 112, 112, 32, 3, 1, 1)	ours	default	{'costs': [0.000415]}	1593587681.002813
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(1, 112, 112, 64, 3, 2, 1)	ours	default	{'costs': [6e-06]}	1593587683.888782
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(16, 112, 112, 64, 3, 2, 1)	ours	default	{'costs': [0.000564]}	1593587688.731808
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(1, 14, 14, 512, 3, 2, 1)	ours	default	{'costs': [4e-06]}	1593587691.492301
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(16, 14, 14, 512, 3, 2, 1)	ours	default	{'costs': [1.5e-05]}	1593587694.889301
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(1, 7, 7, 1024, 3, 1, 1)	ours	default	{'costs': [4e-06]}	1593587698.840904
+Intel-Platinum-8124M-3.00GHz	cpu	op	DEP(16, 7, 7, 1024, 3, 1, 1)	ours	default	{'costs': [1.9e-05]}	1593587702.465904
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(1, 4, 4, 512, 256, 4, 2, 1)	ours	default	{'costs': [0.000128]}	1593600648.989759
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(16, 4, 4, 512, 256, 4, 2, 1)	ours	default	{'costs': [0.000994]}	1593600661.008044
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(1, 8, 8, 256, 128, 4, 2, 1)	ours	default	{'costs': [9.2e-05]}	1593600666.155998
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(16, 8, 8, 256, 128, 4, 2, 1)	ours	default	{'costs': [0.000882]}	1593600679.631833
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(1, 16, 16, 128, 64, 4, 2, 1)	ours	default	{'costs': [5.4e-05]}	1593600684.338362
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(16, 16, 16, 128, 64, 4, 2, 1)	ours	default	{'costs': [0.001089]}	1593600691.380982
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(1, 32, 32, 64, 3, 4, 2, 1)	ours	default	{'costs': [2e-05]}	1593600695.928683
+Intel-Platinum-8124M-3.00GHz	cpu	op	T2D(16, 32, 32, 64, 3, 4, 2, 1)	ours	default	{'costs': [0.000273]}	1593600701.425716
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(1, 16, 16, 32, 32, 3, 2, 1)	ours	default	{'costs': [6e-05]}	1593587764.727113
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(16, 16, 16, 32, 32, 3, 2, 1)	ours	default	{'costs': [0.000883]}	1593587773.346097
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(1, 8, 8, 32, 32, 3, 1, 1)	ours	default	{'costs': [5.6e-05]}	1593587777.778642
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(16, 8, 8, 32, 32, 3, 1, 1)	ours	default	{'costs': [0.00095]}	1593587781.521574
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(1, 16, 16, 8, 16, 3, 2, 1)	ours	default	{'costs': [1e-05]}	1593587784.998069
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(16, 16, 16, 8, 16, 3, 2, 1)	ours	default	{'costs': [0.000104]}	1593587788.092783
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(1, 8, 8, 16, 16, 3, 1, 1)	ours	default	{'costs': [1.8e-05]}	1593587791.860530
+Intel-Platinum-8124M-3.00GHz	cpu	op	CAP(16, 8, 8, 16, 16, 3, 1, 1)	ours	default	{'costs': [0.000191]}	1593587796.351940
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(1, 256, 256)	ours	default	{'costs': [2e-06]}	1593587799.534305
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(16, 256, 256)	ours	default	{'costs': [5e-06]}	1593587803.509982
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(1, 512, 512)	ours	default	{'costs': [1.8e-05]}	1593587806.923919
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(16, 512, 512)	ours	default	{'costs': [2.9e-05]}	1593587810.467641
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(1, 1024, 1024)	ours	default	{'costs': [6.1e-05]}	1593587814.012962
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(16, 1024, 1024)	ours	default	{'costs': [0.000433]}	1593587818.028253
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(1, 4096, 1024)	ours	default	{'costs': [0.000236]}	1593587821.847798
+Intel-Platinum-8124M-3.00GHz	cpu	op	NRM(16, 4096, 1024)	ours	default	{'costs': [0.002332]}	1593587829.982040
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(1, 224, 224, 3, 64, 7, 2, 3)	ours	default	{'costs': [0.000179]}	1593587834.317917
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(1, 56, 56, 64, 128, 3, 2, 1)	ours	default	{'costs': [8.6e-05]}	1593587844.183230
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(1, 28, 28, 128, 256, 1, 2, 0)	ours	default	{'costs': [1.8e-05]}	1593587851.835438
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(1, 7, 7, 512, 512, 3, 1, 1)	ours	default	{'costs': [0.000297]}	1593587864.469640
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(16, 224, 224, 3, 64, 7, 2, 3)	ours	default	{'costs': [0.002579]}	1593587840.038217
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(16, 56, 56, 64, 128, 3, 2, 1)	ours	default	{'costs': [0.001221]}	1593587848.431683
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(16, 28, 28, 128, 256, 1, 2, 0)	ours	default	{'costs': [0.000134]}	1593587854.711973
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	conv2d_bn_relu(16, 7, 7, 512, 512, 3, 1, 1)	ours	default	{'costs': [0.00344]}	1593587874.710175
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(1, 128, 12, 64)	ours	default	{'costs': [2.5e-05]}	1593587878.350880
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(1, 128, 16, 64)	ours	default	{'costs': [3.3e-05]}	1593587886.667532
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(1, 64, 12, 128)	ours	default	{'costs': [1.7e-05]}	1593587894.859693
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(1, 128, 12, 128)	ours	default	{'costs': [4.3e-05]}	1593587902.896591
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(16, 128, 12, 64)	ours	default	{'costs': [0.00034]}	1593587882.770827
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(16, 128, 16, 64)	ours	default	{'costs': [0.000787]}	1593587891.344546
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(16, 64, 12, 128)	ours	default	{'costs': [0.000186]}	1593587899.014936
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul(16, 128, 12, 128)	ours	default	{'costs': [0.000865]}	1593587907.632425
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(1, 128, 12, 64)	ours	default	{'costs': [5.7e-05]}	1594099277.292974
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(1, 128, 16, 64)	ours	default	{'costs': [7.8e-05]}	1594099287.652051
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(1, 64, 12, 128)	ours	default	{'costs': [3.1e-05]}	1594099296.759920
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(1, 128, 12, 128)	ours	default	{'costs': [0.000106]}	1594099304.250883
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(16, 128, 12, 64)	ours	default	{'costs': [0.000767]}	1594099282.333097
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(16, 128, 16, 64)	ours	default	{'costs': [0.001151]}	1594099292.591785
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(16, 64, 12, 128)	ours	default	{'costs': [0.000296]}	1594099300.245822
+Intel-Platinum-8124M-3.00GHz	cpu	subgraph	transpose_batch_matmul_softmax(16, 128, 12, 128)	ours	default	{'costs': [0.001457]}	1594099309.585870
+
+#############################################################
+############### NVIDIA GPU Single Op & Subgraph #############
+#############################################################
+# PyTorch
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(1, 224, 224, 3, 64, 7, 2, 3)	pytorch	cudnn	{'costs': [0.000142]}	1593655496.177173
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(1, 56, 56, 64, 128, 3, 2, 1)	pytorch	cudnn	{'costs': [0.000141]}	1593655499.122097
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(1, 28, 28, 128, 256, 1, 2, 0)	pytorch	cudnn	{'costs': [0.000143]}	1593655501.070332
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(1, 7, 7, 512, 512, 3, 1, 1)	pytorch	cudnn	{'costs': [0.000154]}	1593655503.041262
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(16, 224, 224, 3, 64, 7, 2, 3)	pytorch	cudnn	{'costs': [0.000821]}	1593655505.065301
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(16, 56, 56, 64, 128, 3, 2, 1)	pytorch	cudnn	{'costs': [0.000237]}	1593655508.063817
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(16, 28, 28, 128, 256, 1, 2, 0)	pytorch	cudnn	{'costs': [0.000142]}	1593655510.019588
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(16, 7, 7, 512, 512, 3, 1, 1)	pytorch	cudnn	{'costs': [0.000287]}	1593655513.028293
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(1, 128, 12, 64)	pytorch	cudnn	{'costs': [7.4e-05]}	1593655515.041733
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(1, 128, 16, 64)	pytorch	cudnn	{'costs': [7.4e-05]}	1593655517.949608
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(1, 64, 12, 128)	pytorch	cudnn	{'costs': [7.4e-05]}	1593655521.815787
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(1, 128, 12, 128)	pytorch	cudnn	{'costs': [7.4e-05]}	1593655528.676862
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(16, 128, 12, 64)	pytorch	cudnn	{'costs': [9.3e-05]}	1593655532.587167
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(16, 128, 16, 64)	pytorch	cudnn	{'costs': [0.000118]}	1593655535.571508
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(16, 64, 12, 128)	pytorch	cudnn	{'costs': [8.6e-05]}	1593655537.517606
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(16, 128, 12, 128)	pytorch	cudnn	{'costs': [0.000157]}	1593655539.541645
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(1, 224, 224, 3, 64, 7, 2, 3)	pytorch	cudnn-jit	{'costs': [0.000133]}	1593655545.399723
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(1, 56, 56, 64, 128, 3, 2, 1)	pytorch	cudnn-jit	{'costs': [0.000134]}	1593655547.349748
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(1, 28, 28, 128, 256, 1, 2, 0)	pytorch	cudnn-jit	{'costs': [0.000133]}	1593655549.305179
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(1, 7, 7, 512, 512, 3, 1, 1)	pytorch	cudnn-jit	{'costs': [0.000151]}	1593655552.273367
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(16, 224, 224, 3, 64, 7, 2, 3)	pytorch	cudnn-jit	{'costs': [0.000821]}	1593655554.301689
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(16, 56, 56, 64, 128, 3, 2, 1)	pytorch	cudnn-jit	{'costs': [0.000237]}	1593655557.305114
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(16, 28, 28, 128, 256, 1, 2, 0)	pytorch	cudnn-jit	{'costs': [0.000134]}	1593655560.263154
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(16, 7, 7, 512, 512, 3, 1, 1)	pytorch	cudnn-jit	{'costs': [0.000287]}	1593655562.278431
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(1, 128, 12, 64)	pytorch	cudnn-jit	{'costs': [8.2e-05]}	1593655564.185647
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(1, 128, 16, 64)	pytorch	cudnn-jit	{'costs': [8.1e-05]}	1593655566.102557
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(1, 64, 12, 128)	pytorch	cudnn-jit	{'costs': [8.2e-05]}	1593655567.987978
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(1, 128, 12, 128)	pytorch	cudnn-jit	{'costs': [8.2e-05]}	1593655569.896800
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(16, 128, 12, 64)	pytorch	cudnn-jit	{'costs': [9.2e-05]}	1593655572.786289
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(16, 128, 16, 64)	pytorch	cudnn-jit	{'costs': [0.000118]}	1593655574.770607
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(16, 64, 12, 128)	pytorch	cudnn-jit	{'costs': [8.6e-05]}	1593655577.687017
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(16, 128, 12, 128)	pytorch	cudnn-jit	{'costs': [0.000157]}	1593655579.702269
+#Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(1, 128, 12, 64)	pytorch	cudnn	{'costs': [0.000101]}	1594144250.718778
+#Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(1, 128, 16, 64)	pytorch	cudnn	{'costs': [0.000101]}	1594144254.635541
+#Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(1, 64, 12, 128)	pytorch	cudnn	{'costs': [0.000102]}	1594144256.559587
+#Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(1, 128, 12, 128)	pytorch	cudnn	{'costs': [0.000102]}	1594144260.462761
+#Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(16, 128, 12, 64)	pytorch	cudnn	{'costs': [0.000126]}	1594144264.379134
+#Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(16, 128, 16, 64)	pytorch	cudnn	{'costs': [0.000162]}	1594144266.368202
+#Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(16, 64, 12, 128)	pytorch	cudnn	{'costs': [0.000101]}	1594144269.266666
+#Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(16, 128, 12, 128)	pytorch	cudnn	{'costs': [0.000191]}	1594144272.290665
+#Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(1, 128, 12, 64)	pytorch	cudnn-jit	{'costs': [0.000103]}	1594144339.110374
+#Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(1, 128, 16, 64)	pytorch	cudnn-jit	{'costs': [0.000102]}	1594144342.024149
+#Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(1, 64, 12, 128)	pytorch	cudnn-jit	{'costs': [0.000104]}	1594144343.935121
+#Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(1, 128, 12, 128)	pytorch	cudnn-jit	{'costs': [0.000106]}	1594144346.832516
+#Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(16, 128, 12, 64)	pytorch	cudnn-jit	{'costs': [0.000126]}	1594144350.749687
+#Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(16, 128, 16, 64)	pytorch	cudnn-jit	{'costs': [0.000162]}	1594144352.747970
+#Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(16, 64, 12, 128)	pytorch	cudnn-jit	{'costs': [0.000104]}	1594144355.650715
+#Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(16, 128, 12, 128)	pytorch	cudnn-jit	{'costs': [0.000191]}	1594144358.672665
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(1, 128, 12, 64)	pytorch	cudnn	{'costs': [8.9e-05]}	1597937611.593683
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(1, 128, 16, 64)	pytorch	cudnn	{'costs': [8.8e-05]}	1597937615.491675
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(1, 64, 12, 128)	pytorch	cudnn	{'costs': [8.9e-05]}	1597937617.408525
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(1, 128, 12, 128)	pytorch	cudnn	{'costs': [8.9e-05]}	1597937621.305102
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(16, 128, 12, 64)	pytorch	cudnn	{'costs': [0.000126]}	1597937624.230505
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(16, 128, 16, 64)	pytorch	cudnn	{'costs': [0.000162]}	1597937627.242319
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(16, 64, 12, 128)	pytorch	cudnn	{'costs': [9.2e-05]}	1597937629.181724
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(16, 128, 12, 128)	pytorch	cudnn	{'costs': [0.000192]}	1597937631.224994
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(1, 128, 12, 64)	pytorch	cudnn-jit	{'costs': [9.5e-05]}	1597937655.303183
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(1, 128, 16, 64)	pytorch	cudnn-jit	{'costs': [9.5e-05]}	1597937659.208477
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(1, 64, 12, 128)	pytorch	cudnn-jit	{'costs': [9.5e-05]}	1597937661.134495
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(1, 128, 12, 128)	pytorch	cudnn-jit	{'costs': [9.5e-05]}	1597937665.048114
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(16, 128, 12, 64)	pytorch	cudnn-jit	{'costs': [0.000126]}	1597937667.975028
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(16, 128, 16, 64)	pytorch	cudnn-jit	{'costs': [0.000162]}	1597937669.978906
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(16, 64, 12, 128)	pytorch	cudnn-jit	{'costs': [9.5e-05]}	1597937671.879846
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(16, 128, 12, 128)	pytorch	cudnn-jit	{'costs': [0.00019]}	1597937674.908851
+Tesla V100-SXM2-16GB	gpu	op	SMX(1536, 128)	pytorch	cudnn	{'costs': [1.9e-05]}	1594144614.399291
+Tesla V100-SXM2-16GB	gpu	op	SMX(24576, 128)	pytorch	cudnn	{'costs': [3.3e-05]}	1594144617.295763
+
+# FlexTensor
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(1, 224, 224, 3, 64, 7, 2, 3)	FlexTensor	default	{'costs': [3.2e-05]}	1593802060.407689
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(1, 56, 56, 64, 128, 3, 2, 1)	FlexTensor	default	{'costs': [3.5e-05]}	1593802063.594785
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(1, 28, 28, 128, 256, 1, 2, 0)	FlexTensor	default	{'costs': [1e-05]}	1593802066.824434
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(1, 7, 7, 512, 512, 3, 1, 1)	FlexTensor	default	{'costs': [9.8e-05]}	1593802071.756546
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(16, 224, 224, 3, 64, 7, 2, 3)	FlexTensor	default	{'costs': [0.000481]}	1593802075.439430
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(16, 56, 56, 64, 128, 3, 2, 1)	FlexTensor	default	{'costs': [0.000204]}	1593802078.777636
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(16, 28, 28, 128, 256, 1, 2, 0)	FlexTensor	default	{'costs': [3.3e-05]}	1593802082.187962
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(16, 7, 7, 512, 512, 3, 1, 1)	FlexTensor	default	{'costs': [0.000459]}	1593802084.758939
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(1, 128, 12, 64)	FlexTensor	default	{'costs': [7e-06]}	1593844257.692510
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(1, 128, 16, 64)	FlexTensor	default	{'costs': [8e-06]}	1593844260.477045
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(1, 64, 12, 128)	FlexTensor	default	{'costs': [7e-06]}	1593844263.502721
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(1, 128, 12, 128)	FlexTensor	default	{'costs': [1.1e-05]}	1593844266.218513
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(16, 128, 12, 64)	FlexTensor	default	{'costs': [4.9e-05]}	1593844267.667148
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(16, 128, 16, 64)	FlexTensor	default	{'costs': [6.2e-05]}	1593844271.089026
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(16, 64, 12, 128)	FlexTensor	default	{'costs': [3.5e-05]}	1593844274.095851
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(16, 128, 12, 128)	FlexTensor	default	{'costs': [9.5e-05]}	1593844275.612031
+
+# AutoTVM
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(1, 224, 224, 3, 64, 7, 2, 3)	AutoTVM	default	{'costs': [3.8e-05]}	1593703112.681390
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(1, 56, 56, 64, 128, 3, 2, 1)	AutoTVM	default	{'costs': [3.5e-05]}	1593703119.080781
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(1, 28, 28, 128, 256, 1, 2, 0)	AutoTVM	default	{'costs': [7e-06]}	1593703125.114604
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(1, 7, 7, 512, 512, 3, 1, 1)	AutoTVM	default	{'costs': [0.000107]}	1593703131.688260
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(16, 224, 224, 3, 64, 7, 2, 3)	AutoTVM	default	{'costs': [0.000347]}	1593703138.587029
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(16, 56, 56, 64, 128, 3, 2, 1)	AutoTVM	default	{'costs': [0.000216]}	1593703145.221386
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(16, 28, 28, 128, 256, 1, 2, 0)	AutoTVM	default	{'costs': [3.9e-05]}	1593703151.688432
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(16, 7, 7, 512, 512, 3, 1, 1)	AutoTVM	default	{'costs': [0.000486]}	1593703158.136840
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(1, 128, 12, 64)	AutoTVM	default	{'costs': [7e-06]}	1593703163.756462
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(1, 128, 16, 64)	AutoTVM	default	{'costs': [8e-06]}	1593703169.746258
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(1, 64, 12, 128)	AutoTVM	default	{'costs': [7e-06]}	1593703175.640426
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(1, 128, 12, 128)	AutoTVM	default	{'costs': [1.3e-05]}	1593703181.715402
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(16, 128, 12, 64)	AutoTVM	default	{'costs': [5.7e-05]}	1593703188.015562
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(16, 128, 16, 64)	AutoTVM	default	{'costs': [7.2e-05]}	1593703194.384127
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(16, 64, 12, 128)	AutoTVM	default	{'costs': [3.7e-05]}	1593703200.654187
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(16, 128, 12, 128)	AutoTVM	default	{'costs': [0.000107]}	1593703205.645498
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(1, 128, 12, 64)	AutoTVM	default	{'costs': [0.000215]}	1594142559.218970
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(1, 128, 16, 64)	AutoTVM	default	{'costs': [0.000195]}	1594142566.136875
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(1, 64, 12, 128)	AutoTVM	default	{'costs': [8.6e-05]}	1594142572.983183
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(1, 128, 12, 128)	AutoTVM	default	{'costs': [0.00022]}	1594142579.875651
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(16, 128, 12, 64)	AutoTVM	default	{'costs': [0.000282]}	1594142586.975205
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(16, 128, 16, 64)	AutoTVM	default	{'costs': [0.000312]}	1594142594.057202
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(16, 64, 12, 128)	AutoTVM	default	{'costs': [0.000139]}	1594142601.042328
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(16, 128, 12, 128)	AutoTVM	default	{'costs': [0.00033]}	1594142607.917386
+
+# Ours
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(1, 224, 224, 3, 64, 7, 2, 3)	ours	default	{'costs': [2.3e-05]}	1593722858.752741
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(1, 56, 56, 64, 128, 3, 2, 1)	ours	default	{'costs': [2e-05]}	1593722872.517425
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(1, 28, 28, 128, 256, 1, 2, 0)	ours	default	{'costs': [1e-05]}	1593722885.171785
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(1, 7, 7, 512, 512, 3, 1, 1)	ours	default	{'costs': [9.2e-05]}	1593722896.965833
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(16, 224, 224, 3, 64, 7, 2, 3)	ours	default	{'costs': [0.000301]}	1593722866.761651
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(16, 56, 56, 64, 128, 3, 2, 1)	ours	default	{'costs': [0.000169]}	1593722880.026831
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(16, 28, 28, 128, 256, 1, 2, 0)	ours	default	{'costs': [3e-05]}	1593722890.722562
+Tesla V100-SXM2-16GB	gpu	subgraph	conv2d_bn_relu(16, 7, 7, 512, 512, 3, 1, 1)	ours	default	{'costs': [0.000476]}	1593722907.777072
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(1, 128, 12, 64)	ours	default	{'costs': [6e-06]}	1593722912.851819
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(1, 128, 16, 64)	ours	default	{'costs': [7e-06]}	1593722923.605524
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(1, 64, 12, 128)	ours	default	{'costs': [5e-06]}	1593722934.730338
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(1, 128, 12, 128)	ours	default	{'costs': [1e-05]}	1593722945.423665
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(16, 128, 12, 64)	ours	default	{'costs': [4.4e-05]}	1593722918.818858
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(16, 128, 16, 64)	ours	default	{'costs': [5.5e-05]}	1593722930.055917
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(16, 64, 12, 128)	ours	default	{'costs': [2.8e-05]}	1593722940.050907
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul(16, 128, 12, 128)	ours	default	{'costs': [0.000204]}	1593722951.888159
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(1, 128, 12, 64)	ours	default	{'costs': [1.1e-05]}	1594601753.901886
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(16, 128, 12, 64)	ours	default	{'costs': [0.000132]}	1594601761.231794
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(1, 128, 16, 64)	ours	default	{'costs': [1.3e-05]}	1594601767.242253
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(16, 128, 16, 64)	ours	default	{'costs': [0.000106]}	1594601773.777870
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(1, 64, 12, 128)	ours	default	{'costs': [9e-06]}	1594601780.164011
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(16, 64, 12, 128)	ours	default	{'costs': [6.1e-05]}	1594601787.276068
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(1, 128, 12, 128)	ours	default	{'costs': [1.5e-05]}	1594601793.804433
+Tesla V100-SXM2-16GB	gpu	subgraph	transpose_batch_matmul_softmax(16, 128, 12, 128)	ours	default	{'costs': [0.00013]}	1594601801.686143
+

@@ -235,8 +235,8 @@ def enhance_color(color, h=1, l=1, s=1):
 method_color_dict = {
     'ours': 'C0',
     'AutoTVM': 'C1',
-
     'tensorflow': 'C2',
+    'Ansor': 'C4',
     'tensorflow-tensorrt': 'C9',
     'tflite': 'C2',
 
@@ -257,7 +257,7 @@ def method2color(method):
 ############################## Order
 method_order_list = [
     'pytorch', 'tensorflow', 'tensorflow-xla', 'tensorflow-tensorrt',
-    'tflite', 'halide', 'FlexTensor',  'AutoTVM', 
+    'tflite', 'halide', 'FlexTensor',  'AutoTVM', 'Ansor',
     'Limit space', 'No fine-tuning',
     'ours',
 ]
@@ -275,10 +275,11 @@ show_name_replace_dict = {
     'pytorch': "PyTorch",
     'tensorflow-tensorrt': 'TensorRT-TF',
     'tensorflow': 'TensorFlow',
+
     'tflite': 'TensorFlow Lite',
     'halide': 'Halide',
 
-    'ours': 'Ansor (ours)',
+    'ours': 'ours',
     'batch-16': 'batch',
 
     'resnet_50': 'ResNet-50',

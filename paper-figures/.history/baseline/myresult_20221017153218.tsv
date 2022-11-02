@@ -1,0 +1,61 @@
+#############################################################
+##################### Intel CPU Network #####################
+#############################################################
+
+# PyTorch
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet_50.B1	pytorch	mkldnn	{'costs': [0.030198]}	1593278706.455997
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet_50.B16	pytorch	mkldnn	{'costs': [0.372024]}	1593278710.939302
+Intel-Platinum-8124M-3.00GHz	cpu	network	mobilenet_v2.B1	pytorch	mkldnn	{'costs': [0.012846]}	1593278712.155619
+Intel-Platinum-8124M-3.00GHz	cpu	network	mobilenet_v2.B16	pytorch	mkldnn	{'costs': [0.154665]}	1593278713.957864
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet3d_18.B1	pytorch	mkldnn	{'costs': [0.284689]}	1593278717.544752
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet3d_18.B16	pytorch	mkldnn	{'costs': [4.729389]}	1593278770.073774
+Intel-Platinum-8124M-3.00GHz	cpu	network	dcgan.B1	pytorch	mkldnn	{'costs': [0.004472]}	1593278772.181852
+Intel-Platinum-8124M-3.00GHz	cpu	network	dcgan.B16	pytorch	mkldnn	{'costs': [0.052885]}	1593278773.828731
+Intel-Platinum-8124M-3.00GHz	cpu	network	bert.B1	pytorch	mkldnn	{'costs': [0.033626]}	1593278793.279799
+Intel-Platinum-8124M-3.00GHz	cpu	network	bert.B16	pytorch	mkldnn	{'costs': [0.322732]}	1593278799.217054
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet_50.B1	pytorch	mkldnn-jit	{'costs': [0.027829]}	1593278802.511040
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet_50.B16	pytorch	mkldnn-jit	{'costs': [0.36622]}	1593278807.163225
+Intel-Platinum-8124M-3.00GHz	cpu	network	mobilenet_v2.B1	pytorch	mkldnn-jit	{'costs': [0.010068]}	1593278810.151669
+Intel-Platinum-8124M-3.00GHz	cpu	network	mobilenet_v2.B16	pytorch	mkldnn-jit	{'costs': [0.147271]}	1593278812.173326
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet3d_18.B1	pytorch	mkldnn-jit	{'costs': [0.252418]}	1593278815.628829
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet3d_18.B16	pytorch	mkldnn-jit	{'costs': [4.641203]}	1593278867.355990
+Intel-Platinum-8124M-3.00GHz	cpu	network	dcgan.B1	pytorch	mkldnn-jit	{'costs': [0.00451]}	1593278868.520698
+Intel-Platinum-8124M-3.00GHz	cpu	network	dcgan.B16	pytorch	mkldnn-jit	{'costs': [0.057065]}	1593278870.270697
+Intel-Platinum-8124M-3.00GHz	cpu	network	bert.B1	pytorch	mkldnn-jit	{'costs': [0.026261]}	1593318543.903292
+Intel-Platinum-8124M-3.00GHz	cpu	network	bert.B16	pytorch	mkldnn-jit	{'costs': [0.261714]}	1593318551.281967
+
+# Tensorflow
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet_50.B1	tensorflow	mkldnn	{'costs': [0.017872]}	1593144479.729819
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet_50.B16	tensorflow	mkldnn	{'costs': [0.130149]}	1593144486.362137
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet3d_18.B1	tensorflow	mkldnn	{'costs': [0.053427]}	1593144489.824372
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet3d_18.B16	tensorflow	mkldnn	{'costs': [0.853007]}	1593144501.759823
+Intel-Platinum-8124M-3.00GHz	cpu	network	dcgan.B1	tensorflow	mkldnn	{'costs': [0.006007]}	1593144504.140300
+Intel-Platinum-8124M-3.00GHz	cpu	network	dcgan.B16	tensorflow	mkldnn	{'costs': [0.014299]}	1593144505.629729
+Intel-Platinum-8124M-3.00GHz	cpu	network	mobilenet_v2.B1	tensorflow	mkldnn	{'costs': [0.006824]}	1593144511.459045
+Intel-Platinum-8124M-3.00GHz	cpu	network	mobilenet_v2.B16	tensorflow	mkldnn	{'costs': [0.042555]}	1593144516.032931
+Intel-Platinum-8124M-3.00GHz	cpu	network	bert.B1	tensorflow	mkldnn	{'costs': [0.056929]}	1593144520.443749
+Intel-Platinum-8124M-3.00GHz	cpu	network	bert.B16	tensorflow	mkldnn	{'costs': [0.295699]}	1593144526.465379
+
+# AutoTVM
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet_50.B1	AutoTVM	NCHWc	{'costs': [0.005958, 0.005988, 0.006023]}	1595402275.412326
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet_50.B16	AutoTVM	NCHWc	{'costs': [0.073789, 0.073753, 0.074303]}	1595402291.371248
+Intel-Platinum-8124M-3.00GHz	cpu	network	mobilenet_v2.B1	AutoTVM	NCHWc	{'costs': [0.001409, 0.001458, 0.001494]}	1595402310.443635
+Intel-Platinum-8124M-3.00GHz	cpu	network	mobilenet_v2.B16	AutoTVM	NCHWc	{'costs': [0.027323, 0.027271, 0.027265]}	1595402331.053667
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet3d_18.B1	AutoTVM	NCHWc	{'costs': [0.042703, 0.042725, 0.042622]}	1595402345.946934
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet3d_18.B16	AutoTVM	NCHWc	{'costs': [0.690934, 0.690616, 0.69072]}	1595402382.072002
+Intel-Platinum-8124M-3.00GHz	cpu	network	dcgan.B1	AutoTVM	NCHWc	{'costs': [0.013249, 0.013421, 0.013598]}	1595402389.469726
+Intel-Platinum-8124M-3.00GHz	cpu	network	dcgan.B16	AutoTVM	NCHWc	{'costs': [0.070301, 0.070429, 0.070277]}	1595402398.450094
+Intel-Platinum-8124M-3.00GHz	cpu	network	bert.B1	AutoTVM	NCHWc	{'costs': [0.062407, 0.062356, 0.062337]}	1595402472.538464
+Intel-Platinum-8124M-3.00GHz	cpu	network	bert.B16	AutoTVM	NCHWc	{'costs': [0.952432, 0.953287, 0.95986]}	1595402586.736569
+
+# Ours
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet_50.B1	ours	NHWC	{'costs': [0.005807, 0.005868, 0.00592]}	1595879906.057104
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet_50.B16	ours	NHWC	{'costs': [0.066096, 0.066185, 0.066187]}	1595879942.079471
+Intel-Platinum-8124M-3.00GHz	cpu	network	mobilenet_v2.B1	ours	NHWC	{'costs': [0.000867, 0.000883, 0.000891]}	1595879956.635193
+Intel-Platinum-8124M-3.00GHz	cpu	network	mobilenet_v2.B16	ours	NHWC	{'costs': [0.011553, 0.011567, 0.011593]}	1595879971.433867
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet3d_18.B1	ours	NHWC	{'costs': [0.032989, 0.033033, 0.033029]}	1595879992.941969
+Intel-Platinum-8124M-3.00GHz	cpu	network	resnet3d_18.B16	ours	NHWC	{'costs': [0.504502, 0.503922, 0.503868]}	1595880033.029559
+Intel-Platinum-8124M-3.00GHz	cpu	network	dcgan.B1	ours	NHWC	{'costs': [0.001167, 0.001168, 0.001169]}	1595880042.776374
+Intel-Platinum-8124M-3.00GHz	cpu	network	dcgan.B16	ours	NHWC	{'costs': [0.009738, 0.009736, 0.009741]}	1595880050.725431
+Intel-Platinum-8124M-3.00GHz	cpu	network	bert.B1	ours	NHWC	{'costs': [0.023728, 0.024393, 0.02442]}	1595880132.646025
+Intel-Platinum-8124M-3.00GHz	cpu	network	bert.B16	ours	NHWC	{'costs': [0.258369, 0.257808, 0.256018]}	1595880232.390687

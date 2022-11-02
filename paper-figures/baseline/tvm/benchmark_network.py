@@ -10,6 +10,7 @@ if __name__ == "__main__":
 
     if args.backend == 'intel-cpu':
         run_cmd('python3.6 tune_relay_x86.py --network resnet-50    --batch-size 1')
+    """
         run_cmd('python3.6 tune_relay_x86.py --network resnet-50    --batch-size 16')
         run_cmd('python3.6 tune_relay_x86.py --network mobilenet_v2 --batch-size 1')
         run_cmd('python3.6 tune_relay_x86.py --network mobilenet_v2 --batch-size 16')
@@ -38,4 +39,4 @@ if __name__ == "__main__":
         run_cmd('python3.6 tune_relay_cuda.py --network bert  --batch-size 16')
     else:
         raise NotImplemented
-
+    """
