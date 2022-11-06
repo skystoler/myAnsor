@@ -543,8 +543,7 @@ task_func_dict = {
     'SP_C2D_CSR': sparse_conv2d_csr,
 }
 
-#single_op_eval_wkls = ['GMM', 'C1D', 'C2D', 'C3D', 'GRP', 'DIL', 'DEP', 'T2D', 'CAP', 'NRM']
-single_op_eval_wkls = ['C2D']
+single_op_eval_wkls = ['GMM', 'C1D', 'C2D', 'C3D', 'GRP', 'DIL', 'DEP', 'T2D', 'CAP', 'NRM']
 subgraph_eval_wkls = ['conv2d_bn_relu', 'transpose_batch_matmul']
 
 if __name__ == "__main__":
