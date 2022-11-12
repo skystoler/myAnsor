@@ -1506,21 +1506,21 @@ void SketchSearchPolicyNode::EvolutionarySearch(
     
     
     //calculate diversity
-    int n=pop_scores.size();
-    //float max_v=n*(n-1);
-    float distance=0.0;
-    for(int i=0;i<n;++i){
-      distance=0.0;
-      float a=max(pop_scores[i],0.0);
-      for(int j=0;j<n;++j){
-        float b=max(pop_scores[j],0.0);
-        distance+=std::abs(a-b);
-      }
-    }
-    //StdCout(verbose)<<"distance: "<<distance<<std::endl;
-    float f=distance/(n*(n-1));
-    //StdCout(verbose)<<"f: "<<f<<std::endl;
-    diversity.push_back(f);
+    // int n=pop_scores.size();
+    // //float max_v=n*(n-1);
+    // float distance=0.0;
+    // for(int i=0;i<n;++i){
+    //   distance=0.0;
+    //   float a=max(pop_scores[i],0.0);
+    //   for(int j=0;j<n;++j){
+    //     float b=max(pop_scores[j],0.0);
+    //     distance+=std::abs(a-b);
+    //   }
+    // }
+    // //StdCout(verbose)<<"distance: "<<distance<<std::endl;
+    // float f=distance/(n*(n-1));
+    // //StdCout(verbose)<<"f: "<<f<<std::endl;
+    // diversity.push_back(f);
 
 
     ComputePrefixSumProb(pop_scores, &pop_selection_probs);

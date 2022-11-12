@@ -544,8 +544,9 @@ task_func_dict = {
 }
 
 #single_op_eval_wkls = ['GMM', 'C1D', 'C2D', 'C3D', 'GRP', 'DIL', 'DEP', 'T2D', 'CAP', 'NRM']
-single_op_eval_wkls = ['GMM']
-subgraph_eval_wkls = ['conv2d_bn_relu', 'transpose_batch_matmul']
+single_op_eval_wkls = ['C2D']
+#subgraph_eval_wkls = ['conv2d_bn_relu', 'transpose_batch_matmul']
+subgraph_eval_wkls = ['conv2d_bn_relu']
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
