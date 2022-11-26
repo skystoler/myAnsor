@@ -1,0 +1,32 @@
+device	cpu	op	GMM(1, 128, 128, 128)	tensorflow	default	{'costs': [0.000694]}	1669454001.949821
+device	cpu	op	GMM(1, 512, 32, 512)	tensorflow	default	{'costs': [0.000689]}	1669454002.964518
+device	cpu	op	GMM(1, 512, 512, 512)	tensorflow	default	{'costs': [0.000693]}	1669454003.990025
+device	cpu	op	GMM(1, 1024, 1024, 1024)	tensorflow	default	{'costs': [0.000691]}	1669454005.007811
+device	cpu	op	GMM(16, 128, 128, 128)	tensorflow	default	{'costs': [0.000709]}	1669454007.010691
+device	cpu	op	GMM(16, 512, 32, 512)	tensorflow	default	{'costs': [0.000718]}	1669454009.053234
+device	cpu	op	GMM(16, 512, 512, 512)	tensorflow	default	{'costs': [0.000727]}	1669454010.122429
+device	cpu	op	GMM(16, 1024, 1024, 1024)	tensorflow	default	{'costs': [0.000705]}	1669454014.138711
+device	cpu	op	C1D(1, 256, 64, 128, 3, 2, 1)	tensorflow	default	{'costs': [0.003866]}	1669454015.210537
+device	cpu	op	C1D(1, 128, 128, 256, 1, 2, 0)	tensorflow	default	{'costs': [0.003844]}	1669454017.264399
+device	cpu	op	C1D(1, 64, 256, 256, 5, 1, 2)	tensorflow	default	{'costs': [0.003914]}	1669454018.328793
+device	cpu	op	C1D(1, 32, 512, 512, 3, 1, 1)	tensorflow	default	{'costs': [0.0038]}	1669454019.377930
+device	cpu	op	C1D(16, 256, 64, 128, 3, 2, 1)	tensorflow	default	{'costs': [0.004015]}	1669454020.487693
+device	cpu	op	C1D(16, 128, 128, 256, 1, 2, 0)	tensorflow	default	{'costs': [0.003813]}	1669454022.546485
+device	cpu	op	C1D(16, 64, 256, 256, 5, 1, 2)	tensorflow	default	{'costs': [0.003879]}	1669454023.616798
+device	cpu	op	C1D(16, 32, 512, 512, 3, 1, 1)	tensorflow	default	{'costs': [0.00388]}	1669454024.668761
+device	cpu	op	C2D(1, 224, 224, 3, 64, 7, 2, 3)	tensorflow	default	{'costs': [0.000833]}	1669454025.686381
+device	cpu	op	C2D(1, 56, 56, 64, 64, 1, 1, 0)	tensorflow	default	{'costs': [0.000828]}	1669454026.705768
+device	cpu	op	C2D(1, 14, 14, 256, 256, 3, 1, 1)	tensorflow	default	{'costs': [0.000826]}	1669454027.723145
+device	cpu	op	C2D(1, 7, 7, 512, 512, 3, 1, 1)	tensorflow	default	{'costs': [0.000825]}	1669454028.743917
+device	cpu	op	C2D(16, 224, 224, 3, 64, 7, 2, 3)	tensorflow	default	{'costs': [0.000827]}	1669454029.765487
+device	cpu	op	C2D(16, 56, 56, 64, 64, 1, 1, 0)	tensorflow	default	{'costs': [0.000836]}	1669454031.765313
+device	cpu	op	C2D(16, 14, 14, 256, 256, 3, 1, 1)	tensorflow	default	{'costs': [0.000836]}	1669454034.795014
+device	cpu	op	C2D(16, 7, 7, 512, 512, 3, 1, 1)	tensorflow	default	{'costs': [0.000848]}	1669454038.810136
+device	cpu	op	C3D(1, 16, 224, 224, 3, 64, 7, 2, 3)	tensorflow	default	{'costs': [0.000757]}	1669454040.832842
+device	cpu	op	C3D(1, 16, 56, 56, 64, 64, 1, 1, 0)	tensorflow	default	{'costs': [0.000751]}	1669454041.847666
+device	cpu	op	C3D(1, 16, 14, 14, 256, 256, 3, 1, 1)	tensorflow	default	{'costs': [0.000753]}	1669454043.857769
+device	cpu	op	C3D(1, 16, 7, 7, 512, 512, 3, 1, 1)	tensorflow	default	{'costs': [0.000756]}	1669454045.883491
+device	cpu	op	C3D(16, 16, 224, 224, 3, 64, 7, 2, 3)	tensorflow	default	{'costs': [0.000753]}	1669454046.901548
+device	cpu	op	C3D(16, 16, 56, 56, 64, 64, 1, 1, 0)	tensorflow	default	{'costs': [0.000749]}	1669454049.884362
+device	cpu	op	C3D(16, 16, 14, 14, 256, 256, 3, 1, 1)	tensorflow	default	{'costs': [0.000749]}	1669454052.875557
+device	cpu	op	C3D(16, 16, 7, 7, 512, 512, 3, 1, 1)	tensorflow	default	{'costs': [0.000749]}	1669454053.893814

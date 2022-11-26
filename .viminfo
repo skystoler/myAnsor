@@ -10,13 +10,20 @@
 
 # hlsearch on (H) or off (h):
 ~h
+# Last Search Pattern:
+~Msle0~/\<Workload\>
+
 # Command Line History (newest to oldest):
-:wq
-|2,0,1668494176,,"wq"
 :q
-|2,0,1667472383,,"q"
+|2,0,1669468476,,"q"
+:wq
+|2,0,1669453989,,"wq"
+:q!
+|2,0,1669440515,,"q!"
 
 # Search String History (newest to oldest):
+? \<Workload\>
+|2,1,1669453963,,"\\<Workload\\>"
 
 # Expression History (newest to oldest):
 
@@ -27,67 +34,301 @@
 # Registers:
 
 # File marks:
-'0  547  25  ~/scripts/tune_op_subgraph.py
-|4,48,547,25,1668494176,"~/scripts/tune_op_subgraph.py"
-'1  547  27  ~/scripts/tune_op_subgraph.py
-|4,49,547,27,1668488153,"~/scripts/tune_op_subgraph.py"
-'2  547  33  ~/scripts/tune_op_subgraph.py
-|4,50,547,33,1668472669,"~/scripts/tune_op_subgraph.py"
-'3  547  33  ~/scripts/tune_op_subgraph.py
-|4,51,547,33,1668472669,"~/scripts/tune_op_subgraph.py"
-'4  548  37  ~/scripts/tune_op_subgraph.py
-|4,52,548,37,1668216494,"~/scripts/tune_op_subgraph.py"
-'5  548  37  ~/scripts/tune_op_subgraph.py
-|4,53,548,37,1668216494,"~/scripts/tune_op_subgraph.py"
-'6  548  37  ~/scripts/tune_op_subgraph.py
-|4,54,548,37,1668216494,"~/scripts/tune_op_subgraph.py"
-'7  548  37  ~/scripts/tune_op_subgraph.py
-|4,55,548,37,1668216494,"~/scripts/tune_op_subgraph.py"
-'8  548  37  ~/scripts/tune_op_subgraph.py
-|4,56,548,37,1668216494,"~/scripts/tune_op_subgraph.py"
-'9  548  37  ~/scripts/tune_op_subgraph.py
-|4,57,548,37,1668216494,"~/scripts/tune_op_subgraph.py"
+'0  1  0  ~/paper-figures/baseline/tensorflow/results.tsv
+|4,48,1,0,1669468476,"~/paper-figures/baseline/tensorflow/results.tsv"
+'1  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
+|4,49,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
+'2  14  0  ~/paper-figures/baseline/tensorflow/benchmark.py
+|4,50,14,0,1669453888,"~/paper-figures/baseline/tensorflow/benchmark.py"
+'3  14  0  ~/paper-figures/baseline/tensorflow/benchmark.py
+|4,51,14,0,1669453888,"~/paper-figures/baseline/tensorflow/benchmark.py"
+'4  378  3  ~/paper-figures/baseline/tensorflow/benchmark.py
+|4,52,378,3,1669453823,"~/paper-figures/baseline/tensorflow/benchmark.py"
+'5  378  3  ~/paper-figures/baseline/tensorflow/benchmark.py
+|4,53,378,3,1669453823,"~/paper-figures/baseline/tensorflow/benchmark.py"
+'6  378  3  ~/paper-figures/baseline/tensorflow/benchmark.py
+|4,54,378,3,1669453823,"~/paper-figures/baseline/tensorflow/benchmark.py"
+'7  378  3  ~/paper-figures/baseline/tensorflow/benchmark.py
+|4,55,378,3,1669453823,"~/paper-figures/baseline/tensorflow/benchmark.py"
+'8  787  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,56,787,4,1669453767,"~/paper-figures/baseline/pytorch/benchmark.py"
+'9  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,57,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
 
 # Jumplist (newest first):
--'  547  25  ~/scripts/tune_op_subgraph.py
-|4,39,547,25,1668494176,"~/scripts/tune_op_subgraph.py"
--'  547  27  ~/scripts/tune_op_subgraph.py
-|4,39,547,27,1668488153,"~/scripts/tune_op_subgraph.py"
--'  547  33  ~/scripts/tune_op_subgraph.py
-|4,39,547,33,1668472669,"~/scripts/tune_op_subgraph.py"
--'  548  37  ~/scripts/tune_op_subgraph.py
-|4,39,548,37,1668472646,"~/scripts/tune_op_subgraph.py"
--'  548  37  ~/scripts/tune_op_subgraph.py
-|4,39,548,37,1668472646,"~/scripts/tune_op_subgraph.py"
--'  548  37  ~/scripts/tune_op_subgraph.py
-|4,39,548,37,1668472646,"~/scripts/tune_op_subgraph.py"
--'  548  37  ~/scripts/tune_op_subgraph.py
-|4,39,548,37,1668216494,"~/scripts/tune_op_subgraph.py"
--'  537  4  ~/scripts/tune_op_subgraph.py
-|4,39,537,4,1668216467,"~/scripts/tune_op_subgraph.py"
--'  537  4  ~/scripts/tune_op_subgraph.py
-|4,39,537,4,1668216467,"~/scripts/tune_op_subgraph.py"
--'  537  4  ~/scripts/tune_op_subgraph.py
-|4,39,537,4,1668216467,"~/scripts/tune_op_subgraph.py"
--'  537  4  ~/scripts/tune_op_subgraph.py
-|4,39,537,4,1668216467,"~/scripts/tune_op_subgraph.py"
--'  537  4  ~/scripts/tune_op_subgraph.py
-|4,39,537,4,1667472383,"~/scripts/tune_op_subgraph.py"
--'  1  0  ~/scripts/tune_op_subgraph.py
-|4,39,1,0,1667472354,"~/scripts/tune_op_subgraph.py"
--'  1  0  ~/scripts/tune_op_subgraph.py
-|4,39,1,0,1667472354,"~/scripts/tune_op_subgraph.py"
--'  1  0  ~/scripts/tune_op_subgraph.py
-|4,39,1,0,1667472354,"~/scripts/tune_op_subgraph.py"
--'  1  0  ~/scripts/tune_op_subgraph.py
-|4,39,1,0,1667472354,"~/scripts/tune_op_subgraph.py"
--'  1  0  ~/scripts/tune_op_subgraph.py
-|4,39,1,0,1667472354,"~/scripts/tune_op_subgraph.py"
+-'  1  0  ~/paper-figures/baseline/tensorflow/results.tsv
+|4,39,1,0,1669468476,"~/paper-figures/baseline/tensorflow/results.tsv"
+-'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
+|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
+-'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
+|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
+-'  380  4  ~/paper-figures/baseline/tensorflow/benchmark.py
+|4,39,380,4,1669453963,"~/paper-figures/baseline/tensorflow/benchmark.py"
+-'  380  4  ~/paper-figures/baseline/tensorflow/benchmark.py
+|4,39,380,4,1669453963,"~/paper-figures/baseline/tensorflow/benchmark.py"
+-'  14  0  ~/paper-figures/baseline/tensorflow/benchmark.py
+|4,39,14,0,1669453935,"~/paper-figures/baseline/tensorflow/benchmark.py"
+-'  14  0  ~/paper-figures/baseline/tensorflow/benchmark.py
+|4,39,14,0,1669453935,"~/paper-figures/baseline/tensorflow/benchmark.py"
+-'  14  0  ~/paper-figures/baseline/tensorflow/benchmark.py
+|4,39,14,0,1669453888,"~/paper-figures/baseline/tensorflow/benchmark.py"
+-'  14  0  ~/paper-figures/baseline/tensorflow/benchmark.py
+|4,39,14,0,1669453888,"~/paper-figures/baseline/tensorflow/benchmark.py"
+-'  378  3  ~/paper-figures/baseline/tensorflow/benchmark.py
+|4,39,378,3,1669453869,"~/paper-figures/baseline/tensorflow/benchmark.py"
+-'  378  3  ~/paper-figures/baseline/tensorflow/benchmark.py
+|4,39,378,3,1669453869,"~/paper-figures/baseline/tensorflow/benchmark.py"
+-'  378  3  ~/paper-figures/baseline/tensorflow/benchmark.py
+|4,39,378,3,1669453869,"~/paper-figures/baseline/tensorflow/benchmark.py"
+-'  378  3  ~/paper-figures/baseline/tensorflow/benchmark.py
+|4,39,378,3,1669453869,"~/paper-figures/baseline/tensorflow/benchmark.py"
+-'  378  3  ~/paper-figures/baseline/tensorflow/benchmark.py
+|4,39,378,3,1669453823,"~/paper-figures/baseline/tensorflow/benchmark.py"
+-'  378  3  ~/paper-figures/baseline/tensorflow/benchmark.py
+|4,39,378,3,1669453823,"~/paper-figures/baseline/tensorflow/benchmark.py"
+-'  1  0  ~/paper-figures/baseline/tensorflow/benchmark.py
+|4,39,1,0,1669453782,"~/paper-figures/baseline/tensorflow/benchmark.py"
+-'  1  0  ~/paper-figures/baseline/tensorflow/benchmark.py
+|4,39,1,0,1669453782,"~/paper-figures/baseline/tensorflow/benchmark.py"
+-'  1  0  ~/paper-figures/baseline/tensorflow/benchmark.py
+|4,39,1,0,1669453782,"~/paper-figures/baseline/tensorflow/benchmark.py"
+-'  1  0  ~/paper-figures/baseline/tensorflow/benchmark.py
+|4,39,1,0,1669453782,"~/paper-figures/baseline/tensorflow/benchmark.py"
+-'  1  0  ~/paper-figures/baseline/tensorflow/benchmark.py
+|4,39,1,0,1669453782,"~/paper-figures/baseline/tensorflow/benchmark.py"
+-'  1  0  ~/paper-figures/baseline/tensorflow/benchmark.py
+|4,39,1,0,1669453782,"~/paper-figures/baseline/tensorflow/benchmark.py"
+-'  787  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,787,4,1669453767,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  787  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,787,4,1669453767,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  787  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,787,4,1669453767,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  787  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,787,4,1669453767,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  787  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,787,4,1669453767,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  787  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,787,4,1669453767,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  787  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,787,4,1669453767,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  787  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,787,4,1669453767,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  787  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,787,4,1669453767,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  787  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,787,4,1669453767,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  787  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,787,4,1669453767,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  787  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,787,4,1669453767,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  787  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,787,4,1669453767,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  787  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,787,4,1669453767,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  787  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,787,4,1669453767,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  787  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,787,4,1669453767,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453527,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453527,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453527,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453527,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453527,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453527,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453527,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453527,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453527,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453527,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453527,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453527,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453527,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453527,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453527,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453527,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  1  0  ~/paper-figures/baseline/pytorch/results.tsv
+|4,39,1,0,1669453499,"~/paper-figures/baseline/pytorch/results.tsv"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453274,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453274,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453274,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453274,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453274,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453274,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453274,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453274,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453274,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453274,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453274,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453274,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453274,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453274,"~/paper-figures/baseline/pytorch/benchmark.py"
+-'  760  4  ~/paper-figures/baseline/pytorch/benchmark.py
+|4,39,760,4,1669453274,"~/paper-figures/baseline/pytorch/benchmark.py"
 
 # History of marks within files (newest to oldest):
 
+> ~/paper-figures/baseline/tensorflow/results.tsv
+	*	1669454280	0
+	"	1	0
+
+> ~/paper-figures/baseline/tensorflow/benchmark.py
+	*	1669453988	0
+	"	372	4
+	^	372	5
+	.	384	4
+	+	374	4
+	+	373	4
+	+	372	4
+	+	371	4
+	+	378	4
+	+	14	0
+	+	380	4
+	+	381	4
+	+	382	4
+	+	383	4
+	+	384	4
+
+> ~/paper-figures/baseline/pytorch/benchmark.py
+	*	1669453529	0
+	"	787	4
+	^	760	5
+	.	760	4
+	+	791	0
+	+	761	4
+	+	762	4
+	+	763	4
+	+	764	4
+	+	765	4
+	+	760	4
+
+> ~/paper-figures/baseline/pytorch/results.tsv
+	*	1669453498	0
+	"	1	0
+
+> ~/paper-figures/baseline/tvm/benchmark_op_subgraph.py
+	*	1669440416	0
+	"	668	38
+	^	668	39
+	.	668	38
+	+	667	42
+	+	732	42
+	+	668	38
+
+> ~/paper-figures/baseline/tvm/results.tsv
+	*	1669440352	0
+	"	1	0
+
+> ~/paper-figures/baseline/results.tsv
+	*	1669440089	0
+	"	498	0
+	^	498	0
+
+> ~/python/tvm/autotvm/tuner/tuner.py
+	*	1669439866	0
+	"	137	0
+
+> ~/paper-figures/baseline/tvm/C1D.log
+	*	1669439814	0
+	"	13	0
+	^	13	0
+	.	13	0
+	+	1	0
+	+	13	0
+
 > ~/scripts/tune_op_subgraph.py
-	*	1668494174	0
+	*	1669261621	0
 	"	547	25
 	^	547	26
 	.	547	25
