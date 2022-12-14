@@ -1,20 +1,8 @@
-x86_64	cpu	network	resnet_50.B1	pytorch	mkldnn	{'costs': [0.059953]}	1666681674.820292
-x86_64	cpu	network	resnet_50.B16	pytorch	mkldnn	{'costs': [0.683432]}	1666681682.828297
-x86_64	cpu	network	resnet_50.B1	pytorch	mkldnn	{'costs': [0.06063]}	1666681906.960255
-x86_64	cpu	network	resnet_50.B16	pytorch	mkldnn	{'costs': [0.753157]}	1666681915.736793
-x86_64	cpu	network	resnet_50.B1	pytorch	mkldnn	{'costs': [0.058124]}	1666684114.243573
-x86_64	cpu	network	resnet_50.B16	pytorch	mkldnn	{'costs': [0.73534]}	1666684122.859349
-x86_64	cpu	network	resnet_50.B1	pytorch	mkldnn	{'costs': [0.060864]}	1666684133.915801
-x86_64	cpu	network	resnet_50.B16	pytorch	mkldnn	{'costs': [0.797071]}	1666684143.139265
-x86_64	cpu	network	resnet_50.B1	pytorch	mkldnn	{'costs': [0.060504]}	1666684162.574400
-x86_64	cpu	network	resnet_50.B16	pytorch	mkldnn	{'costs': [0.793894]}	1666684171.772291
-x86_64	cpu	network	resnet_50.B1	pytorch	mkldnn	{'costs': [0.058395]}	1666684181.134394
-x86_64	cpu	network	resnet_50.B16	pytorch	mkldnn	{'costs': [0.629178]}	1666684188.599213
-x86_64	cpu	network	resnet_50.B1	pytorch	mkldnn	{'costs': [0.060392]}	1666684199.685712
-x86_64	cpu	network	resnet_50.B16	pytorch	mkldnn	{'costs': [0.665508]}	1666684207.513165
-x86_64	cpu	network	resnet_50.B1	pytorch	mkldnn	{'costs': [0.058757]}	1666684214.993626
-x86_64	cpu	network	resnet_50.B16	pytorch	mkldnn	{'costs': [0.637416]}	1666684222.534269
-x86_64	cpu	network	resnet_50.B1	pytorch	mkldnn	{'costs': [0.062503]}	1666684226.988479
-x86_64	cpu	network	resnet_50.B16	pytorch	mkldnn	{'costs': [0.762638]}	1666684235.939381
-x86_64	cpu	network	resnet_50.B1	pytorch	mkldnn	{'costs': [0.062606]}	1666684244.828167
-x86_64	cpu	network	resnet_50.B16	pytorch	mkldnn	{'costs': [0.753942]}	1666684253.607483
+x86_64	cpu	subgraph	conv2d_bn_relu(1, 224, 224, 3, 64, 7, 2, 3)	pytorch	mkldnn	{'costs': [0.001654]}	1669688004.482125
+x86_64	cpu	subgraph	conv2d_bn_relu(1, 56, 56, 64, 128, 3, 2, 1)	pytorch	mkldnn	{'costs': [0.000413]}	1669688008.291264
+x86_64	cpu	subgraph	conv2d_bn_relu(1, 28, 28, 128, 256, 1, 2, 0)	pytorch	mkldnn	{'costs': [0.000369]}	1669688010.449181
+x86_64	cpu	subgraph	conv2d_bn_relu(1, 7, 7, 512, 512, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.000762]}	1669688016.334403
+x86_64	cpu	subgraph	conv2d_bn_relu(16, 224, 224, 3, 64, 7, 2, 3)	pytorch	mkldnn	{'costs': [0.045322]}	1669688017.901056
+x86_64	cpu	subgraph	conv2d_bn_relu(16, 56, 56, 64, 128, 3, 2, 1)	pytorch	mkldnn	{'costs': [0.003036]}	1669688022.672122
+x86_64	cpu	subgraph	conv2d_bn_relu(16, 28, 28, 128, 256, 1, 2, 0)	pytorch	mkldnn	{'costs': [0.000521]}	1669688026.220314
+x86_64	cpu	subgraph	conv2d_bn_relu(16, 7, 7, 512, 512, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.003982]}	1669688029.274354

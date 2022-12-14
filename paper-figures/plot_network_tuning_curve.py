@@ -122,7 +122,7 @@ if __name__ == "__main__":
                         name = log_file.split('.')[0]
                         fout.write("\t".join([name, str(log_n_lines), to_str_round(cost), "%.2f" % time.time()]) + "\n")
 
-                    time.sleep(5)
+                    #time.sleep(5)
         else:
             for log_file in log_names:
                 for log_n_lines in (range(2000, 20000, 2000)):
@@ -132,7 +132,7 @@ if __name__ == "__main__":
                         name = log_file.split('.')[0]
                         fout.write("\t".join([name, str(log_n_lines), to_str_round(cost), "%.2f" % time.time()]) + "\n")
 
-                    time.sleep(5)
+                    #time.sleep(5)
 
     if args.paper:
         # draw the plot for the paper

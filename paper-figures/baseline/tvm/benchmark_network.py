@@ -9,9 +9,9 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.backend == 'intel-cpu':
-        run_cmd('python3.6 tune_relay_x86.py --network resnet-50    --batch-size 1')
-    """
-        run_cmd('python3.6 tune_relay_x86.py --network resnet-50    --batch-size 16')
+        run_cmd('python3 tune_relay_x86.py --network resnet-50    --batch-size 1')
+        run_cmd('python3 tune_relay_x86.py --network resnet-50    --batch-size 16')
+        """
         run_cmd('python3.6 tune_relay_x86.py --network mobilenet_v2 --batch-size 1')
         run_cmd('python3.6 tune_relay_x86.py --network mobilenet_v2 --batch-size 16')
         run_cmd('python3.6 tune_relay_x86.py --network resnet3d-18  --batch-size 1  --graph-tuner false')

@@ -9,6 +9,7 @@ from typing import Dict, List, Tuple
 
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.ticker as mtick
 
 ############################################################
 #####################  Other Utilities  ####################
@@ -233,14 +234,23 @@ def enhance_color(color, h=1, l=1, s=1):
     return colorsys.hls_to_rgb(h, l, s)
 
 method_color_dict = {
-    'ours': 'C0',
-    'AutoTVM': 'C1',
-    'tensorflow': 'C2',
-    'Ansor': 'C4',
+    #'ours': 'C0',
+    'AutoTVM': '#CB997E',
+    'tensorflow': '#B8B7A3',
+    'Ansor': '#B8B7A3',
+    'Ansor-DPC': '#6B705C',
     'tensorflow-tensorrt': 'C9',
     'tflite': 'C2',
 
-    'pytorch': enhance_color('C3', l=1.1, s=0.9),
+
+    'queen-bee-x':'#A5A58D',
+    'segmented-x':'#CB997E',
+    'single-point-x':'#FDE8D5',
+    'three-point-x':'#DDBEA9',
+
+
+
+    'pytorch': enhance_color('#DDBEA9', l=1.1, s=0.9),
 
     'FlexTensor': enhance_color('C5'),
     'halide': enhance_color('teal', l=1.25),
@@ -257,7 +267,8 @@ def method2color(method):
 ############################## Order
 method_order_list = [
     'pytorch', 'tensorflow', 'tensorflow-xla', 'tensorflow-tensorrt',
-    'tflite', 'halide', 'FlexTensor',  'AutoTVM', 'Ansor',
+    'tflite', 'halide', 'FlexTensor',  'AutoTVM', 'Ansor','Ansor-DPC',
+    'queen-bee-x','segmented-x','single-point-x','three-point-x',
     'Limit space', 'No fine-tuning',
     'ours',
 ]
@@ -279,7 +290,14 @@ show_name_replace_dict = {
     'tflite': 'TensorFlow Lite',
     'halide': 'Halide',
 
-    'ours': 'ours',
+    'Ansor': 'Ansor',
+    'Ansor-DPC': 'Ansor-DPC',
+
+    'queen-bee-x':'queen bee crossover',
+    'segmented-x':'segemented crossover',
+    'single-point-x':'single point crossover',
+    'three-point-x':'3 point crossover',
+
     'batch-16': 'batch',
 
     'resnet_50': 'ResNet-50',
@@ -322,7 +340,7 @@ def throughput_to_cost(data):
     return ret
 
 def draw_grouped_bar_chart(data, baseline=None, output='out.png',
-        yscale_log=False, yticks=None, y_max=None,
+        yscale_log=False, yticks=None, y_max=None,y_min=None,
         legend_bbox_to_anchor=None, legend_nrow=None,
         figure_size=None, figax=None, draw_ylabel=True, draw_legend=True):
     """
@@ -406,11 +424,11 @@ def draw_grouped_bar_chart(data, baseline=None, output='out.png',
         if yticks is not None:
             ax.set_yticks(yticks)
         if y_max:
-            ax.set_ylim(top=y_max)
+            ax.set_ylim(bottom=y_min,top=y_max)
 
         from matplotlib.ticker import FormatStrFormatter
         ax.set_yticklabels(ax.get_yticks(), fontsize=fontsize)
-        ax.yaxis.set_major_formatter(FormatStrFormatter('%.1f'))
+        ax.yaxis.set_major_formatter(FormatStrFormatter('%.2f'))
         ax.yaxis.grid(linewidth=0.4, linestyle='dotted') # draw grid line
         ax.set_axisbelow(True)  # grid lines are behind the rest
         ax.tick_params(bottom=False, top=False, right=False)
@@ -426,8 +444,10 @@ def draw_grouped_bar_chart(data, baseline=None, output='out.png',
                   [show_name(x) for x in all_methods],
                   fontsize=fontsize-1,
                   loc='upper center',
+                  #loc=(0.0,0.1),
                   bbox_to_anchor=legend_bbox_to_anchor,
                   ncol=ncol,
+                  prop={'size':14},
                   handlelength=1.0,
                   handletextpad=0.5,
                   columnspacing=1.1)

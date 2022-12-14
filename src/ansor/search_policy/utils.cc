@@ -592,6 +592,7 @@ State RandomMutateParallel(const State& old_state, std::mt19937* random_gen,
           step = PragmaStep(ps->stage_id, ps->iter_id + iter_offset, ps->pragma_type);
         }
       } else {
+        StdCout(verbose) << "Parallel mutation: Cannot apply " << step;
         StdCout(verbose) << "Parallel mutation: Cannot apply " << step
                          << " after fuse"  << std::endl;
         return State();
@@ -1111,16 +1112,32 @@ State CrossOverState(const SearchTask& task, std::mt19937* random_gen, const Sta
   }
 
   // Check wheter the crossover creates a new state
-  //tmp_s = task->compute_dag.InferBound(tmp_s);
-  //std::string s1 = p1.ToStr();
-  //std::string s2 = p2.ToStr();
-  //std::string s3 = tmp_s.ToStr();
+    // tmp_s = task->compute_dag.InferBound(tmp_s);
+    // std::string s1 = p1.ToStr();
+    // std::string s2 = p2.ToStr();
+    // std::string s3 = tmp_s.ToStr();
 
-  //if (s1 == s2 || s1 == s3 || s2 == s3) {
-  //  return State();
-  //}
+    // if (s1 == s2 || s1 == s3 || s2 == s3) {
+    //   return State();
+    // }
 
-  return tmp_s;
+
+    // StdCout(1)<<std::endl;
+    // StdCout(1)<<std::endl;
+    // StdCout(1)<<std::endl;
+    // for(auto ss:s1)  StdCout(1)<<ss;
+    // StdCout(1)<<std::endl;
+    // for(auto ss:s2)  StdCout(1)<<ss;
+    // StdCout(1)<<std::endl;
+    // for(auto ss:s3)  StdCout(1)<<ss;
+    // StdCout(1)<<std::endl;
+    // StdCout(1)<<std::endl;
+    // StdCout(1)<<std::endl;
+
+
+
+
+    return tmp_s;
 }
 
 }  // namespace ansor

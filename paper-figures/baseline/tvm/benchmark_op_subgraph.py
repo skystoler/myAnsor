@@ -664,8 +664,8 @@ task_func_dict = {
     'transpose_batch_matmul_softmax': (transpose_batch_matmul_softmax, "transpose_batch_matmul_softmax"),
 }
 
-single_op_eval_wkls = ['GMM', 'C1D', 'C2D', 'C3D', 'GRP', 'DIL', 'DEP', 'T2D', 'CAP', 'NRM']
-subgraph_eval_wkls = ['conv2d_bn_relu', 'transpose_batch_matmul']
+single_op_eval_wkls = ['GMM']
+subgraph_eval_wkls = ['conv2d_bn_relu']
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

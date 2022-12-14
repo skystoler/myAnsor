@@ -167,21 +167,22 @@ def tune_and_evaluate(tuning_opt):
         tasks = autotvm.task.extract_from_program(mod["main"], target=target,
                                                   params=params,
                                                   ops=(relay.op.get("nn.conv2d"),
-                                                  """
+                                                  
                                                        relay.op.get("nn.conv3d"),
                                                        relay.op.get("nn.conv2d_transpose"),
                                                        relay.op.get('nn.dense'),
                                                        relay.op.get('nn.batch_matmul')
-                                                       """))
-        sleep(5)
+                                                       ))
+        #sleep(5)
 
         # run tuning tasks
         if args.kernel_tuner:
             tune_kernels(tasks, **tuning_opt)
+        
         if args.graph_tuner:
             tune_graph(mod["main"], data_name, data_shape, log_file, graph_opt_sch_file)
         
-        sleep(5)
+        #sleep(5)
     # compile kernels with graph-level best records
     ctx = None
     if args.graph_tuner:

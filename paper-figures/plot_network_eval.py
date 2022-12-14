@@ -38,7 +38,8 @@ networks = ['resnet_50']
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--baseline-file", type=str, default="baseline/myresult.tsv")
+    #parser.add_argument("--baseline-file", type=str, default="baseline/myresult.tsv")
+    parser.add_argument("--baseline-file", type=str, default="baseline/bestresult.tsv")
     parser.add_argument("--device", type=str, required=True,
                         choices=['Intel-Platinum-8269CY-2.50GHz', 'Intel-Platinum-8124M-3.00GHz',
                                  'Intel-E5-2670-v3-2.30Ghz', 'Intel-i7-8750H-2.20Ghz',
@@ -53,25 +54,29 @@ if __name__ == "__main__":
         methods = ['pytorch', 'tensorflow', 'tensorflow-tensorrt', 'AutoTVM', 'ours']
         backend = 'gpu'
     elif 'Intel' in args.device:
-        methods = ['pytorch', 'tensorflow', 'AutoTVM', 'Ansor', 'ours']
+        #methods = ['pytorch', 'tensorflow','Ansor','queen-bee-x','segmented-x','single-point-x','three-point-x','Ansor-DPC']
+        methods = ['Ansor','queen-bee-x','segmented-x','single-point-x','three-point-x','Ansor-DPC']
         backend = 'cpu'
     else:
         methods = ['tflite', 'AutoTVM', 'ours']
         backend = 'cpu'
 
-    yticks = [0, 0.2, 0.4, 0.6, 0.8, 1.0]
+    #yticks = [0, 0.2, 0.4, 0.6, 0.8, 1.0]
+    yticks = [0, 0.2, 0.4, 0.6, 0.8, 0.9,0.92,0.94,0.96,0.98,1.0]
     yscale_log = False
-    y_max = 1.4
+    y_max = 1.02
+    y_min = 0.9
 
     if args.batch_size > 0:
         networks = ["%s.B%d" % (name, args.batch_size) for name in networks]
         data = load_data(networks, args.baseline_file, args.device, backend, methods)
         fig, ax = plt.subplots()
 
-        draw_grouped_bar_chart(data, legend_nrow=1, legend_bbox_to_anchor=(0.50, 1.30), figax=ax, yticks=yticks, y_max=y_max, draw_ylabel='Normalized Performance')
-        ax.text(0.15, 0.85, 'Batch size = 1', horizontalalignment='center', verticalalignment='center', transform=ax.transAxes, fontsize=ax.yaxis.label.get_size())
+        draw_grouped_bar_chart(data, legend_nrow=3, legend_bbox_to_anchor=(0.50, 1.50), figax=ax, yticks=yticks, y_max=y_max, y_min=y_min,draw_ylabel="")
+        #ax.text(0.15, 0.85, 'Batch size = 1', horizontalalignment='center', verticalalignment='center', transform=ax.transAxes, fontsize=ax.yaxis.label.get_size())
 
-        fig.set_size_inches((11, 3))
+        fig.set_size_inches((7, 3))
+        #fig.set_size_inches((11, 2))
         fig.savefig(out_file, bbox_inches='tight')
         print("Output the plot to %s" % out_file)
     else:
@@ -101,4 +106,3 @@ if __name__ == "__main__":
         fig.set_size_inches((11, 5.5))
         fig.savefig(out_file, bbox_inches='tight')
         print("Output the plot to %s" % out_file)
-

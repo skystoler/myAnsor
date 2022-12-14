@@ -1431,12 +1431,12 @@ void SketchSearchPolicyNode::EvolutionarySearch(
     PruneInvalidState(cur_task, pnow);
     program_cost_model->Predict(cur_task, *pnow, &pop_scores);
 
-    fout<<"iter:"<<k+1<<std::endl;
+    //fout<<"iter:"<<k+1<<std::endl;
     for (size_t i = 0; i < pnow->size(); ++i) {
 
       //record experiment
-      if(i%10==0) fout<<std::endl;
-      fout<<i<<":"<<pop_scores[i]<<"  ";
+      //if(i%10==0) fout<<std::endl;
+      //fout<<i<<":"<<pop_scores[i]<<"  ";
       //fout<<std::endl;
       
       const State& state = (*pnow)[i];
@@ -1524,7 +1524,43 @@ void SketchSearchPolicyNode::EvolutionarySearch(
 
 
     ComputePrefixSumProb(pop_scores, &pop_selection_probs);
-     
+
+    // calculate diversity
+    int n=pnow->size();
+    std::vector<std::vector<int>> v(n,std::vector<int>(3,0));
+    
+    for(int i=0;i<n;++i){
+      std::vector<Stage> stagev=(*pnow)[i]->stages;
+      for(auto s:stagev){
+        std::vector<Iterator> iterv=s->iters; 
+        for(auto t:iterv){
+          switch (t->annotation) {
+            case kUnroll:
+              ++v[i][0];
+              break;
+            case kParallel:
+              ++v[i][1];
+              break;
+            case kVectorize:
+              ++v[i][2];
+              break;
+            default:
+              break;
+          }
+        }
+      }
+    }
+
+    float distance=0.0;
+    for(int i=0;i<n;++i){
+      for(int j=0;j<n;++j){
+        distance+=std::abs(v[i][0]-v[j][0]);
+        distance+=std::abs(v[i][1]-v[j][1]);
+        distance+=std::abs(v[i][2]-v[j][2]);
+      }
+    }
+    diversity.push_back(distance);
+
     // Do cross over
     int ct = 0;
     
@@ -1631,7 +1667,7 @@ void SketchSearchPolicyNode::EvolutionarySearch(
     std::swap(pnext, pnow); pnext->clear();
     double duration = std::chrono::duration_cast<std::chrono::duration<double> >(
       std::chrono::high_resolution_clock::now() - tic_begin).count();
-    fout<<std::fixed << std::setprecision(2)<<duration<<std::endl;
+    //fout<<std::fixed << std::setprecision(2)<<duration<<std::endl;
   }
 
   // Copy best states in the heap to out_states
@@ -1647,8 +1683,8 @@ void SketchSearchPolicyNode::EvolutionarySearch(
                    << "\tTime elapsed: "
                    << std::fixed << std::setprecision(2) << duration << std::endl;
 
-  fout<<"Time elapsed:"<<std::fixed << std::setprecision(2) << duration<<std::endl;
-  fout<<std::endl;
+  //fout<<"Time elapsed:"<<std::fixed << std::setprecision(2) << duration<<std::endl;
+  //fout<<std::endl;
   fout<<"diversity: ";
   for(auto d:diversity)fout<<std::fixed << std::setprecision(8)<<d<<" ";
   fout<<std::endl;

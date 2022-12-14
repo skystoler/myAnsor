@@ -1,21 +1,8 @@
-device	cpu	network	resnet_50.B1	tensorflow	default	{'costs': [0.036258]}	1666683145.183041
-device	cpu	network	resnet_50.B16	tensorflow	default	{'costs': [0.298167]}	1666683153.124207
-device	cpu	network	resnet3d_18.B1	tensorflow	default	{'costs': [0.135601]}	1666683155.935276
-device	cpu	network	resnet_50.B1	tensorflow	default	{'costs': [0.046274]}	1666683552.216296
-device	cpu	network	resnet_50.B16	tensorflow	default	{'costs': [0.291571]}	1666683560.089298
-device	cpu	network	resnet_50.B1	tensorflow	default	{'costs': [0.033838]}	1666683577.697267
-device	cpu	network	resnet_50.B16	tensorflow	default	{'costs': [0.290022]}	1666683585.507116
-device	cpu	network	resnet_50.B1	tensorflow	default	{'costs': [0.043502]}	1666683621.303519
-device	cpu	network	resnet_50.B16	tensorflow	default	{'costs': [0.282217]}	1666683629.114040
-device	cpu	network	resnet_50.B1	tensorflow	default	{'costs': [0.045549]}	1666683674.801926
-device	cpu	network	resnet_50.B16	tensorflow	default	{'costs': [0.277792]}	1666683682.562982
-device	cpu	network	resnet_50.B1	tensorflow	default	{'costs': [0.037229]}	1666683709.105976
-device	cpu	network	resnet_50.B16	tensorflow	default	{'costs': [0.293323]}	1666683717.183033
-device	cpu	network	resnet_50.B1	tensorflow	default	{'costs': [0.03444]}	1666683909.807051
-device	cpu	network	resnet_50.B16	tensorflow	default	{'costs': [0.272042]}	1666683917.513850
-device	cpu	network	resnet_50.B1	tensorflow	default	{'costs': [0.040609]}	1666683960.420050
-device	cpu	network	resnet_50.B16	tensorflow	default	{'costs': [0.311537]}	1666683968.491264
-device	cpu	network	resnet_50.B1	tensorflow	default	{'costs': [0.048388]}	1666684026.289699
-device	cpu	network	resnet_50.B16	tensorflow	default	{'costs': [0.304617]}	1666684034.393705
-device	cpu	network	resnet_50.B1	tensorflow	default	{'costs': [0.041607]}	1666684049.100463
-device	cpu	network	resnet_50.B16	tensorflow	default	{'costs': [0.267811]}	1666684056.872187
+device	cpu	op	GMM(1, 128, 128, 128)	tensorflow-eager	default	{'costs': [0.000149]}	1669701020.699822
+device	cpu	op	GMM(1, 512, 32, 512)	tensorflow-eager	default	{'costs': [0.000279]}	1669701022.419292
+device	cpu	op	GMM(1, 512, 512, 512)	tensorflow-eager	default	{'costs': [0.000719]}	1669701024.125410
+device	cpu	op	GMM(1, 1024, 1024, 1024)	tensorflow-eager	default	{'costs': [0.002351]}	1669701027.821602
+device	cpu	op	GMM(16, 128, 128, 128)	tensorflow-eager	default	{'costs': [0.001234]}	1669701028.863934
+device	cpu	op	GMM(16, 512, 32, 512)	tensorflow-eager	default	{'costs': [0.002749]}	1669701031.705197
+device	cpu	op	GMM(16, 512, 512, 512)	tensorflow-eager	default	{'costs': [0.009206]}	1669701033.742540
+device	cpu	op	GMM(16, 1024, 1024, 1024)	tensorflow-eager	default	{'costs': [0.042317]}	1669701035.355769

@@ -15,10 +15,10 @@ def extract_data_for_device(mode, batch_size, device, backend, baseline_file, me
     assert baseline == None
 
     if mode == 'op':
-        wkl_meta_names = ['C1D', 'C2D', 'C3D', 'GMM', 'GRP', 'DIL', 'DEP', 'T2D', 'CAP', 'NRM']
+        wkl_meta_names = ['C1D', 'C2D', 'C3D', 'GMM']
     elif mode == 'subgraph':
         #wkl_meta_names = ['conv2d_bn_relu', 'transpose_batch_matmul']
-        wkl_meta_names = ['conv2d_bn_relu', 'transpose_batch_matmul_softmax']
+        wkl_meta_names = ['conv2d_bn_relu']
     else:
         raise ValueError("Invalid mode")
 
@@ -78,10 +78,11 @@ def extract_data_for_device(mode, batch_size, device, backend, baseline_file, me
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--baseline-file", type=str, default="baseline/results.tsv")
+    #parser.add_argument("--baseline-file", type=str, default="baseline/myresult.tsv")
+    parser.add_argument("--baseline-file", type=str, default="baseline/bestresult.tsv")
     parser.add_argument("--device", type=str,
                         choices=['Intel-Platinum-8269CY-2.50GHz', 'Intel-Platinum-8124M-3.00GHz',
-                                 'Intel-E5-2670-v3-2.30Ghz', 'Intel-i7-8750H-2.20Ghz',
+                                 'Intel-E5-2650-v4-2.20GHz', 'Intel-i7-8750H-2.20Ghz',
                                  'Tesla V100-SXM2-16GB'])
     parser.add_argument("--mode", choices=['subgraph', 'op'], default='subgraph')
     parser.add_argument("--out-file", type=str)
@@ -91,28 +92,30 @@ if __name__ == "__main__":
 
     yscale_log = False
     yticks = [0, 0.2, 0.4, 0.6, 0.8, 1.0]
-    y_max = 1.4
+    y_max = 1.2
     legend_nrow = 1
-    legend_bbox_to_anchor = (0.45, 1.35)
+    legend_bbox_to_anchor = (0.45, 1.3)
 
     if args.mode == 'op':
         fig, ax = plt.subplots()
         gs = gridspec.GridSpec(2, 1) #, width_ratios=[2, 1])
         ax1 = plt.subplot(gs[0])
-        ax2 = plt.subplot(gs[1])
+        #ax2 = plt.subplot(gs[1])
 
         baseline = None
-        methods = ['AutoTVM', 'halide', 'pytorch', 'FlexTensor',  'ours']
+        methods = ['AutoTVM', 'tensorflow', 'pytorch', 'Ansor',  'Ansor-DPC']
         data = extract_data_for_device(args.mode, 1, args.device, 'cpu', args.baseline_file, methods)
         draw_grouped_bar_chart(throughput_to_cost(data), baseline='', draw_legend=True, figax=ax1, yticks=yticks, yscale_log=yscale_log,
                 legend_nrow=legend_nrow, legend_bbox_to_anchor=legend_bbox_to_anchor, draw_ylabel="", y_max=y_max)
-        ax1.text(0.15, 0.85, 'Batch size = 1', horizontalalignment='center', verticalalignment='center', transform=ax1.transAxes, fontsize=ax1.yaxis.label.get_size())
-
+        #ax1.text(0.15, 0.85, 'Batch size = 1', horizontalalignment='center', verticalalignment='center', transform=ax1.transAxes, fontsize=ax1.yaxis.label.get_size())
+        
+        """
         data = extract_data_for_device(args.mode, 16, args.device, 'cpu', args.baseline_file, methods)
         draw_grouped_bar_chart(throughput_to_cost(data), baseline='', draw_legend=False, figax=ax2, yticks=yticks, yscale_log=yscale_log, 
                 legend_nrow=legend_nrow, legend_bbox_to_anchor=legend_bbox_to_anchor, draw_ylabel="", y_max=y_max)
         ax2.text(0.15, 0.85, 'Batch size = 16', horizontalalignment='center', verticalalignment='center', transform=ax2.transAxes, fontsize=ax2.yaxis.label.get_size())
         ax2.text(-0.10, 1.15, 'Normalized Performance', horizontalalignment='center', verticalalignment='center', rotation=90, transform=ax2.transAxes, fontsize=ax2.yaxis.label.get_size())
+        """
 
         fig.set_size_inches((11, 5.5))
         fig.savefig(out_file, bbox_inches='tight')
@@ -123,44 +126,49 @@ if __name__ == "__main__":
         fig, ax = plt.subplots()
         gs = gridspec.GridSpec(2, 1) #, width_ratios=[2, 1])
         ax1 = plt.subplot(gs[0])
-        ax2 = plt.subplot(gs[1])
+        #ax2 = plt.subplot(gs[1])
 
         def extract_data_for_both_device(mode, batch_size, methods):
-            cpu_data = extract_data_for_device(args.mode, batch_size, 'Intel-Platinum-8124M-3.00GHz', 'cpu', args.baseline_file, methods)
-            gpu_data = extract_data_for_device(args.mode, batch_size, 'Tesla V100-SXM2-16GB', 'gpu', args.baseline_file, methods)
+            cpu_data = extract_data_for_device(args.mode, batch_size, 'Intel-E5-2650-v4-2.20GHz', 'cpu', args.baseline_file, methods)
+            #gpu_data = extract_data_for_device(args.mode, batch_size, 'Tesla V100-SXM2-16GB', 'gpu', args.baseline_file, methods)
 
             data = {}
             replace_dict = {
                 'conv2d_bn_relu' : 'ConvLayer',
-                'transpose_batch_matmul_softmax': 'TBS'
+                #'transpose_batch_matmul_softmax': 'TBS'
             }
 
+            """
             # remove flextensor in transpose_batch_matmul_softmax
             del cpu_data['transpose_batch_matmul_softmax']['FlexTensor']
             del gpu_data['transpose_batch_matmul_softmax']['FlexTensor']
+            """
 
             for wkl, value in cpu_data.items():
-                data[replace_dict[wkl] + " @ $\mathbf{C}$"] = value
+                #data[replace_dict[wkl] + " @ $\mathbf{C}$"] = value
+                data[replace_dict[wkl]] = value
                 # remove halide in gpu data
-                tmp_gpu_data = gpu_data[wkl]
-                del tmp_gpu_data['halide']
-                data[replace_dict[wkl] + " @ $\mathbf{G}$"] = tmp_gpu_data
+                #tmp_gpu_data = gpu_data[wkl]
+                #del tmp_gpu_data['halide']
+                #data[replace_dict[wkl] + " @ $\mathbf{G}$"] = tmp_gpu_data
+            
+
             return data
 
         baseline = None
-        methods = ['AutoTVM', 'halide', 'pytorch', 'FlexTensor',  'ours']
+        methods = ['AutoTVM', 'pytorch', 'Ansor',  'Ansor-DPC']
         data = extract_data_for_both_device(args.mode, 1, methods)
         draw_grouped_bar_chart(throughput_to_cost(data), baseline='', draw_legend=True, figax=ax1, yticks=yticks, yscale_log=yscale_log,
                 legend_nrow=legend_nrow, legend_bbox_to_anchor=legend_bbox_to_anchor, draw_ylabel="", y_max=y_max)
-        ax1.text(0.15, 0.85, 'Batch size = 1', horizontalalignment='center', verticalalignment='center', transform=ax1.transAxes, fontsize=ax1.yaxis.label.get_size())
-
+        #ax1.text(0.15, 0.85, 'Batch size = 1', horizontalalignment='center', verticalalignment='center', transform=ax1.transAxes, fontsize=ax1.yaxis.label.get_size())
+        """
         data = extract_data_for_both_device(args.mode, 16, methods)
         draw_grouped_bar_chart(throughput_to_cost(data), baseline='', draw_legend=False, figax=ax2, yticks=yticks, yscale_log=yscale_log, 
                 legend_nrow=legend_nrow, legend_bbox_to_anchor=legend_bbox_to_anchor, draw_ylabel="", y_max=y_max)
         ax2.text(0.15, 0.85, 'Batch size = 16', horizontalalignment='center', verticalalignment='center', transform=ax2.transAxes, fontsize=ax2.yaxis.label.get_size())
         ax2.text(-0.10, 1.15, 'Normalized Performance', horizontalalignment='center', verticalalignment='center', rotation=90, transform=ax2.transAxes, fontsize=ax2.yaxis.label.get_size())
-
-        fig.set_size_inches((11, 5.5))
+        """
+        fig.set_size_inches((8, 5.5))
         fig.savefig(out_file, bbox_inches='tight')
         print("Output to %s ..." % out_file)
 

@@ -1,0 +1,196 @@
+#############################################################
+##################### Intel CPU Network #####################
+#############################################################
+
+# PyTorch
+
+Intel-E5-2650-v4-2.20GHz	cpu	network	resnet_50.B16	pytorch	mkldnn	{'costs': [0.629178]}	1593278710.939302
+
+
+# Tensorflow
+
+Intel-E5-2650-v4-2.20GHz	cpu	network	resnet_50.B16	tensorflow	mkldnn	{'costs': [0.272042]}	1593144486.362137
+
+
+# Ansor
+
+Intel-E5-2650-v4-2.20GHz	cpu	network	resnet_50.B16	Ansor	NHWC	{'costs': [0.088752]}	1595879942.079471
+
+# Single-point x
+
+Intel-E5-2650-v4-2.20GHz	cpu	network	resnet_50.B16	single-point-x	NHWC	{'costs': [0.087684]}	1595879942.079471
+
+# Queen bee x
+
+Intel-E5-2650-v4-2.20GHz	cpu	network	resnet_50.B16	queen-bee-x	NHWC	{'costs': [0.0901400]}	1595879942.079471
+
+# Three-point x
+
+Intel-E5-2650-v4-2.20GHz	cpu	network	resnet_50.B16	three-point-x	NHWC	{'costs': [0.087669]}	1595879942.079471
+
+# Segmented x
+
+Intel-E5-2650-v4-2.20GHz	cpu	network	resnet_50.B16	segmented-x	NHWC	{'costs': [0.090864]}	1595879942.079471
+
+# Ansor-DPC
+
+Intel-E5-2650-v4-2.20GHz	cpu	network	resnet_50.B16	Ansor-DPC	NHWC	{'costs': [0.086945]}	1595879942.079471
+
+
+
+#############################################################
+############### Intel CPU Single Op & Subgraph ##############
+#############################################################
+
+# PyTorch
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(1, 128, 128, 128)	pytorch	mkldnn	{'costs': [4.9e-05]}	1593277503.991113
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(1, 512, 32, 512)	pytorch	mkldnn	{'costs': [5.1e-05]}	1593277507.864160
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(1, 512, 512, 512)	pytorch	mkldnn	{'costs': [0.000334]}	1593277510.847527
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(1, 1024, 1024, 1024)	pytorch	mkldnn	{'costs': [0.001568]}	1593277513.885711
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(16, 128, 128, 128)	pytorch	mkldnn	{'costs': [0.0001]}	1593277515.818964
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(16, 512, 32, 512)	pytorch	mkldnn	{'costs': [0.000233]}	1593277517.823513
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(16, 512, 512, 512)	pytorch	mkldnn	{'costs': [0.00311]}	1593277519.939473
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(16, 1024, 1024, 1024)	pytorch	mkldnn	{'costs': [0.030764]}	1593277521.591911
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(1, 256, 64, 128, 3, 2, 1)	pytorch	mkldnn	{'costs': [0.000133]}	1593277523.487607
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(1, 128, 128, 256, 1, 2, 0)	pytorch	mkldnn	{'costs': [0.000135]}	1593277525.364247
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(1, 64, 256, 256, 5, 1, 2)	pytorch	mkldnn	{'costs': [0.000241]}	1593277528.355668
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(1, 32, 512, 512, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.000219]}	1593277530.282269
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(16, 256, 64, 128, 3, 2, 1)	pytorch	mkldnn	{'costs': [0.000227]}	1593277532.265619
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(16, 128, 128, 256, 1, 2, 0)	pytorch	mkldnn	{'costs': [0.000204]}	1593277534.271847
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(16, 64, 256, 256, 5, 1, 2)	pytorch	mkldnn	{'costs': [0.000668]}	1593277535.291522
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(16, 32, 512, 512, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.000808]}	1593277536.350044
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(1, 224, 224, 3, 64, 7, 2, 3)	pytorch	mkldnn	{'costs': [0.000743]}	1593277537.357887
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(1, 56, 56, 64, 64, 1, 1, 0)	pytorch	mkldnn	{'costs': [0.000246]}	1593277538.411165
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(1, 14, 14, 256, 256, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.000344]}	1593277540.392284
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(1, 7, 7, 512, 512, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.000507]}	1593277542.401368
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(16, 224, 224, 3, 64, 7, 2, 3)	pytorch	mkldnn	{'costs': [0.016009]}	1593277543.536271
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(16, 56, 56, 64, 64, 1, 1, 0)	pytorch	mkldnn	{'costs': [0.000762]}	1593277545.537079
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(16, 14, 14, 256, 256, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.002676]}	1593277546.572653
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(16, 7, 7, 512, 512, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.003159]}	1593277548.610715
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(1, 16, 224, 224, 3, 64, 7, 2, 3)	pytorch	mkldnn	{'costs': [0.093173]}	1593277550.263458
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(1, 16, 56, 56, 64, 64, 1, 1, 0)	pytorch	mkldnn	{'costs': [0.010848]}	1593277551.643206
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(1, 16, 14, 14, 256, 256, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.041901]}	1593277553.842935
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(1, 16, 7, 7, 512, 512, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.03733]}	1593277555.066008
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(16, 16, 224, 224, 3, 64, 7, 2, 3)	pytorch	mkldnn	{'costs': [1.390617]}	1593277564.773887
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(16, 16, 56, 56, 64, 64, 1, 1, 0)	pytorch	mkldnn	{'costs': [0.199868]}	1593277566.615860
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(16, 16, 14, 14, 256, 256, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.546685]}	1593277569.457678
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(16, 16, 7, 7, 512, 512, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.543365]}	1593277572.216260
+Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(1, 224, 224, 3, 64, 7, 2, 3)	pytorch	mkldnn	{'costs': [0.001654]}	1593277682.070559
+Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(1, 56, 56, 64, 128, 3, 2, 1)	pytorch	mkldnn	{'costs': [0.000413]}	1593277684.107528
+Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(1, 28, 28, 128, 256, 1, 2, 0)	pytorch	mkldnn	{'costs': [0.000369]}	1593277686.028284
+Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(1, 7, 7, 512, 512, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.000762]}	1593277688.028476
+Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(16, 224, 224, 3, 64, 7, 2, 3)	pytorch	mkldnn	{'costs': [0.045322]}	1593277689.335111
+Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(16, 56, 56, 64, 128, 3, 2, 1)	pytorch	mkldnn	{'costs': [0.003036]}	1593277691.358478
+Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(16, 28, 28, 128, 256, 1, 2, 0)	pytorch	mkldnn	{'costs': [0.000521]}	1593277693.314391
+Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(16, 7, 7, 512, 512, 3, 1, 1)	pytorch	mkldnn	{'costs': [0.003982]}	1593277695.353614
+
+# Tensorflow
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(1, 128, 128, 128)	tensorflow	mkldnn	{'costs': [0.000694]}	1593277503.991113
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(1, 512, 32, 512)	tensorflow	mkldnn	{'costs': [0.000689]}	1593277507.864160
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(1, 512, 512, 512)	tensorflow	mkldnn	{'costs': [0.000693]}	1593277510.847527
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(1, 1024, 1024, 1024)	tensorflow	mkldnn	{'costs': [0.000691]}	1593277513.885711
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(16, 128, 128, 128)	tensorflow	mkldnn	{'costs': [0.000709]}	1593277515.818964
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(16, 512, 32, 512)	tensorflow	mkldnn	{'costs': [0.000718]}	1593277517.823513
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(16, 512, 512, 512)	tensorflow	mkldnn	{'costs': [0.000727]}	1593277519.939473
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(16, 1024, 1024, 1024)	tensorflow	mkldnn	{'costs': [0.000705]}	1593277521.591911
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(1, 256, 64, 128, 3, 2, 1)	tensorflow	mkldnn	{'costs': [0.003866]}	1593277523.487607
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(1, 128, 128, 256, 1, 2, 0)	tensorflow	mkldnn	{'costs': [0.003844]}	1593277525.364247
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(1, 64, 256, 256, 5, 1, 2)	tensorflow	mkldnn	{'costs': [0.003914]}	1593277528.355668
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(1, 32, 512, 512, 3, 1, 1)	tensorflow	mkldnn	{'costs': [0.003800]}	1593277530.282269
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(16, 256, 64, 128, 3, 2, 1)	tensorflow	mkldnn	{'costs': [0.004015]}	1593277532.265619
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(16, 128, 128, 256, 1, 2, 0)	tensorflow	mkldnn	{'costs': [0.003813]}	1593277534.271847
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(16, 64, 256, 256, 5, 1, 2)	tensorflow	mkldnn	{'costs': [0.003879]}	1593277535.291522
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(16, 32, 512, 512, 3, 1, 1)	tensorflow	mkldnn	{'costs': [0.003880]}	1593277536.350044
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(1, 224, 224, 3, 64, 7, 2, 3)	tensorflow	mkldnn	{'costs': [0.000833]}	1593277537.357887
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(1, 56, 56, 64, 64, 1, 1, 0)	tensorflow	mkldnn	{'costs': [0.000828]}	1593277538.411165
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(1, 14, 14, 256, 256, 3, 1, 1)	tensorflow	mkldnn	{'costs': [0.000826]}	1593277540.392284
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(1, 7, 7, 512, 512, 3, 1, 1)	tensorflow	mkldnn	{'costs': [0.000825]}	1593277542.401368
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(16, 224, 224, 3, 64, 7, 2, 3)	tensorflow	mkldnn	{'costs': [0.000827]}	1593277543.536271
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(16, 56, 56, 64, 64, 1, 1, 0)	tensorflow	mkldnn	{'costs': [0.000836]}	1593277545.537079
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(16, 14, 14, 256, 256, 3, 1, 1)	tensorflow	mkldnn	{'costs': [0.000836]}	1593277546.572653
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(16, 7, 7, 512, 512, 3, 1, 1)	tensorflow	mkldnn	{'costs': [0.000848]}	1593277548.610715
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(1, 16, 224, 224, 3, 64, 7, 2, 3)	tensorflow	mkldnn	{'costs': [0.00757]}	1593277550.263458
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(1, 16, 56, 56, 64, 64, 1, 1, 0)	tensorflow	mkldnn	{'costs': [0.00751]}	1593277551.643206
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(1, 16, 14, 14, 256, 256, 3, 1, 1)	tensorflow	mkldnn	{'costs': [0.00753]}	1593277553.842935
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(1, 16, 7, 7, 512, 512, 3, 1, 1)	tensorflow	mkldnn	{'costs': [0.00756]}	1593277555.066008
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(16, 16, 224, 224, 3, 64, 7, 2, 3)	tensorflow	mkldnn	{'costs': [0.00753]}	1593277564.773887
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(16, 16, 56, 56, 64, 64, 1, 1, 0)	tensorflow	mkldnn	{'costs': [0.00749]}	1593277566.615860
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(16, 16, 14, 14, 256, 256, 3, 1, 1)	tensorflow	mkldnn	{'costs': [0.00749]}	1593277569.457678
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(16, 16, 7, 7, 512, 512, 3, 1, 1)	tensorflow	mkldnn	{'costs': [0.00749]}	1593277572.216260
+
+
+# AutoTVM
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(1, 128, 128, 128)	AutoTVM	default	{'costs': [1.6e-05]}	1593334493.423112
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(1, 512, 32, 512)	AutoTVM	default	{'costs': [4.2e-05]}	1593334497.753366
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(1, 512, 512, 512)	AutoTVM	default	{'costs': [0.000624]}	1593334501.957920
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(1, 1024, 1024, 1024)	AutoTVM	default	{'costs': [0.005564]}	1593334506.149572
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(16, 128, 128, 128)	AutoTVM	default	{'costs': [0.000201]}	1593334510.290874
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(16, 512, 32, 512)	AutoTVM	default	{'costs': [0.000564]}	1593334514.508965
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(16, 512, 512, 512)	AutoTVM	default	{'costs': [0.010058]}	1593334517.539048
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(16, 1024, 1024, 1024)	AutoTVM	default	{'costs': [0.089587]}	1593334521.534268
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(1, 256, 64, 128, 3, 2, 1)	AutoTVM	default	{'costs': [1.9e-05]}	1593334523.800628
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(1, 128, 128, 256, 1, 2, 0)	AutoTVM	default	{'costs': [1.7e-05]}	1593334525.846895
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(1, 64, 256, 256, 5, 1, 2)	AutoTVM	default	{'costs': [8.2e-05]}	1593334528.796093
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(1, 32, 512, 512, 3, 1, 1)	AutoTVM	default	{'costs': [9.6e-05]}	1593334531.310739
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(1, 224, 224, 3, 64, 7, 2, 3)	AutoTVM	default	{'costs': [0.001061]}	1593334544.547047
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(1, 56, 56, 64, 64, 1, 1, 0)	AutoTVM	default	{'costs': [0.000217]}	1593334547.090006
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(1, 14, 14, 256, 256, 3, 1, 1)	AutoTVM	default	{'costs': [0.00036]}	1593334549.591046
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(1, 7, 7, 512, 512, 3, 1, 1)	AutoTVM	default	{'costs': [0.000357]}	1593334553.434398
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(1, 16, 224, 224, 3, 64, 7, 2, 3)	AutoTVM	default	{'costs': [0.011879]}	1593334569.124177
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(1, 16, 56, 56, 64, 64, 1, 1, 0)	AutoTVM	default	{'costs': [0.001117]}	1593334572.949632
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(1, 16, 14, 14, 256, 256, 3, 1, 1)	AutoTVM	default	{'costs': [0.009737]}	1593334575.312959
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(1, 16, 7, 7, 512, 512, 3, 1, 1)	AutoTVM	default	{'costs': [0.01029]}	1593334577.681618
+Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(1, 224, 224, 3, 64, 7, 2, 3)	AutoTVM	default	{'costs': [5.7e-04]}	1593334758.982134
+Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(1, 56, 56, 64, 128, 3, 2, 1)	AutoTVM	default	{'costs': [2.7e-04]}	1593334761.991241
+Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(1, 28, 28, 128, 256, 1, 2, 0)	AutoTVM	default	{'costs': [8.6e-05]}	1593334764.943387
+Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(1, 7, 7, 512, 512, 3, 1, 1)	AutoTVM	default	{'costs': [4.1e-04]}	1593334769.402861
+Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(16, 224, 224, 3, 64, 7, 2, 3)	AutoTVM	default	{'costs': [0.010311]}	1593334772.493355
+Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(16, 56, 56, 64, 128, 3, 2, 1)	AutoTVM	default	{'costs': [0.003431]}	1593334777.010994
+Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(16, 28, 28, 128, 256, 1, 2, 0)	AutoTVM	default	{'costs': [0.000782]}	1593334781.174050
+Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(16, 7, 7, 512, 512, 3, 1, 1)	AutoTVM	default	{'costs': [0.007244]}	1593334784.329368
+
+
+
+# Ansor
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(1, 128, 128, 128)	Ansor	default	{'costs': [8.0e-06]}	1593586495.582533
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(1, 512, 32, 512)	Ansor	default	{'costs': [1.8e-05]}	1593586501.113158
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(1, 512, 512, 512)	Ansor	default	{'costs': [0.000238]}	1593586508.140421
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(1, 1024, 1024, 1024)	Ansor	default	{'costs': [0.002026]}	1593586521.703597
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(1, 256, 64, 128, 3, 2, 1)	Ansor	default	{'costs': [1e-05]}	1593586585.937866
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(1, 128, 128, 256, 1, 2, 0)	Ansor	default	{'costs': [8e-06]}	1593586591.264275
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(1, 64, 256, 256, 5, 1, 2)	Ansor	default	{'costs': [0.000062]}	1593586597.713663
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(1, 32, 512, 512, 3, 1, 1)	Ansor	default	{'costs': [0.000064]}	1593586606.578414
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(1, 224, 224, 3, 64, 7, 2, 3)	Ansor	default	{'costs': [0.000179]}	1593586614.344265
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(1, 56, 56, 64, 64, 1, 1, 0)	Ansor	default	{'costs': [0.000023]}	1593586623.033785
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(1, 14, 14, 256, 256, 3, 1, 1)	Ansor	default	{'costs': [0.000231]}	1593586630.465974
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(1, 7, 7, 512, 512, 3, 1, 1)	Ansor	default	{'costs': [0.000349]}	1593586644.233730
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(1, 16, 224, 224, 3, 64, 7, 2, 3)	Ansor	default	{'costs': [0.009681]}	1593586665.961345
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(1, 16, 56, 56, 64, 64, 1, 1, 0)	Ansor	default	{'costs': [0.000283]}	1593586808.076177
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(1, 16, 14, 14, 256, 256, 3, 1, 1)	Ansor	default	{'costs': [0.009309]}	1593586840.980304
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(1, 16, 7, 7, 512, 512, 3, 1, 1)	Ansor	default	{'costs': [0.012382]}	1593587163.167712
+Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(1, 224, 224, 3, 64, 7, 2, 3)	Ansor	default	{'costs': [0.000192]}	1593587834.317917
+Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(1, 56, 56, 64, 128, 3, 2, 1)	Ansor	default	{'costs': [0.000123]}	1593587844.183230
+Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(1, 28, 28, 128, 256, 1, 2, 0)	Ansor	default	{'costs': [1.6e-05]}	1593587851.835438
+Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(1, 7, 7, 512, 512, 3, 1, 1)	Ansor	default	{'costs': [0.000306]}	1593587864.469640
+
+# Ansor-DPC
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(1, 128, 128, 128)	Ansor-DPC	default	{'costs': [8e-06]}	1593586495.582533
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(1, 512, 32, 512)	Ansor-DPC	default	{'costs': [1.7e-05]}	1593586501.113158
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(1, 512, 512, 512)	Ansor-DPC	default	{'costs': [0.000234]}	1593586508.140421
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(1, 1024, 1024, 1024)	Ansor-DPC	default	{'costs': [0.001950]}	1593586521.703597
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(1, 256, 64, 128, 3, 2, 1)	Ansor-DPC	default	{'costs': [1e-05]}	1593586585.937866
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(1, 128, 128, 256, 1, 2, 0)	Ansor-DPC	default	{'costs': [9e-06]}	1593586591.264275
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(1, 64, 256, 256, 5, 1, 2)	Ansor-DPC	default	{'costs': [5e-05]}	1593586597.713663
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(1, 32, 512, 512, 3, 1, 1)	Ansor-DPC	default	{'costs': [6.2e-05]}	1593586606.578414
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(1, 224, 224, 3, 64, 7, 2, 3)	Ansor-DPC	default	{'costs': [0.000179]}	1593586614.344265
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(1, 56, 56, 64, 64, 1, 1, 0)	Ansor-DPC	default	{'costs': [2.3e-05]}	1593586623.033785
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(1, 14, 14, 256, 256, 3, 1, 1)	Ansor-DPC	default	{'costs': [0.000233]}	1593586630.465974
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(1, 7, 7, 512, 512, 3, 1, 1)	Ansor-DPC	default	{'costs': [0.000308]}	1593586644.233730
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(1, 16, 224, 224, 3, 64, 7, 2, 3)	Ansor-DPC	default	{'costs': [0.009784]}	1593586665.961345
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(1, 16, 56, 56, 64, 64, 1, 1, 0)	Ansor-DPC	default	{'costs': [0.000281]}	1593586808.076177
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(1, 16, 14, 14, 256, 256, 3, 1, 1)	Ansor-DPC	default	{'costs': [0.008962]}	1593586840.980304
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(1, 16, 7, 7, 512, 512, 3, 1, 1)	Ansor-DPC	default	{'costs': [0.010952]}	1593587163.167712
+Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(1, 224, 224, 3, 64, 7, 2, 3)	Ansor-DPC	default	{'costs': [0.000183]}	1593587834.317917
+Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(1, 56, 56, 64, 128, 3, 2, 1)	Ansor-DPC	default	{'costs': [0.000123]}	1593587844.183230
+Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(1, 28, 28, 128, 256, 1, 2, 0)	Ansor-DPC	default	{'costs': [1.6e-05]}	1593587851.835438
+Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(1, 7, 7, 512, 512, 3, 1, 1)	Ansor-DPC	default	{'costs': [0.000306]}	1593587864.469640
