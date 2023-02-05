@@ -236,14 +236,15 @@ def enhance_color(color, h=1, l=1, s=1):
 method_color_dict = {
     #'ours': 'C0',
     'AutoTVM': '#CB997E',
-    'tensorflow': '#B8B7A3',
+    #'tensorflow': '#B8B7A3',
+    'tensorflow': '#CB997E',
     'Ansor': '#B8B7A3',
-    'Ansor-DPC': '#6B705C',
+    'Ansor-TPC': '#6B705C',
     'tensorflow-tensorrt': 'C9',
     'tflite': 'C2',
 
 
-    'queen-bee-x':'#A5A58D',
+    'queen-bee-x':'#CDBA96',
     'segmented-x':'#CB997E',
     'single-point-x':'#FDE8D5',
     'three-point-x':'#DDBEA9',
@@ -267,7 +268,7 @@ def method2color(method):
 ############################## Order
 method_order_list = [
     'pytorch', 'tensorflow', 'tensorflow-xla', 'tensorflow-tensorrt',
-    'tflite', 'halide', 'FlexTensor',  'AutoTVM', 'Ansor','Ansor-DPC',
+    'tflite', 'halide', 'FlexTensor',  'AutoTVM', 'Ansor','Ansor-TPC',
     'queen-bee-x','segmented-x','single-point-x','three-point-x',
     'Limit space', 'No fine-tuning',
     'ours',
@@ -291,12 +292,12 @@ show_name_replace_dict = {
     'halide': 'Halide',
 
     'Ansor': 'Ansor',
-    'Ansor-DPC': 'Ansor-DPC',
+    'Ansor-TPC': 'Ansor-TPC',
 
-    'queen-bee-x':'queen bee crossover',
-    'segmented-x':'segemented crossover',
-    'single-point-x':'single point crossover',
-    'three-point-x':'3 point crossover',
+    'queen-bee-x':'Queen Bee Crossover',
+    'segmented-x':'Segemented Crossover',
+    'single-point-x':'Single-point Crossover',
+    'three-point-x':'Three-point Crossover',
 
     'batch-16': 'batch',
 

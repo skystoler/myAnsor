@@ -92,9 +92,12 @@ if __name__ == "__main__":
 
     yscale_log = False
     yticks = [0, 0.2, 0.4, 0.6, 0.8, 1.0]
-    y_max = 1.2
-    legend_nrow = 1
-    legend_bbox_to_anchor = (0.45, 1.3)
+    y_max = 1.1       
+    #y_max = 1.4 
+    #legend_nrow = 1                
+    legend_nrow = 2
+    #legend_bbox_to_anchor = (0.45, 1.0)
+    legend_bbox_to_anchor = (0.25, 1.0)
 
     if args.mode == 'op':
         fig, ax = plt.subplots()
@@ -103,7 +106,7 @@ if __name__ == "__main__":
         #ax2 = plt.subplot(gs[1])
 
         baseline = None
-        methods = ['AutoTVM', 'tensorflow', 'pytorch', 'Ansor',  'Ansor-DPC']
+        methods = ['AutoTVM', 'tensorflow', 'pytorch', 'Ansor',  'Ansor-TPC']
         data = extract_data_for_device(args.mode, 1, args.device, 'cpu', args.baseline_file, methods)
         draw_grouped_bar_chart(throughput_to_cost(data), baseline='', draw_legend=True, figax=ax1, yticks=yticks, yscale_log=yscale_log,
                 legend_nrow=legend_nrow, legend_bbox_to_anchor=legend_bbox_to_anchor, draw_ylabel="", y_max=y_max)
@@ -156,7 +159,7 @@ if __name__ == "__main__":
             return data
 
         baseline = None
-        methods = ['AutoTVM', 'pytorch', 'Ansor',  'Ansor-DPC']
+        methods = ['AutoTVM', 'pytorch', 'Ansor',  'Ansor-TPC']
         data = extract_data_for_both_device(args.mode, 1, methods)
         draw_grouped_bar_chart(throughput_to_cost(data), baseline='', draw_legend=True, figax=ax1, yticks=yticks, yscale_log=yscale_log,
                 legend_nrow=legend_nrow, legend_bbox_to_anchor=legend_bbox_to_anchor, draw_ylabel="", y_max=y_max)

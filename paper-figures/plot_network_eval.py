@@ -54,8 +54,10 @@ if __name__ == "__main__":
         methods = ['pytorch', 'tensorflow', 'tensorflow-tensorrt', 'AutoTVM', 'ours']
         backend = 'gpu'
     elif 'Intel' in args.device:
-        #methods = ['pytorch', 'tensorflow','Ansor','queen-bee-x','segmented-x','single-point-x','three-point-x','Ansor-DPC']
-        methods = ['Ansor','queen-bee-x','segmented-x','single-point-x','three-point-x','Ansor-DPC']
+        #methods = ['pytorch', 'tensorflow','Ansor','queen-bee-x','segmented-x','single-point-x','three-point-x','Ansor-TPC']
+        #methods = ['Ansor','queen-bee-x','segmented-x','Ansor-TPC']
+        methods = ['Ansor','single-point-x','three-point-x','Ansor-TPC']
+        #methods = ['pytorch', 'tensorflow','Ansor','Ansor-TPC']
         backend = 'cpu'
     else:
         methods = ['tflite', 'AutoTVM', 'ours']
@@ -64,15 +66,17 @@ if __name__ == "__main__":
     #yticks = [0, 0.2, 0.4, 0.6, 0.8, 1.0]
     yticks = [0, 0.2, 0.4, 0.6, 0.8, 0.9,0.92,0.94,0.96,0.98,1.0]
     yscale_log = False
-    y_max = 1.02
+    #y_max = 1.1
+    y_max = 1.06
     y_min = 0.9
+    #y_min=0
 
     if args.batch_size > 0:
         networks = ["%s.B%d" % (name, args.batch_size) for name in networks]
         data = load_data(networks, args.baseline_file, args.device, backend, methods)
         fig, ax = plt.subplots()
 
-        draw_grouped_bar_chart(data, legend_nrow=3, legend_bbox_to_anchor=(0.50, 1.50), figax=ax, yticks=yticks, y_max=y_max, y_min=y_min,draw_ylabel="")
+        draw_grouped_bar_chart(data, legend_nrow=2, legend_bbox_to_anchor=(0.5, 1.0), figax=ax, yticks=yticks, y_max=y_max, y_min=y_min,draw_ylabel="")
         #ax.text(0.15, 0.85, 'Batch size = 1', horizontalalignment='center', verticalalignment='center', transform=ax.transAxes, fontsize=ax.yaxis.label.get_size())
 
         fig.set_size_inches((7, 3))
@@ -85,10 +89,12 @@ if __name__ == "__main__":
         ax1 = plt.subplot(gs[0])
         ax2 = plt.subplot(gs[1])
 
-        legend_nrow = 1
+        #legend_nrow = 1
+        legend_nrow = 2
 
         if 'Intel' in args.device:
-            legend_bbox_to_anchor = (0.50, 1.35)
+            #legend_bbox_to_anchor = (0.50, 1.35)
+            legend_bbox_to_anchor = (0.25, 1.0)
         else:
             legend_bbox_to_anchor = (0.45, 1.35)
 

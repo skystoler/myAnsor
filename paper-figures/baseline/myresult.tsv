@@ -32,9 +32,9 @@ Intel-E5-2650-v4-2.20GHz	cpu	network	resnet_50.B16	three-point-x	NHWC	{'costs': 
 
 Intel-E5-2650-v4-2.20GHz	cpu	network	resnet_50.B16	segmented-x	NHWC	{'costs': [0.092773]}	1595879942.079471
 
-# Ansor-DPC
+# Ansor-TPC
 
-Intel-E5-2650-v4-2.20GHz	cpu	network	resnet_50.B16	Ansor-DPC	NHWC	{'costs': [0.088591]}	1595879942.079471
+Intel-E5-2650-v4-2.20GHz	cpu	network	resnet_50.B16	Ansor-TPC	NHWC	{'costs': [0.088591]}	1595879942.079471
 
 
 
@@ -173,24 +173,24 @@ Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(1, 56, 56, 64, 128, 3, 2, 1
 Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(1, 28, 28, 128, 256, 1, 2, 0)	Ansor	default	{'costs': [1.6e-05]}	1593587851.835438
 Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(1, 7, 7, 512, 512, 3, 1, 1)	Ansor	default	{'costs': [0.000325]}	1593587864.469640
 
-# Ansor-DPC
-Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(1, 128, 128, 128)	Ansor-DPC	default	{'costs': [9e-06]}	1593586495.582533
-Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(1, 512, 32, 512)	Ansor-DPC	default	{'costs': [1.8e-05]}	1593586501.113158
-Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(1, 512, 512, 512)	Ansor-DPC	default	{'costs': [0.000268]}	1593586508.140421
-Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(1, 1024, 1024, 1024)	Ansor-DPC	default	{'costs': [0.002125]}	1593586521.703597
-Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(1, 256, 64, 128, 3, 2, 1)	Ansor-DPC	default	{'costs': [1e-05]}	1593586585.937866
-Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(1, 128, 128, 256, 1, 2, 0)	Ansor-DPC	default	{'costs': [9e-06]}	1593586591.264275
-Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(1, 64, 256, 256, 5, 1, 2)	Ansor-DPC	default	{'costs': [5.4e-05]}	1593586597.713663
-Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(1, 32, 512, 512, 3, 1, 1)	Ansor-DPC	default	{'costs': [6.8e-05]}	1593586606.578414
-Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(1, 224, 224, 3, 64, 7, 2, 3)	Ansor-DPC	default	{'costs': [0.000195]}	1593586614.344265
-Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(1, 56, 56, 64, 64, 1, 1, 0)	Ansor-DPC	default	{'costs': [2.4e-05]}	1593586623.033785
-Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(1, 14, 14, 256, 256, 3, 1, 1)	Ansor-DPC	default	{'costs': [0.000261]}	1593586630.465974
-Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(1, 7, 7, 512, 512, 3, 1, 1)	Ansor-DPC	default	{'costs': [0.000366]}	1593586644.233730
-Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(1, 16, 224, 224, 3, 64, 7, 2, 3)	Ansor-DPC	default	{'costs': [0.010038]}	1593586665.961345
-Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(1, 16, 56, 56, 64, 64, 1, 1, 0)	Ansor-DPC	default	{'costs': [0.000291]}	1593586808.076177
-Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(1, 16, 14, 14, 256, 256, 3, 1, 1)	Ansor-DPC	default	{'costs': [0.009571]}	1593586840.980304
-Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(1, 16, 7, 7, 512, 512, 3, 1, 1)	Ansor-DPC	default	{'costs': [0.011981]}	1593587163.167712
-Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(1, 224, 224, 3, 64, 7, 2, 3)	Ansor-DPC	default	{'costs': [0.000201]}	1593587834.317917
-Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(1, 56, 56, 64, 128, 3, 2, 1)	Ansor-DPC	default	{'costs': [0.000128]}	1593587844.183230
-Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(1, 28, 28, 128, 256, 1, 2, 0)	Ansor-DPC	default	{'costs': [1.6e-05]}	1593587851.835438
-Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(1, 7, 7, 512, 512, 3, 1, 1)	Ansor-DPC	default	{'costs': [0.000341]}	1593587864.469640
+# Ansor-TPC
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(1, 128, 128, 128)	Ansor-TPC	default	{'costs': [9e-06]}	1593586495.582533
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(1, 512, 32, 512)	Ansor-TPC	default	{'costs': [1.8e-05]}	1593586501.113158
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(1, 512, 512, 512)	Ansor-TPC	default	{'costs': [0.000268]}	1593586508.140421
+Intel-E5-2650-v4-2.20GHz	cpu	op	GMM(1, 1024, 1024, 1024)	Ansor-TPC	default	{'costs': [0.002125]}	1593586521.703597
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(1, 256, 64, 128, 3, 2, 1)	Ansor-TPC	default	{'costs': [1e-05]}	1593586585.937866
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(1, 128, 128, 256, 1, 2, 0)	Ansor-TPC	default	{'costs': [9e-06]}	1593586591.264275
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(1, 64, 256, 256, 5, 1, 2)	Ansor-TPC	default	{'costs': [5.4e-05]}	1593586597.713663
+Intel-E5-2650-v4-2.20GHz	cpu	op	C1D(1, 32, 512, 512, 3, 1, 1)	Ansor-TPC	default	{'costs': [6.8e-05]}	1593586606.578414
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(1, 224, 224, 3, 64, 7, 2, 3)	Ansor-TPC	default	{'costs': [0.000195]}	1593586614.344265
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(1, 56, 56, 64, 64, 1, 1, 0)	Ansor-TPC	default	{'costs': [2.4e-05]}	1593586623.033785
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(1, 14, 14, 256, 256, 3, 1, 1)	Ansor-TPC	default	{'costs': [0.000261]}	1593586630.465974
+Intel-E5-2650-v4-2.20GHz	cpu	op	C2D(1, 7, 7, 512, 512, 3, 1, 1)	Ansor-TPC	default	{'costs': [0.000366]}	1593586644.233730
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(1, 16, 224, 224, 3, 64, 7, 2, 3)	Ansor-TPC	default	{'costs': [0.010038]}	1593586665.961345
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(1, 16, 56, 56, 64, 64, 1, 1, 0)	Ansor-TPC	default	{'costs': [0.000291]}	1593586808.076177
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(1, 16, 14, 14, 256, 256, 3, 1, 1)	Ansor-TPC	default	{'costs': [0.009571]}	1593586840.980304
+Intel-E5-2650-v4-2.20GHz	cpu	op	C3D(1, 16, 7, 7, 512, 512, 3, 1, 1)	Ansor-TPC	default	{'costs': [0.011981]}	1593587163.167712
+Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(1, 224, 224, 3, 64, 7, 2, 3)	Ansor-TPC	default	{'costs': [0.000201]}	1593587834.317917
+Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(1, 56, 56, 64, 128, 3, 2, 1)	Ansor-TPC	default	{'costs': [0.000128]}	1593587844.183230
+Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(1, 28, 28, 128, 256, 1, 2, 0)	Ansor-TPC	default	{'costs': [1.6e-05]}	1593587851.835438
+Intel-E5-2650-v4-2.20GHz	cpu	subgraph	conv2d_bn_relu(1, 7, 7, 512, 512, 3, 1, 1)	Ansor-TPC	default	{'costs': [0.000341]}	1593587864.469640
