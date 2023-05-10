@@ -961,7 +961,16 @@ State CrossOverState(const SearchTask& task, std::mt19937* random_gen, const Sta
   std::unordered_map<std::string, int> stage_out_to_states;
   int p1_selected = 0, p2_selected = 0;
 
-  for (int t = static_cast<int>(p1->stages.size()) - 1; t >= 0; --t) {
+  //doublex----p2+p1+p2
+  int length=static_cast<int>(p1->stages.size());
+  int one_point=rand() % length;
+  int two_point=rand() % length;
+  while(two_point==one_point){
+    two_point=rand() % length;
+  }
+  int cnt=0;
+  for (int t=length-1; t >= 0; --t) {
+
     // Don't do crossover only when the stage names are different
     if (p1->stages[t]->op->name != p2->stages[t]->op->name) {
       (*fail_counters)[1]++;
@@ -977,13 +986,18 @@ State CrossOverState(const SearchTask& task, std::mt19937* random_gen, const Sta
       // Since CacheRead steps target to placeholder stage, we assign all placeholders to p1.
       stage_out_to_states[p1->stages[t]->op->name] = sync_p1.id;
       continue;
-    } else if ((*random_gen)() % 100 >= 50) {
-      // TODO(lmzheng, comaniac): Should be based on the score breakdown instead of random selection.
-      stage_out_to_states[p1->stages[t]->op->name] = sync_p2.id;
+    } 
+
+    if(t==one_point || t==two_point) ++cnt;
+
+    if(cnt==0 || cnt==2){
+      stage_out_to_states[p2->stages[t]->op->name] = sync_p2.id;
       if (p2->stages[t]->compute_at != kInlined) {
         p2_selected++;
       }
-    } else {
+    }
+
+    if(cnt==1){
       stage_out_to_states[p1->stages[t]->op->name] = sync_p1.id;
       if (p1->stages[t]->compute_at != kInlined) {
         p1_selected++;

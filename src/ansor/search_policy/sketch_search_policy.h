@@ -40,6 +40,16 @@
 namespace tvm {
 namespace ansor {
 
+// LRU
+class LRUList{
+public:
+      LRUList(std::string x, LRUList *y, LRUList *z){
+          val = x, pre = y, next = z;
+      }
+      std::string val;
+      LRUList *pre, *next;
+};
+
 class SketchSearchPolicyNode;
 
 /*!
@@ -119,6 +129,11 @@ class SketchSearchPolicyNode: public SearchPolicyNode {
   void SearchOneRound(std::vector<State>* best_states,
                       int num_random_states, std::vector<State>* random_states);
 
+  State LNS(State now_s);
+
+  State destroy(State old_s);
+
+  State repair(State tmp_s);
 
   // Sample init population
   void SampleInitPopulation(const std::vector<State>& sketches,

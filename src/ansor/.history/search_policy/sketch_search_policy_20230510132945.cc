@@ -719,7 +719,7 @@ void SketchSearchPolicyNode::SearchOneRound(std::vector<State>* best_states,
   // PrintAllStates(init_population);
   // exit(0);
 
-  best_states.push_back(LNS(tmp_s));
+  //best_states.push_back(LNS(tmp_s));
 
   // Sample some random states for eps-greedy
   //RandomSampleStates(init_population, &rand_gen_, num_random_states * 10, random_states);

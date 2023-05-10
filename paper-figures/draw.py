@@ -145,7 +145,7 @@ if __name__ == "__main__":
     ax.legend(name_list,
             fontsize=18,
             loc='upper center',
-            bbox_to_anchor=(0.5, 1.17),
+            bbox_to_anchor=(0.75, 0.95),
             ncol=3,
             handlelength=1.0,
             handletextpad=0.5,
