@@ -660,6 +660,155 @@ int InitPopulationUnroll(const SketchSearchPolicyNode* policy,
   return 0;
 }
 
+/*
+// Clone and apply one step from the reference state to a new state.
+State ApplyStepToNewState(const SearchTask& task, const State& state, const State& ref_s,
+                          const Step& step) {
+  State tmp_s = state;
+
+  int curr_stage_id = step->stage_id;
+  if (tmp_s->stages[curr_stage_id]->op->name != ref_s->stages[curr_stage_id]->op->name) {
+    // Relocate stage_id by matching the name, so the step can work on the same stage
+    curr_stage_id = GetStageIdByName(tmp_s, ref_s->stages[step->stage_id]->op->name);
+    CHECK_NE(curr_stage_id, -1);
+  }
+
+  // The default case: Simply append the step to the history and do it
+  std::function<State(const Step&)> simple_apply = [&task, &tmp_s, &curr_stage_id]
+      (Step new_step) {
+    if (new_step->stage_id != curr_stage_id) {
+      new_step = new_step->CloneWithStageID(curr_stage_id);
+    }
+
+    tmp_s.CopyOnWrite()->transform_steps.push_back(new_step);
+    try {
+      tmp_s.DoStep(new_step, task->compute_dag);
+    } catch (dmlc::Error &ex) {
+      return State();
+    }
+    return tmp_s;
+  };
+
+  // Deal with special steps
+  if (auto follow_step = step.as<FollowSplitStepNode>()) {
+    // Follow split step specifies a source split step ID that might be changed when
+    // crossover, so we try to identify the corresponding split step and use an offset
+    // to adjust the source step id.
+    const std::string& target_stage_name =
+        ref_s->stages[ref_s->transform_steps[follow_step->src_step_id]->stage_id]->op->name;
+
+    // Looking for the first SplitStep to the target stage.
+    size_t tmp_s_ptr = 0;
+    while (tmp_s_ptr < tmp_s->transform_steps.size() &&
+           (!tmp_s->transform_steps[tmp_s_ptr]->IsInstance<SplitStepNode>() ||
+            tmp_s->stages[tmp_s->transform_steps[tmp_s_ptr]->stage_id]->op->name !=
+                target_stage_name)) {
+      tmp_s_ptr++;
+    }
+
+    size_t ref_s_ptr = 0;
+    while (ref_s_ptr < ref_s->transform_steps.size() &&
+           (!ref_s->transform_steps[ref_s_ptr]->IsInstance<SplitStepNode>() ||
+            ref_s->stages[ref_s->transform_steps[ref_s_ptr]->stage_id]->op->name !=
+                target_stage_name)) {
+      ref_s_ptr++;
+    }
+
+    int follow_split_src_offset = tmp_s_ptr - ref_s_ptr;
+    int new_src_split_step_id = follow_step->src_step_id + follow_split_src_offset;
+
+    // Check the validity of the new_src_split_step_id
+    if (tmp_s_ptr == tmp_s->transform_steps.size() || ref_s_ptr == ref_s->transform_steps.size() ||
+        new_src_split_step_id < 0 || new_src_split_step_id >= static_cast<int>(tmp_s->transform_steps.size())) {
+      return State();
+    }
+    auto ps = tmp_s->transform_steps[new_src_split_step_id].as<SplitStepNode>();
+    if (ps == nullptr || static_cast<int>(ps->lengths.size()) <= follow_step->n_split) {
+      return State();
+    }
+
+    CHECK_LT(follow_step->iter_id, tmp_s->stages[curr_stage_id]->iters.size());
+    auto iter = tmp_s->stages[curr_stage_id]->iters[follow_step->iter_id];
+
+    tmp_s.follow_split(curr_stage_id, iter, new_src_split_step_id, follow_step->n_split);
+  } else if (auto follow_step = step.as<FollowFusedSplitStepNode>()) {
+    // Follow fused split step specifies a source split/fuse step IDs that might be changed when
+    // crossover, so we update the source step ID list.
+
+    // Get target stage ID and spatial split steps.
+    std::set<int> consumers = GetConsumers(task, tmp_s, curr_stage_id);
+    if (consumers.size() == 0) {
+      return State();
+    }
+    int target_stage_id = *consumers.begin();
+
+    // Get split steps.
+    std::vector<int> spatial_split_step_ids;
+    GetSpaceSplitStepIds(tmp_s, target_stage_id, &spatial_split_step_ids);
+    if (spatial_split_step_ids.size() == 0 ||
+        spatial_split_step_ids.size() != follow_step->src_step_ids.size()) {
+      return State();
+    }
+
+    // Locate the new state iter by name.
+    const std::string& iter_name = ref_s->stages[follow_step->stage_id]->iters[follow_step->iter_id]->name;
+    Iterator iter;
+    for (size_t i = 0; i < tmp_s->stages[curr_stage_id]->iters.size(); ++i) {
+      if (tmp_s->stages[curr_stage_id]->iters[i]->name == iter_name) {
+        iter = tmp_s->stages[curr_stage_id]->iters[i];
+        break;
+      }
+    }
+
+    if (!iter.defined()) {
+      return State();
+    }
+
+    tmp_s.follow_fused_split(curr_stage_id, iter, spatial_split_step_ids, follow_step->level,
+                             follow_step->factor_or_nparts);
+  } else if (auto compute_at_step = step.as<ComputeAtStepNode>()) {
+    // ComputeAt target stage may be missing in the new state so we need to update target stage ID
+    // and iter ID before applying ComputeAtStep to a new state.
+    // We use stage name and iter name from the reference state to update IDs. If any of names is
+    // missing in the new state, we give up this crossover to avoid creating an invalid state.
+    const std::string& target_stage_name =
+        ref_s->stages[compute_at_step->target_stage_id]->op->name;
+    const std::string& target_iter_name = ref_s->stages[compute_at_step->target_stage_id]
+                                               ->iters[compute_at_step->target_iter_id]
+                                               ->name;
+
+    // Find the target stage and iter to apply the compute at step.
+    for (size_t stage_id = 0; stage_id < tmp_s->stages.size(); ++stage_id) {
+      if (target_stage_name == tmp_s->stages[stage_id]->op->name) {
+        for (size_t iter_id = 0; iter_id < tmp_s->stages[stage_id]->iters.size(); ++iter_id) {
+          if (target_iter_name == tmp_s->stages[stage_id]->iters[iter_id]->name) {
+            auto clone_step = ComputeAtStep(curr_stage_id, stage_id, iter_id);
+            tmp_s.CopyOnWrite()->transform_steps.push_back(clone_step);
+            tmp_s.DoStep(clone_step, task->compute_dag);
+            return tmp_s;
+          }
+        }
+      }
+    }
+    return State();
+  } else if (auto annotation_step = step.as<AnnotationStepNode>()) {
+    if (annotation_step->annotation == kParallel &&
+        tmp_s->stages[curr_stage_id]->compute_at != kRoot) {
+      // Do not produce nested parallel
+      return simple_apply(AnnotationStep(annotation_step->stage_id,
+                                         annotation_step->iter_id,
+                                         kNone));
+    } else {
+      return simple_apply(step);
+    }
+  } else {
+    return simple_apply(step);
+  }
+  return tmp_s;
+}
+
+*/
+
 void SketchSearchPolicyNode::SearchOneRound(std::vector<State>* best_states,
     int num_random_states, std::vector<State>* random_states) {
   best_states->clear();
@@ -719,7 +868,8 @@ void SketchSearchPolicyNode::SearchOneRound(std::vector<State>* best_states,
   // PrintAllStates(init_population);
   // exit(0);
 
-  best_states.push_back(LNS(tmp_s));
+  //best_states->push_back(tmp_s);
+  best_states->push_back(LNS(tmp_s));
 
   // Sample some random states for eps-greedy
   //RandomSampleStates(init_population, &rand_gen_, num_random_states * 10, random_states);
@@ -727,64 +877,131 @@ void SketchSearchPolicyNode::SearchOneRound(std::vector<State>* best_states,
 
 State SketchSearchPolicyNode::LNS(State now_s){
   State best_s=now_s;
-  while(true){
-    State tmp_s=repair(destroy(now_s));
+  for(int i=0;i<5;++i){
+    State tmp_s=DestroyAndRepair(now_s);
+
+    StdCout(verbose) << "Destroy And Repair State\t#s: " << std::endl;
+    std::cerr << tmp_s;
+    std::cerr << "==============================================" << std::endl;
+
+    int fail_cnt=0;
+    
+    
     while(!tmp_s.defined()){
-      tmp_s=repair(destroy(now_s));
+      std::cerr<<fail_cnt<<std::endl;
+      if(++fail_cnt==5) return State();
+      tmp_s=DestroyAndRepair(now_s);
     }
+    
     //compute scores
+    std::cerr<<tmp_s.defined()<<" "<<now_s.defined()<<" "<<best_s.defined()<<std::endl;
+    //std::cerr<<"tset"<<std::endl;
+
+    //断错误
     std::vector<State> states={tmp_s,now_s,best_s};
+
+    //没问题
+    //std::vector<State> states={now_s,best_s};
+    
     std::vector<State> *statesp=&states;
-    std::vector<float> scores(3,0); 
+    std::vector<float> scores;
+    scores.reserve(3);
+    //PruneInvalidState(cur_task, statesp);
     program_cost_model->Predict(cur_task, *statesp, &scores);
-    if(scores[0]>scores[1]){
-      now_s=tmp_s;
-    }
-    if(scores[0]>scores[2]){
-      best_s=tmp_s;
-    }
+    std::cerr<<" finish"<<std::endl;
+    // if(scores[0]>scores[1]){
+    //   now_s=tmp_s;
+    // }
+    // if(scores[0]>scores[2]){
+    //   best_s=tmp_s;
+    // }
   }
 
   return best_s;
 }
 
-State SketchSearchPolicyNode::destroy(State old_s){
+State SketchSearchPolicyNode::DestroyAndRepair(State old_s){
   //const SearchTask& task = policy->cur_task;
 
-  // Randomly pick one step to destroy.
-  std::vector<Step> steps=old_s->transform_steps;
-  size_t step_id = rand_gen_() % steps.size();
+  // Randomly pick two steps to destroy and repair.
+  //StdCout(verbose)<<"randomly pick steps"<<std::endl;
+  //size_t de_id = rand_gen_() % old_s->transform_steps.size();
+  size_t de_id = rand() % old_s->transform_steps.size();
+
+  size_t re_id = rand() % old_s->transform_steps.size();
+
+  while(re_id==de_id){
+    re_id=rand() % old_s->transform_steps.size();
+  }
+  StdCout(verbose)<<"length: "<<old_s->transform_steps.size()<<", destroy id: "<<de_id<<", repair id: "<<re_id<<std::endl;
 
   // Create a new state.
   State tmp_s = cur_task->compute_dag.GetInitState();
+  
+/*
+  if(de_id<re_id){
+    for (size_t s = 0; s < de_id - 1; ++s) {
+      const auto& step = old_s->transform_steps[s];
+      tmp_s.CopyOnWrite()->transform_steps.push_back(step);
+      tmp_s.DoStep(step, cur_task->compute_dag);
+    }
 
-  /*
-  for (size_t s = 0; s < step_id - 1; ++s) {
-    const auto& step = old_s->transform_steps[s];
-    tmp_s.CopyOnWrite()->transform_steps.push_back(step);
-    tmp_s.DoStep(step, cur_task->compute_dag);
-  }
+    for (size_t s = de_id + 1; s < re_id - 1; ++s) {
+      const auto& step = old_s->transform_steps[s];
+      tmp_s.CopyOnWrite()->transform_steps.push_back(step);
+      tmp_s.DoStep(step, cur_task->compute_dag);
+    }
 
-  // Replay the rest steps.
-  for (size_t s = step_id + 1; s < old_s->transform_steps.size(); ++s) {
-    auto step = old_s->transform_steps[s];
-    tmp_s.CopyOnWrite()->transform_steps.push_back(step);
-    tmp_s.DoStep(tmp_s->transform_steps.back(), cur_task->compute_dag);
+    tmp_s.CopyOnWrite()->transform_steps.push_back(old_s->transform_steps[de_id]);
+    tmp_s.DoStep(old_s->transform_steps[de_id], cur_task->compute_dag);
+
+    for (size_t s = re_id + 1; s < old_s->transform_steps.size(); ++s) {
+      auto step = old_s->transform_steps[s];
+      tmp_s.CopyOnWrite()->transform_steps.push_back(step);
+      tmp_s.DoStep(tmp_s->transform_steps.back(), cur_task->compute_dag);
+    }
+  }else{
+    for (size_t s = 0; s < re_id - 1; ++s) {
+      const auto& step = old_s->transform_steps[s];
+      tmp_s.CopyOnWrite()->transform_steps.push_back(step);
+      tmp_s.DoStep(step, cur_task->compute_dag);
+    }
+
+    tmp_s.CopyOnWrite()->transform_steps.push_back(old_s->transform_steps[de_id]);
+    tmp_s.DoStep(old_s->transform_steps[de_id], cur_task->compute_dag);
+
+    for (size_t s = re_id + 1; s < de_id - 1; ++s) {
+      const auto& step = old_s->transform_steps[s];
+      tmp_s.CopyOnWrite()->transform_steps.push_back(step);
+      tmp_s.DoStep(step, cur_task->compute_dag);
+    }
+
+    for (size_t s = de_id + 1; s < old_s->transform_steps.size(); ++s) {
+      auto step = old_s->transform_steps[s];
+      tmp_s.CopyOnWrite()->transform_steps.push_back(step);
+      tmp_s.DoStep(tmp_s->transform_steps.back(), cur_task->compute_dag);
+    }
   }
   */
 
+  //StdCout(verbose)<<"replay"<<std::endl;
   for (size_t s = 0; s < old_s->transform_steps.size(); ++s) {
-    if(s==step_id) continue;
-    const auto& step = old_s->transform_steps[s];
-    tmp_s.CopyOnWrite()->transform_steps.push_back(step);
-    tmp_s.DoStep(step, cur_task->compute_dag);
+    //std::cerr<<s<<std::endl;
+    if(s==de_id) continue;
+    if(s==re_id){
+      //tmp_s = ApplyStepToNewState(cur_task, tmp_s, old_s, old_s->transform_steps[de_id]);
+      tmp_s.CopyOnWrite()->transform_steps.push_back(old_s->transform_steps[de_id]);
+    }
+    
+    tmp_s.CopyOnWrite()->transform_steps.push_back(old_s->transform_steps[s]);
+
+    try{
+      tmp_s.DoStep(old_s->transform_steps.back(), cur_task->compute_dag);
+    } catch (dmlc::Error &e) {
+      return State();
+    }
+    //tmp_s = ApplyStepToNewState(cur_task, tmp_s, old_s, old_s->transform_steps[s]);
   }
-
-  return tmp_s;
-}
-
-State SketchSearchPolicyNode::repair(State tmp_s){
-  if(!tmp_s.defined()) return State();
   return tmp_s;
 }
 

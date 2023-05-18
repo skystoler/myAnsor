@@ -755,12 +755,13 @@ State ApplyStepToNewState(const SearchTask& task, const State& state, const Stat
                           const Step& step) {
   State tmp_s = state;
 
-  int curr_stage_id = step->stage_id;
+  int curr_stage_id = step->stage_id; 
+  /*
   if (tmp_s->stages[curr_stage_id]->op->name != ref_s->stages[curr_stage_id]->op->name) {
     // Relocate stage_id by matching the name, so the step can work on the same stage
     curr_stage_id = GetStageIdByName(tmp_s, ref_s->stages[step->stage_id]->op->name);
     CHECK_NE(curr_stage_id, -1);
-  }
+  }*/
 
   // The default case: Simply append the step to the history and do it
   std::function<State(const Step&)> simple_apply = [&task, &tmp_s, &curr_stage_id]

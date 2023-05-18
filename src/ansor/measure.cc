@@ -285,12 +285,16 @@ void ProgramMeasurerNode::SilentMeasure(const SearchTask& task,
   // Close the thread pool to avoid the conflits with python environment
   ThreadPool::Global().Abort();
 
+  std::cerr << "1"<<std::endl;
   results->clear();
   results->reserve(inputs.size());
+  std::cerr << "2"<<std::endl;
   Array<MeasureInput> input_batch(inputs.begin(), inputs.end());
 
   // Call builder and runner
+  std::cerr << "3"<<std::endl;
   Array<BuildResult> build_res_batch = builder->Build(input_batch, verbose);
+  std::cerr << "4"<<std::endl;
   Array<MeasureResult> result_batch =
       runner->Run(input_batch, build_res_batch, verbose);
 

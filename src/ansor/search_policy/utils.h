@@ -745,6 +745,9 @@ State RandomMutateParallel(const State& old_state, std::mt19937* random_gen,
 State RandomMutateComputeLocation(const State& old_state, std::mt19937* random_gen,
                                   const SearchTask& task);
 
+State ApplyStepToNewState(const SearchTask& task, const State& state, const State& ref_s,
+                          const Step& step);
+
 // GA: Crossover two states
 State CrossOverState(const SearchTask& task, std::mt19937* random_gen, const State& p1,
                     const State& p2, std::vector<int>* fail_counters);

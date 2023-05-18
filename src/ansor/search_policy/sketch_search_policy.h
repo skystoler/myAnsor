@@ -131,9 +131,7 @@ class SketchSearchPolicyNode: public SearchPolicyNode {
 
   State LNS(State now_s);
 
-  State destroy(State old_s);
-
-  State repair(State tmp_s);
+  State DestroyAndRepair(State old_s);
 
   // Sample init population
   void SampleInitPopulation(const std::vector<State>& sketches,

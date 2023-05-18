@@ -67,6 +67,7 @@ void RandomModelNode::Update(const Array<MeasureInput>& inputs,
 void RandomModelNode::Predict(const SearchTask& task,
                               const std::vector<State>& states,
                               std::vector<float>* scores) {
+  //std::cerr<<"1"<<std::endl;
   scores->resize(states.size());
   (*random_number_func)(states.size(), static_cast<void*>(scores->data()));
 }
@@ -84,6 +85,7 @@ void MeasureModelNode::Update(const Array<MeasureInput>& inputs,
 void MeasureModelNode::Predict(const SearchTask& task,
                                const std::vector<State>& states,
                                std::vector<float>* scores) {
+  //std::cerr<<"2"<<std::endl;
   std::vector<MeasureInput> inputs;
   std::vector<MeasureResult> results;
 
@@ -92,6 +94,7 @@ void MeasureModelNode::Predict(const SearchTask& task,
   for (const auto& state : states) {
     inputs.push_back(MeasureInput(task, state));
   }
+
   measurer->SilentMeasure(task, inputs, &results);
 
   scores->clear();
@@ -119,6 +122,7 @@ void PythonBasedModelNode::Update(const Array<MeasureInput>& inputs,
 void PythonBasedModelNode::Predict(const SearchTask& task,
                                    const std::vector<State>& states,
                                    std::vector<float>* scores) {
+  //std::cerr<<"3"<<std::endl;
   scores->resize(states.size());
   predict_func(task, Array<State>(states.begin(), states.end()),
                static_cast<void*>(scores->data()));
