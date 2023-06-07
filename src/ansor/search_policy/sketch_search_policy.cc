@@ -897,7 +897,7 @@ State SketchSearchPolicyNode::LNS(State now_s){
     std::cerr<<tmp_s.defined()<<" "<<now_s.defined()<<" "<<best_s.defined()<<std::endl;
     //std::cerr<<"tset"<<std::endl;
 
-    //断错误
+    //段错误
     std::vector<State> states={tmp_s,now_s,best_s};
 
     //没问题
@@ -983,6 +983,17 @@ State SketchSearchPolicyNode::DestroyAndRepair(State old_s){
     }
   }
   */
+
+  //compare to debug
+  // for (size_t s = 0; s < old_s->transform_steps.size(); ++s) {
+  //   if(s==de_id) continue;
+  //   tmp_s.CopyOnWrite()->transform_steps.push_back(old_s->transform_steps[s]);
+  //   try{
+  //     tmp_s.DoStep(old_s->transform_steps.back(), cur_task->compute_dag);
+  //   } catch (dmlc::Error &e) {
+  //     return State();
+  //   }
+  // }
 
   //StdCout(verbose)<<"replay"<<std::endl;
   for (size_t s = 0; s < old_s->transform_steps.size(); ++s) {

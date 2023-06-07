@@ -15,7 +15,7 @@
 
 # Command Line History (newest to oldest):
 :wq
-|2,0,1683696878,,"wq"
+|2,0,1684409405,,"wq"
 :q
 |2,0,1679366545,,"q"
 :q!
@@ -32,40 +32,58 @@
 # Debug Line History (newest to oldest):
 
 # Registers:
+""1	CHAR	0
+	
+	#
+|3,1,1,0,2,0,1684409396,"","#"
 
 # File marks:
-'0  1  13  ~/.git/COMMIT_EDITMSG
-|4,48,1,13,1683696878,"~/.git/COMMIT_EDITMSG"
-'1  124  0  ~/scripts/data.txt
-|4,49,124,0,1679366545,"~/scripts/data.txt"
-'2  123  0  ~/scripts/data.txt
-|4,50,123,0,1679284433,"~/scripts/data.txt"
+'0  1  4  ~/.git/COMMIT_EDITMSG
+|4,48,1,4,1684409405,"~/.git/COMMIT_EDITMSG"
+'1  1  13  ~/.git/COMMIT_EDITMSG
+|4,49,1,13,1683696878,"~/.git/COMMIT_EDITMSG"
+'2  124  0  ~/scripts/data.txt
+|4,50,124,0,1679366545,"~/scripts/data.txt"
 '3  123  0  ~/scripts/data.txt
 |4,51,123,0,1679284433,"~/scripts/data.txt"
-'4  81  0  ~/CMakeLists.txt
-|4,52,81,0,1678694969,"~/CMakeLists.txt"
-'5  1  0  ~/paper-figures/baseline/tensorflow/results.tsv
-|4,53,1,0,1669468476,"~/paper-figures/baseline/tensorflow/results.tsv"
-'6  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,54,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
-'7  14  0  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,55,14,0,1669453888,"~/paper-figures/baseline/tensorflow/benchmark.py"
+'4  123  0  ~/scripts/data.txt
+|4,52,123,0,1679284433,"~/scripts/data.txt"
+'5  81  0  ~/CMakeLists.txt
+|4,53,81,0,1678694969,"~/CMakeLists.txt"
+'6  1  0  ~/paper-figures/baseline/tensorflow/results.tsv
+|4,54,1,0,1669468476,"~/paper-figures/baseline/tensorflow/results.tsv"
+'7  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
+|4,55,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
 '8  14  0  ~/paper-figures/baseline/tensorflow/benchmark.py
 |4,56,14,0,1669453888,"~/paper-figures/baseline/tensorflow/benchmark.py"
-'9  378  3  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,57,378,3,1669453823,"~/paper-figures/baseline/tensorflow/benchmark.py"
+'9  14  0  ~/paper-figures/baseline/tensorflow/benchmark.py
+|4,57,14,0,1669453888,"~/paper-figures/baseline/tensorflow/benchmark.py"
 
 # Jumplist (newest first):
+-'  1  4  ~/.git/COMMIT_EDITMSG
+|4,39,1,4,1684409405,"~/.git/COMMIT_EDITMSG"
 -'  1  13  ~/.git/COMMIT_EDITMSG
 |4,39,1,13,1683696878,"~/.git/COMMIT_EDITMSG"
 -'  124  0  ~/scripts/data.txt
 |4,39,124,0,1679366545,"~/scripts/data.txt"
 -'  124  0  ~/scripts/data.txt
 |4,39,124,0,1679366545,"~/scripts/data.txt"
+-'  124  0  ~/scripts/data.txt
+|4,39,124,0,1679366545,"~/scripts/data.txt"
+-'  124  0  ~/scripts/data.txt
+|4,39,124,0,1679366545,"~/scripts/data.txt"
 -'  123  0  ~/scripts/data.txt
 |4,39,123,0,1679366447,"~/scripts/data.txt"
 -'  123  0  ~/scripts/data.txt
 |4,39,123,0,1679366447,"~/scripts/data.txt"
+-'  123  0  ~/scripts/data.txt
+|4,39,123,0,1679366447,"~/scripts/data.txt"
+-'  123  0  ~/scripts/data.txt
+|4,39,123,0,1679366447,"~/scripts/data.txt"
+-'  123  0  ~/scripts/data.txt
+|4,39,123,0,1679284433,"~/scripts/data.txt"
+-'  123  0  ~/scripts/data.txt
+|4,39,123,0,1679284433,"~/scripts/data.txt"
 -'  123  0  ~/scripts/data.txt
 |4,39,123,0,1679284433,"~/scripts/data.txt"
 -'  123  0  ~/scripts/data.txt
@@ -78,6 +96,14 @@
 |4,39,6260,0,1679282508,"~/scripts/data.txt"
 -'  6260  0  ~/scripts/data.txt
 |4,39,6260,0,1679282508,"~/scripts/data.txt"
+-'  6260  0  ~/scripts/data.txt
+|4,39,6260,0,1679282508,"~/scripts/data.txt"
+-'  6260  0  ~/scripts/data.txt
+|4,39,6260,0,1679282508,"~/scripts/data.txt"
+-'  6260  0  ~/scripts/data.txt
+|4,39,6260,0,1679282508,"~/scripts/data.txt"
+-'  6260  0  ~/scripts/data.txt
+|4,39,6260,0,1679282508,"~/scripts/data.txt"
 -'  1286  0  ~/scripts/data.txt
 |4,39,1286,0,1679282503,"~/scripts/data.txt"
 -'  1286  0  ~/scripts/data.txt
@@ -86,6 +112,22 @@
 |4,39,1286,0,1679282503,"~/scripts/data.txt"
 -'  1286  0  ~/scripts/data.txt
 |4,39,1286,0,1679282503,"~/scripts/data.txt"
+-'  1286  0  ~/scripts/data.txt
+|4,39,1286,0,1679282503,"~/scripts/data.txt"
+-'  1286  0  ~/scripts/data.txt
+|4,39,1286,0,1679282503,"~/scripts/data.txt"
+-'  1286  0  ~/scripts/data.txt
+|4,39,1286,0,1679282503,"~/scripts/data.txt"
+-'  1286  0  ~/scripts/data.txt
+|4,39,1286,0,1679282503,"~/scripts/data.txt"
+-'  1  0  ~/scripts/data.txt
+|4,39,1,0,1679279965,"~/scripts/data.txt"
+-'  1  0  ~/scripts/data.txt
+|4,39,1,0,1679279965,"~/scripts/data.txt"
+-'  1  0  ~/scripts/data.txt
+|4,39,1,0,1679279965,"~/scripts/data.txt"
+-'  1  0  ~/scripts/data.txt
+|4,39,1,0,1679279965,"~/scripts/data.txt"
 -'  1  0  ~/scripts/data.txt
 |4,39,1,0,1679279965,"~/scripts/data.txt"
 -'  1  0  ~/scripts/data.txt
@@ -110,6 +152,38 @@
 |4,39,81,0,1678694969,"~/CMakeLists.txt"
 -'  81  0  ~/CMakeLists.txt
 |4,39,81,0,1678694969,"~/CMakeLists.txt"
+-'  81  0  ~/CMakeLists.txt
+|4,39,81,0,1678694969,"~/CMakeLists.txt"
+-'  81  0  ~/CMakeLists.txt
+|4,39,81,0,1678694969,"~/CMakeLists.txt"
+-'  81  0  ~/CMakeLists.txt
+|4,39,81,0,1678694969,"~/CMakeLists.txt"
+-'  81  0  ~/CMakeLists.txt
+|4,39,81,0,1678694969,"~/CMakeLists.txt"
+-'  81  0  ~/CMakeLists.txt
+|4,39,81,0,1678694969,"~/CMakeLists.txt"
+-'  81  0  ~/CMakeLists.txt
+|4,39,81,0,1678694969,"~/CMakeLists.txt"
+-'  81  0  ~/CMakeLists.txt
+|4,39,81,0,1678694969,"~/CMakeLists.txt"
+-'  81  0  ~/CMakeLists.txt
+|4,39,81,0,1678694969,"~/CMakeLists.txt"
+-'  1  0  ~/CMakeLists.txt
+|4,39,1,0,1678694957,"~/CMakeLists.txt"
+-'  1  0  ~/CMakeLists.txt
+|4,39,1,0,1678694957,"~/CMakeLists.txt"
+-'  1  0  ~/CMakeLists.txt
+|4,39,1,0,1678694957,"~/CMakeLists.txt"
+-'  1  0  ~/CMakeLists.txt
+|4,39,1,0,1678694957,"~/CMakeLists.txt"
+-'  1  0  ~/CMakeLists.txt
+|4,39,1,0,1678694957,"~/CMakeLists.txt"
+-'  1  0  ~/CMakeLists.txt
+|4,39,1,0,1678694957,"~/CMakeLists.txt"
+-'  1  0  ~/CMakeLists.txt
+|4,39,1,0,1678694957,"~/CMakeLists.txt"
+-'  1  0  ~/CMakeLists.txt
+|4,39,1,0,1678694957,"~/CMakeLists.txt"
 -'  1  0  ~/CMakeLists.txt
 |4,39,1,0,1678694957,"~/CMakeLists.txt"
 -'  1  0  ~/CMakeLists.txt
@@ -158,113 +232,45 @@
 |4,39,1,0,1669468476,"~/paper-figures/baseline/tensorflow/results.tsv"
 -'  1  0  ~/paper-figures/baseline/tensorflow/results.tsv
 |4,39,1,0,1669468476,"~/paper-figures/baseline/tensorflow/results.tsv"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  372  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,372,4,1669453989,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  380  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,380,4,1669453963,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  380  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,380,4,1669453963,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  380  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,380,4,1669453963,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  380  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,380,4,1669453963,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  380  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,380,4,1669453963,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  380  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,380,4,1669453963,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  380  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,380,4,1669453963,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  380  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,380,4,1669453963,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  380  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,380,4,1669453963,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  380  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,380,4,1669453963,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  380  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,380,4,1669453963,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  380  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,380,4,1669453963,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  380  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,380,4,1669453963,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  380  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,380,4,1669453963,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  380  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,380,4,1669453963,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  380  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,380,4,1669453963,"~/paper-figures/baseline/tensorflow/benchmark.py"
--'  380  4  ~/paper-figures/baseline/tensorflow/benchmark.py
-|4,39,380,4,1669453963,"~/paper-figures/baseline/tensorflow/benchmark.py"
+-'  1  0  ~/paper-figures/baseline/tensorflow/results.tsv
+|4,39,1,0,1669468476,"~/paper-figures/baseline/tensorflow/results.tsv"
+-'  1  0  ~/paper-figures/baseline/tensorflow/results.tsv
+|4,39,1,0,1669468476,"~/paper-figures/baseline/tensorflow/results.tsv"
+-'  1  0  ~/paper-figures/baseline/tensorflow/results.tsv
+|4,39,1,0,1669468476,"~/paper-figures/baseline/tensorflow/results.tsv"
+-'  1  0  ~/paper-figures/baseline/tensorflow/results.tsv
+|4,39,1,0,1669468476,"~/paper-figures/baseline/tensorflow/results.tsv"
+-'  1  0  ~/paper-figures/baseline/tensorflow/results.tsv
+|4,39,1,0,1669468476,"~/paper-figures/baseline/tensorflow/results.tsv"
+-'  1  0  ~/paper-figures/baseline/tensorflow/results.tsv
+|4,39,1,0,1669468476,"~/paper-figures/baseline/tensorflow/results.tsv"
+-'  1  0  ~/paper-figures/baseline/tensorflow/results.tsv
+|4,39,1,0,1669468476,"~/paper-figures/baseline/tensorflow/results.tsv"
+-'  1  0  ~/paper-figures/baseline/tensorflow/results.tsv
+|4,39,1,0,1669468476,"~/paper-figures/baseline/tensorflow/results.tsv"
+-'  1  0  ~/paper-figures/baseline/tensorflow/results.tsv
+|4,39,1,0,1669468476,"~/paper-figures/baseline/tensorflow/results.tsv"
+-'  1  0  ~/paper-figures/baseline/tensorflow/results.tsv
+|4,39,1,0,1669468476,"~/paper-figures/baseline/tensorflow/results.tsv"
+-'  1  0  ~/paper-figures/baseline/tensorflow/results.tsv
+|4,39,1,0,1669468476,"~/paper-figures/baseline/tensorflow/results.tsv"
+-'  1  0  ~/paper-figures/baseline/tensorflow/results.tsv
+|4,39,1,0,1669468476,"~/paper-figures/baseline/tensorflow/results.tsv"
+-'  1  0  ~/paper-figures/baseline/tensorflow/results.tsv
+|4,39,1,0,1669468476,"~/paper-figures/baseline/tensorflow/results.tsv"
+-'  1  0  ~/paper-figures/baseline/tensorflow/results.tsv
+|4,39,1,0,1669468476,"~/paper-figures/baseline/tensorflow/results.tsv"
 
 # History of marks within files (newest to oldest):
 
 > ~/.git/COMMIT_EDITMSG
-	*	1683696877	0
-	"	1	13
-	^	1	14
-	.	1	13
-	+	1	13
+	*	1684409403	0
+	"	1	4
+	^	1	5
+	.	2	0
+	+	1	0
+	+	1	5
+	+	2	0
 
 > ~/scripts/data.txt
 	*	1679366542	0
