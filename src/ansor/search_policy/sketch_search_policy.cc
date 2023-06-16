@@ -1563,19 +1563,19 @@ void SketchSearchPolicyNode::EvolutionarySearch(
 
     //elite strategy, heap.size=128,elite.size=128?
      //vector<index> return the index of the max pop_scores
-    std::vector<size_t> index(pop_scores.size(),0);
-    for (size_t i = 0; i < index.size(); ++i) {
-      index[i]=i;
-    }
-    sort(index.begin(),index.end(),
-     [&](const float& a, const float& b) {
-        return (pop_scores[a] > pop_scores[b]);
-      }
-    );
+    // std::vector<size_t> index(pop_scores.size(),0);
+    // for (size_t i = 0; i < index.size(); ++i) {
+    //   index[i]=i;
+    // }
+    // sort(index.begin(),index.end(),
+    //  [&](const float& a, const float& b) {
+    //     return (pop_scores[a] > pop_scores[b]);
+    //   }
+    // );
 
-    for(size_t i=0;i<128;++i){
-      pnext->push_back((*pnow)[index[i]]);
-    }
+    // for(size_t i=0;i<128;++i){
+    //   pnext->push_back((*pnow)[index[i]]);
+    // }
 
     // Do mutation,num_best_states=128
     while (pnext->size() < population) {
