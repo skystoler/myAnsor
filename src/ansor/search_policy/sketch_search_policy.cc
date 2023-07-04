@@ -1351,7 +1351,8 @@ void SketchSearchPolicyNode::EvolutionarySearch(
   int num_iters =  GetIntParam(params, "evolutionary_search_num_iters");
   double mutation_prob = GetDoubleParam(params, "evolutionary_search_mutation_prob");
   double crossover_ratio = GetDoubleParam(params, "evolutionary_search_crossover_ratio");
-  int num_cross_over = static_cast<int>(population * crossover_ratio);
+  //int num_cross_over = static_cast<int>(population * crossover_ratio);
+  int num_cross_over = 256;
   int num_cross_over_trial_upper_bound = num_cross_over;
 
   // Two ping pong buffers to avoid copy
@@ -1416,8 +1417,8 @@ void SketchSearchPolicyNode::EvolutionarySearch(
   // std::time_t t = std::time(0); 
   // StdCout(verbose)<<"time:"<<t<<std::endl;
 
-  std::fstream fout;
-  fout.open("./data.txt",std::ios::app);
+  // std::fstream fout;
+  // fout.open("./data.txt",std::ios::app);
   
 
   int k = 0;
@@ -1430,12 +1431,12 @@ void SketchSearchPolicyNode::EvolutionarySearch(
     PruneInvalidState(cur_task, pnow);
     program_cost_model->Predict(cur_task, *pnow, &pop_scores);
 
-    fout<<"iter:"<<k+1<<std::endl;
+    //fout<<"iter:"<<k+1<<std::endl;
     for (size_t i = 0; i < pnow->size(); ++i) {
 
       //record experiment
-      if(i%10==0) fout<<std::endl;
-      fout<<i<<":"<<pop_scores[i]<<"  ";
+      //if(i%10==0) fout<<std::endl;
+      //fout<<i<<":"<<pop_scores[i]<<"  ";
       //fout<<std::endl;
       
       const State& state = (*pnow)[i];
@@ -1461,14 +1462,6 @@ void SketchSearchPolicyNode::EvolutionarySearch(
         }
       }
     }
-    
-
-    //elites strategy 1, heap.size=128,elite.size=64
-    
-    // std::sort(heap.begin(),heap.end(),cmp);
-    // for(size_t i=0;i<64;++i){
-    // 	pnext->push_back(heap[i].first);
-    // }
 
     if (k % 5 == 0 || k == num_iters){
       StdCout(verbose) << "GA Iter: " << k << std::fixed << std::setprecision(4)
@@ -1493,6 +1486,22 @@ void SketchSearchPolicyNode::EvolutionarySearch(
     // Compute selection probability
     ComputePrefixSumProb(pop_scores, &pop_selection_probs);
      
+    //elite strategy, heap.size=128,elite.size=128?
+     //vector<index> return the index of the max pop_scores
+    std::vector<size_t> index(pop_scores.size(),0);
+    for (size_t i = 0; i < index.size(); ++i) {
+      index[i]=i;
+    }
+    sort(index.begin(),index.end(),
+     [&](const float& a, const float& b) {
+        return (pop_scores[a] > pop_scores[b]);
+      }
+    );
+
+    for(size_t i=0;i<128;++i){
+      pnext->push_back((*pnow)[index[i]]);
+    }
+
     // Do cross over
     int ct = 0;
     
@@ -1577,6 +1586,13 @@ void SketchSearchPolicyNode::EvolutionarySearch(
     //   pnext->push_back((*pnow)[index[i]]);
     // }
 
+    //elites strategy 2, heap.size=128,elite.size=64
+    // StdCout(verbose) <<"test"<<std::endl;
+    // std::sort(heap.begin(),heap.end(),cmp);
+    // for(size_t i=0;i<64;++i){
+    // 	pnext->push_back(heap[i].first);
+    // }
+
     // Do mutation,num_best_states=128
     while (pnext->size() < population) {
       int id = RandomChoose(pop_selection_probs, &rand_gen_);
@@ -1616,7 +1632,7 @@ void SketchSearchPolicyNode::EvolutionarySearch(
     std::swap(pnext, pnow); pnext->clear();
     double duration = std::chrono::duration_cast<std::chrono::duration<double> >(
       std::chrono::high_resolution_clock::now() - tic_begin).count();
-    fout<<std::fixed << std::setprecision(2)<<duration<<std::endl;
+    //fout<<std::fixed << std::setprecision(2)<<duration<<std::endl;
   }
 
   // Copy best states in the heap to out_states
@@ -1632,9 +1648,9 @@ void SketchSearchPolicyNode::EvolutionarySearch(
                    << "\tTime elapsed: "
                    << std::fixed << std::setprecision(2) << duration << std::endl;
 
-  fout<<"Time elapsed:"<<std::fixed << std::setprecision(2) << duration<<std::endl;
-  fout<<std::endl;
-  fout.close();
+  //fout<<"Time elapsed:"<<std::fixed << std::setprecision(2) << duration<<std::endl;
+  //fout<<std::endl;
+  //fout.close();
 }
 
 /*!
