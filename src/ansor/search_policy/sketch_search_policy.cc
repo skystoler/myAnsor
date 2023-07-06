@@ -1434,10 +1434,10 @@ void SketchSearchPolicyNode::EvolutionarySearch(
     //fout<<"iter:"<<k+1<<std::endl;
     for (size_t i = 0; i < pnow->size(); ++i) {
 
-      //record experiment
-      //if(i%10==0) fout<<std::endl;
-      //fout<<i<<":"<<pop_scores[i]<<"  ";
-      //fout<<std::endl;
+     // record experiment
+      // if(i%10==0) fout<<std::endl;
+      // fout<<i<<":"<<pop_scores[i]<<"  ";
+      // fout<<std::endl;
       
       const State& state = (*pnow)[i];
       std::string state_str = state.ToStr();
@@ -1461,7 +1461,7 @@ void SketchSearchPolicyNode::EvolutionarySearch(
         }
       }
     }
-
+    fout << k << " : " << max_score << std::endl;
     if (k % 5 == 0 || k == num_iters) {
       StdCout(verbose) << "GA Iter: " << k << std::fixed << std::setprecision(4)
                        << "\tMax score: " << max_score
@@ -1526,6 +1526,7 @@ void SketchSearchPolicyNode::EvolutionarySearch(
     ComputePrefixSumProb(pop_scores, &pop_selection_probs);
 
     // calculate diversity
+    /*
     int n=pnow->size();
     std::vector<std::vector<int>> v(n,std::vector<int>(3,0));
     
@@ -1560,7 +1561,7 @@ void SketchSearchPolicyNode::EvolutionarySearch(
       }
     }
     diversity.push_back(distance);
-
+    */
     // Do cross over
     int ct = 0;
     
@@ -1685,9 +1686,9 @@ void SketchSearchPolicyNode::EvolutionarySearch(
 
   //fout<<"Time elapsed:"<<std::fixed << std::setprecision(2) << duration<<std::endl;
   //fout<<std::endl;
-  fout<<"diversity: ";
-  for(auto d:diversity)fout<<std::fixed << std::setprecision(8)<<d<<" ";
-  fout<<std::endl;
+  // fout<<"diversity: ";
+  // for(auto d:diversity)fout<<std::fixed << std::setprecision(8)<<d<<" ";
+  // fout<<std::endl;
   fout.close();
 }
 
